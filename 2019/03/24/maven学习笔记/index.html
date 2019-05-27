@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Maven学习笔记 | 归来仍是少年</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Maven的学习虽然经常用，但是还是有很多地方不了解，花点时间学习一下。 简介Maven的核心功能便是合理叙述项目间的依赖关系，通过pom.xml文件的配置获取jar包。Maven项目有着统一的项目结构，完善的生命周期模型。 官网 Maven POMPOM代表项目对象模型。它是 Maven 中工作的基本单位，这是一个 XML 文件。它始终保存在该项目基本目录中的 pom.xml 文件。详解 1.基">
+  <meta name="description" content="Maven的学习虽然经常用，但是还是有很多地方不了解，花点时间学习一下。 简介Maven的核心功能便是合理叙述项目间的依赖关系，通过pom.xml文件的配置获取jar包。Maven项目有着统一的项目结构，完善的生命周期模型。 官网">
 <meta name="keywords" content="-笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Maven学习笔记">
 <meta property="og:url" content="http://yoursite.com/2019/03/24/maven学习笔记/index.html">
 <meta property="og:site_name" content="归来仍是少年">
-<meta property="og:description" content="Maven的学习虽然经常用，但是还是有很多地方不了解，花点时间学习一下。 简介Maven的核心功能便是合理叙述项目间的依赖关系，通过pom.xml文件的配置获取jar包。Maven项目有着统一的项目结构，完善的生命周期模型。 官网 Maven POMPOM代表项目对象模型。它是 Maven 中工作的基本单位，这是一个 XML 文件。它始终保存在该项目基本目录中的 pom.xml 文件。详解 1.基">
+<meta property="og:description" content="Maven的学习虽然经常用，但是还是有很多地方不了解，花点时间学习一下。 简介Maven的核心功能便是合理叙述项目间的依赖关系，通过pom.xml文件的配置获取jar包。Maven项目有着统一的项目结构，完善的生命周期模型。 官网">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-27T06:31:37.605Z">
+<meta property="og:updated_time" content="2019-05-27T06:32:46.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Maven学习笔记">
-<meta name="twitter:description" content="Maven的学习虽然经常用，但是还是有很多地方不了解，花点时间学习一下。 简介Maven的核心功能便是合理叙述项目间的依赖关系，通过pom.xml文件的配置获取jar包。Maven项目有着统一的项目结构，完善的生命周期模型。 官网 Maven POMPOM代表项目对象模型。它是 Maven 中工作的基本单位，这是一个 XML 文件。它始终保存在该项目基本目录中的 pom.xml 文件。详解 1.基">
+<meta name="twitter:description" content="Maven的学习虽然经常用，但是还是有很多地方不了解，花点时间学习一下。 简介Maven的核心功能便是合理叙述项目间的依赖关系，通过pom.xml文件的配置获取jar包。Maven项目有着统一的项目结构，完善的生命周期模型。 官网">
   
     <link rel="alternative" href="/atom.xml" title="归来仍是少年" type="application/atom+xml">
   
@@ -172,6 +172,7 @@
         <h1 id="Maven的学习"><a href="#Maven的学习" class="headerlink" title="Maven的学习"></a>Maven的学习</h1><p>虽然经常用，但是还是有很多地方不了解，花点时间学习一下。</p>
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Maven的核心功能便是合理叙述项目间的依赖关系，通过pom.xml文件的配置获取jar包。Maven项目有着统一的项目结构，完善的生命周期模型。</p>
 <p><a href="http://maven.apache.org/" target="_blank" rel="noopener">官网</a></p>
+<a id="more"></a>
 <h2 id="Maven-POM"><a href="#Maven-POM" class="headerlink" title="Maven POM"></a>Maven POM</h2><p>POM代表项目对象模型。它是 Maven 中工作的基本单位，这是一个 XML 文件。它始终保存在该项目基本目录中的 <code>pom.xml</code> 文件。<a href="https://www.cnblogs.com/xlhan/p/7144822.html" target="_blank" rel="noopener">详解</a></p>
 <h3 id="1-基本属性"><a href="#1-基本属性" class="headerlink" title="1.基本属性"></a>1.基本属性</h3><p>pom.xml 的根元素是 <code>project</code>，它有三个主要的子节点<code>groupId</code>，<code>artifactId</code>，<code>version</code>。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">         </span><br><span class="line">    <span class="comment">&lt;!-- 模型版本。maven2.0必须是这样写，现在是maven2唯一支持的版本 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">&lt;!-- 项目组的编号，并且配置时生成的路径也是由此生成 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.MavenTest<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">&lt;!-- 这是项目的ID。这通常是项目的名称。本项目的唯一ID，一个groupId下面可能多个项目，就是靠artifactId来区分的 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>MavenTest<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">&lt;!-- 本项目目前所处的版本号 --&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
