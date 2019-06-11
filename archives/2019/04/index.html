@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Windows常用命令的学习笔记 | 归来仍是少年</title>
+  <title>Archives: 2019/4 | 归来仍是少年</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Windows常用命令的学习虽然也不是很经常用，但是还是很有必要了解一下的。">
-<meta name="keywords" content="笔记">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Windows常用命令的学习笔记">
-<meta property="og:url" content="http://yoursite.com/2019/02/26/Win常用操作/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="归来仍是少年">
+<meta property="og:url" content="http://yoursite.com/archives/2019/04/index.html">
 <meta property="og:site_name" content="归来仍是少年">
-<meta property="og:description" content="Windows常用命令的学习虽然也不是很经常用，但是还是很有必要了解一下的。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-27T06:25:42.409Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Windows常用命令的学习笔记">
-<meta name="twitter:description" content="Windows常用命令的学习虽然也不是很经常用，但是还是很有必要了解一下的。">
+<meta name="twitter:title" content="归来仍是少年">
   
     <link rel="alternative" href="/atom.xml" title="归来仍是少年" type="application/atom+xml">
   
@@ -149,213 +144,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Win常用操作" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Windows常用命令的学习笔记
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/04/24/MongoDB/" class="archive-article-date">
+  	<time datetime="2019-04-24T05:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/04/24/MongoDB/">MongoDB了解一下</a>
     </h1>
   
 
-        
-        <a href="/2019/02/26/Win常用操作/" class="archive-article-date">
-  	<time datetime="2019-02-26T06:07:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Windows常用命令的学习"><a href="#Windows常用命令的学习" class="headerlink" title="Windows常用命令的学习"></a>Windows常用命令的学习</h1><p>虽然也不是很经常用，但是还是很有必要了解一下的。</p>
-<a id="more"></a>
-<h2 id="CMD常用命令"><a href="#CMD常用命令" class="headerlink" title="CMD常用命令"></a>CMD常用命令</h2><p>获取命令<code>help</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">help   //查看命令</span><br><span class="line">cd /?   //查看某个命令（比如cd）的详情</span><br></pre></td></tr></table></figure>
-<p>切换目录<code>cd</code>/<code>pushd  popd</code></p>
-<figure class="highlight plain"><figcaption><span> </span><a href="//">显示当前目录</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd ..   // 进入父目录</span><br><span class="line">cd /d d:   // 进入上次d盘所在的目录（或在直接输入：d:）</span><br><span class="line">cd /d d:\   // 进入d盘根目录</span><br><span class="line">cd d: // 显示上次d盘所在的目录</span><br><span class="line">cd /d d:\src // 进入d:\src目录</span><br><span class="line">cd prj\src\view  // 进入当前目录下的prj\src\view文件夹</span><br><span class="line">pushd c:\mp3 // 将当前目录d:\mp4入栈，并切换当前目录为c:\mp3</span><br><span class="line">popd  // 将刚才保存的d:\mp4弹栈，并设置为当前目录</span><br></pre></td></tr></table></figure>
-<p>显示目录中的内容<code>dir</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dir   // 显示当前目录中的子文件夹与文件</span><br></pre></td></tr></table></figure>
-<p>文件查看<code>type</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">例：type c:\11.txt   // 显示c盘中11.txt的文本内容</span><br><span class="line">例：type conf.ini  // 显示当前目录下conf.ini的文本内容</span><br><span class="line">例：type c:\11.txt | more  // 分页显示c盘中11.txt的文本内容</span><br></pre></td></tr></table></figure>
-<p>显示目录结构<code>tree</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tree d:\myfiles  // 显示d:\myfiles目录结构</span><br></pre></td></tr></table></figure>
-<p>创建目录<code>md</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">md 123   //创建123文件夹</span><br><span class="line">md movie music  // 在当前目录中创建名为movie和music的文件夹</span><br><span class="line">md d:\test\movie  // 创建d:\test\movie目录</span><br></pre></td></tr></table></figure>
-<p>文件或目录重命名<code>ren</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ren rec.txt rec.ini  // 将当前目录下的rec.txt文件重命名为rec.ini</span><br><span class="line"></span><br><span class="line">ren c:\test test_01  // 将c盘下的test文件夹重命名为test_01</span><br><span class="line"></span><br><span class="line">ren Logs.txt Logs-%date:~0,4%%date:~5,2%%date:~8,2%_%time:~0,2%%time:~3,2%.txt  // 将当前目录下的Logs.txt文件重命名为Logs-20150114_2135.txt或Logs-20150114_ 812.txt（注意：小时只有个位数时会多一个空格，可以使用字符串替换：将空格替换成0）</span><br></pre></td></tr></table></figure>
-<p>删除目录<code>rd</code> </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rd movie // 删除当前目录下的movie空文件夹</span><br><span class="line"></span><br><span class="line">rd /s /q d:\test  // 使用安静模式删除d:\test（除目录本身外，还将删除指定目录下的所有子目录和文件）</span><br></pre></td></tr></table></figure>
-<p>拷贝文件<code>copy</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">copy key.txt c:\doc  // 将当前目录下的key.txt拷贝到c:\doc下（若doc中也存在一个key.txt文件，会询问是否覆盖）</span><br><span class="line"></span><br><span class="line">copy jobs c:\doc  // 将当前目录下jobs文件夹中文件（不递归子目录）拷贝到c:\doc下（若doc中也存在相应的文件，会询问是否覆盖）</span><br><span class="line"></span><br><span class="line">copy key.txt c:\doc\key_bak.txt  // 将当前目录下的key.txt拷贝到c:\doc下，并重命名为key_bak.txt（若doc中也存在一个key_bak.txt文件，会询问是否覆盖）</span><br><span class="line"></span><br><span class="line">copy /Y key.txt c:\doc  // 将当前目录下的key.txt拷贝到c:\doc下（不询问，直接覆盖写）</span><br><span class="line"></span><br><span class="line">copy key.txt +  // 复制文件到自己，实际上是修改了文件日期</span><br><span class="line"></span><br><span class="line">copy /Y key1.txt + key2.txt key.txt  // 将当前目录下的key1.txt与key2.txt的内容合并写入key.txt中（不询问，直接覆盖写）</span><br><span class="line"></span><br><span class="line">copy /B art_2.7z.* art_2.7z    // 将当前目录下的art_2.7z.开头的所有文件（按照名称升序排序）依次合并生成art_2.7z</span><br><span class="line"></span><br><span class="line">copy /B art_2.7z.001+art_2.7z.002 art_2.7z    // 将当前目录下的art_2.7z.001、art_2.7z.002文件合并生成art_2.7z</span><br></pre></td></tr></table></figure>
-<p>  更强大的复制命令<code>xcopy</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xcopy c:\bat\hai d:\hello\ /s /h /e /f /c    // 将c:\bat\hai中的所有内容拷贝到d:\hello中  注意：需要在hello后加上\  表示hello为一个目录，否则xcopy会询问hello是F，还是D</span><br><span class="line"></span><br><span class="line">xcopy c:\bat\hai d:\hello\ /d:12-29-2010  // 将c:\bat\hai中的2010年12月29日后更改的文件拷贝到d:\hello中</span><br></pre></td></tr></table></figure>
-<p>移动文件<code>move</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">move *.png test  // 将当前目录下的png图片移动到当前目录下test文件夹中 （若test中也存在同名的png图片，会询问是否覆盖）</span><br><span class="line"></span><br><span class="line">move /Y *.png test  // 将当前目录下的png图片移动到当前目录下test文件夹中 （不询问，直接覆盖写）</span><br><span class="line"></span><br><span class="line">move 1.png d:\test\2.png  // 将当前目录下的1.png移动到d盘test文件夹中，并重命名为2.png （若test中也存在同名的png图片，会询问是否覆盖）</span><br><span class="line"></span><br><span class="line">move test d:\new  // 若d盘中存在new文件夹，将当前目录下的test文件夹移动到d盘new文件夹中；若不存在，将当前目录下的test文件夹移动到d盘，并重命名为new</span><br></pre></td></tr></table></figure>
-<p>删除文件<code>del</code>   注意：目录及子目录都不会删除</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">del test  // 删除当前目录下的test文件夹中的所有非只读文件（子目录下的文件不删除；删除前会进行确认；等价于del test\*）</span><br><span class="line"></span><br><span class="line">del /f test  // 删除当前目录下的test文件夹中的所有文件（含只读文件；子目录下的文件不删除；删除前会进行确认；等价于del /f test\*）</span><br><span class="line"></span><br><span class="line">del /f /s /q test d:\test2\*.doc  // 删除当前目录下的test文件夹中所有文件及d:\test2中所有doc文件（含只读文件；递归子目录下的文件；删除前不确认）</span><br></pre></td></tr></table></figure>
-<p>清除屏幕<code>cls</code> </p>
-<p>关系符<code>&amp;、&amp;&amp;、||、|</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&amp;  顺序执行多条命令，而不管命令是否执行成功</span><br><span class="line">cd /d d:\src&amp;work.exe /o c:\result.txt  // 先将当前工作目录切换到d:\src下，然后执行work.exe /o c:\result.txt命令</span><br><span class="line"></span><br><span class="line">&amp;&amp;  顺序执行多条命令，当碰到执行出错的命令后将不执行后面的命令</span><br><span class="line">find &quot;ok&quot; c:\test.txt &amp;&amp; echo 成功 // 如果找到了&quot;ok&quot;字样，就显示&quot;成功&quot;，找不到就不显示</span><br><span class="line"></span><br><span class="line">||   顺序执行多条命令，当碰到执行正确的命令后将不执行后面的命令</span><br><span class="line">find &quot;ok&quot; c:\test.txt || echo 不成功   // 如果找不到&quot;ok&quot;字样，就显示&quot;不成功&quot;，找到了就不显示</span><br><span class="line"></span><br><span class="line">|    管道命令</span><br><span class="line">dir *.* /s/a | find /c &quot;.exe&quot;   // 先执行dir命令，然后对输出结果（stdout）执行find命令（输出当前文件夹及所有子文件夹里的.exe文件的个数）</span><br></pre></td></tr></table></figure>
-<p>查询端口占用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -aon | findstr &quot;xx&quot;   //xx端口号</span><br></pre></td></tr></table></figure>
-<p>杀死进程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tasklist|findstr xx   //xx进程号</span><br></pre></td></tr></table></figure>
-<p>文件中搜索字符串<code>find 、findstr</code> </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">find /N /I &quot;pid&quot; 1.txt  // 在1.txt文件中忽略大小写查找pid字符串，并带行号显示查找后的结果</span><br><span class="line"></span><br><span class="line">find /C &quot;exe&quot; 1.txt  // 只显示在1.txt文件中查找到exe字符串的次数</span><br><span class="line"></span><br><span class="line">find /V &quot;exe&quot; 1.txt  // 显示未包含1.txt文件中未包含exe字符串的行</span><br><span class="line"></span><br><span class="line">findstr &quot;hello world&quot; 1.txt  // 在1.txt文件中搜索hello或world</span><br><span class="line"></span><br><span class="line">findstr /c:&quot;hello world&quot; 1.txt  // 在1.txt文件中搜索hello world</span><br><span class="line"></span><br><span class="line">findstr /c:&quot;hello world&quot; 1.txt nul  // 在1.txt文件中搜索hello world，并在每行结果前打印出1.txt:   注：findstr只有在2个及以上文件中搜索字符串时才会打印出每个文件的文件名，nul表示一个空文件</span><br><span class="line"></span><br><span class="line">findstr /s /i &quot;Hello&quot; *.*   // 不区分大小写，在当前目录和所有子目录中的所有文件中的hello</span><br><span class="line"></span><br><span class="line">findstr  &quot;^[0-9][a-z]&quot; 1.txt  // 在1.txt中搜索以1个数字+1个小写字母开头子串的行</span><br></pre></td></tr></table></figure>
-<p>进程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tasklist  // 显示当前运行的进程信息（可查看PID）</span><br><span class="line"></span><br><span class="line">taskkill  结束指定的进程</span><br></pre></td></tr></table></figure>
-<p>网络</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ping  // 用于检测网络是否通畅，以及网络时延情况（工作在ICMP协议上）</span><br><span class="line"></span><br><span class="line">ipconfig /all  // 查看本地ip地址等详细信息</span><br></pre></td></tr></table></figure>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">学习笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/26/Win常用操作/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/02/27/Linux常用shell命令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Linux常用shell命令
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/02/14/Markdown基本语法/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Markdown基本语法的学习</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -379,8 +221,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
