@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Linux常用shell命令 | 归来仍是少年</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Shell学习笔记学习一下shell的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
+  <meta name="description" content="Linux学习笔记学习一下Linux的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
 <meta name="keywords" content="基础,笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux常用shell命令">
 <meta property="og:url" content="http://yoursite.com/2019/02/27/Linux常用shell命令/index.html">
 <meta property="og:site_name" content="归来仍是少年">
-<meta property="og:description" content="Shell学习笔记学习一下shell的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
+<meta property="og:description" content="Linux学习笔记学习一下Linux的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-27T06:34:48.519Z">
+<meta property="og:updated_time" content="2019-09-06T10:16:00.406Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux常用shell命令">
-<meta name="twitter:description" content="Shell学习笔记学习一下shell的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
+<meta name="twitter:description" content="Linux学习笔记学习一下Linux的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
   
     <link rel="alternative" href="/atom.xml" title="归来仍是少年" type="application/atom+xml">
   
@@ -170,20 +170,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Shell学习笔记"><a href="#Shell学习笔记" class="headerlink" title="Shell学习笔记"></a>Shell学习笔记</h1><p>学习一下shell的常用命令，才能更好的使用linux服务器。</p>
+        <h1 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h1><p>学习一下Linux的常用命令，才能更好的使用linux服务器。</p>
 <h2 id="Shell简介"><a href="#Shell简介" class="headerlink" title="Shell简介"></a>Shell简介</h2><p>Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。</p>
 <a id="more"></a>
 <p>shell有两种执行指令的方式，第一种方法是用户事先编写一个sh脚本文件，内含shell脚本，而后使用shell程序执行该脚本，这种方式，我们习惯称为shell编程。</p>
 <p>第二种形式，则是用户直接在shell界面上执行shell命令，由于shell界面的关系，大家都习惯一行行的书写，很少写出成套的程序来一起执行，所以也称命令行。</p>
-<h2 id="常用的shell命令"><a href="#常用的shell命令" class="headerlink" title="常用的shell命令"></a>常用的shell命令</h2><ul>
-<li><p>help//获取命令帮助</p>
-</li>
-<li><p>man//和help差不多，比较简略</p>
-</li>
-<li><p>pwd//显示当前目录</p>
-</li>
-<li><p>cd//切换当前目录到指定目录</p>
-<ul>
+<h2 id="常用的Linux命令"><a href="#常用的Linux命令" class="headerlink" title="常用的Linux命令"></a>常用的Linux命令</h2><ul>
+<li>help//获取命令帮助</li>
+<li>man//和help差不多，比较简略</li>
+<li>pwd//显示当前目录</li>
+<li>cd//切换当前目录到指定目录<ul>
 <li>cd dir　切换到当前目录下的dir目录</li>
 <li>cd /　切换到根目录</li>
 <li>cd ..　切换到到上一级目录</li>
@@ -191,13 +187,11 @@
 <li>cd ~　切换到用户目录，比如是root用户，则切换到/root下</li>
 </ul>
 </li>
-<li><p>ls//列出对应目录清单</p>
-<ul>
+<li>ls//列出对应目录清单<ul>
 <li>ll  /  ls -l    //-l:除文件名外，打印包括文件权限，大小等详细信息</li>
 </ul>
 </li>
-<li><p>find//查找文件</p>
-<ul>
+<li>find//查找文件<ul>
 <li>find /k8s -name ‘face*’ -type f //type:按类型查找文件d(目录)、f(普通文件)  //name 按文件名查找文件</li>
 </ul>
 </li>
@@ -214,6 +208,14 @@
 <li>rm//删除目录中的文件或目录</li>
 <li>mv//移动或更改文件名，常用来备份文件或目录</li>
 <li>cp//复制文件或目录</li>
+<li>sz rz//下载、上传</li>
+<li>wget//下载</li>
+<li>tar//解压</li>
+<li>vim//文本编辑器</li>
+<li>lsof -i//查看进程   [:端口号]查看端口占用</li>
+<li>netstat -tunlp  //netstat -tunlp|grep 端口号  //查看进程</li>
+<li>kill -9 进程id  //杀掉进程</li>
+<li>nohup java -jar xx.jar  //部署</li>
 </ul>
 <p>还有很多常用的命令，用到了在学……</p>
 
@@ -382,7 +384,7 @@
     	</div>
       	<div class="footer-right">
       	<!--	<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
-		2019-08-23
+		2019-09-06
       	</div>
     </div>
   </div>
@@ -470,11 +472,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">心得</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心得</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
             
             <div class="clearfix"></div>
