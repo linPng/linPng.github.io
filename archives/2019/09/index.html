@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Linux常用shell命令 | 归来仍是少年</title>
+  <title>Archives: 2019/9 | 归来仍是少年</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux学习笔记学习一下Linux的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
-<meta name="keywords" content="基础,笔记">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Linux常用shell命令">
-<meta property="og:url" content="http://yoursite.com/2019/02/27/Linux常用shell命令/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="归来仍是少年">
+<meta property="og:url" content="http://yoursite.com/archives/2019/09/index.html">
 <meta property="og:site_name" content="归来仍是少年">
-<meta property="og:description" content="Linux学习笔记学习一下Linux的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-06T10:16:00.406Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux常用shell命令">
-<meta name="twitter:description" content="Linux学习笔记学习一下Linux的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
+<meta name="twitter:title" content="归来仍是少年">
   
     <link rel="alternative" href="/atom.xml" title="归来仍是少年" type="application/atom+xml">
   
@@ -150,103 +145,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Linux常用shell命令" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      Linux常用shell命令
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/09/04/vue-element-admin-master/" class="archive-article-date">
+  	<time datetime="2019-09-04T05:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/09/04/vue-element-admin-master/">vue-element-admin的学习</a>
     </h1>
   
 
-        
-        <a href="/2019/02/27/Linux常用shell命令/" class="archive-article-date">
-  	<time datetime="2019-02-27T06:07:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h1><p>学习一下Linux的常用命令，才能更好的使用linux服务器。</p>
-<h2 id="Shell简介"><a href="#Shell简介" class="headerlink" title="Shell简介"></a>Shell简介</h2><p>Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。</p>
-<a id="more"></a>
-<p>shell有两种执行指令的方式，第一种方法是用户事先编写一个sh脚本文件，内含shell脚本，而后使用shell程序执行该脚本，这种方式，我们习惯称为shell编程。</p>
-<p>第二种形式，则是用户直接在shell界面上执行shell命令，由于shell界面的关系，大家都习惯一行行的书写，很少写出成套的程序来一起执行，所以也称命令行。</p>
-<h2 id="常用的Linux命令"><a href="#常用的Linux命令" class="headerlink" title="常用的Linux命令"></a>常用的Linux命令</h2><ul>
-<li>help//获取命令帮助</li>
-<li>man//和help差不多，比较简略</li>
-<li>pwd//显示当前目录</li>
-<li>cd//切换当前目录到指定目录<ul>
-<li>cd dir　切换到当前目录下的dir目录</li>
-<li>cd /　切换到根目录</li>
-<li>cd ..　切换到到上一级目录</li>
-<li>cd ../..　切换到上二级目录</li>
-<li>cd ~　切换到用户目录，比如是root用户，则切换到/root下</li>
-</ul>
-</li>
-<li>ls//列出对应目录清单<ul>
-<li>ll  /  ls -l    //-l:除文件名外，打印包括文件权限，大小等详细信息</li>
-</ul>
-</li>
-<li>find//查找文件<ul>
-<li>find /k8s -name ‘face*’ -type f //type:按类型查找文件d(目录)、f(普通文件)  //name 按文件名查找文件</li>
-</ul>
-</li>
-<li>grep//一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来<ul>
-<li>grep ‘关键词’ catalina.2019-05-16.out –color -b2 -a3 -n  //color:标色、A/B:显示前/后、C显示前后=A+B、n:显示行号</li>
-</ul>
-</li>
-<li>head//显示文件的开头，默认为前10行</li>
-<li>tail//显示文件末尾内容<ul>
-<li>tail  catalina.2019-05-16.out -n 1 -f //-f:实时查看  -n 1 显示1行</li>
-</ul>
-</li>
-<li>mkdir//创建目录名</li>
-<li>rm//删除目录中的文件或目录</li>
-<li>mv//移动或更改文件名，常用来备份文件或目录</li>
-<li>cp//复制文件或目录</li>
-<li>sz rz//下载、上传</li>
-<li>wget//下载</li>
-<li>tar//解压</li>
-<li>vim//文本编辑器</li>
-<li>lsof -i//查看进程   [:端口号]查看端口占用</li>
-<li>netstat -tunlp  //netstat -tunlp|grep 端口号  //查看进程</li>
-<li>kill -9 进程id  //杀掉进程</li>
-<li>nohup java -jar xx.jar  //部署</li>
-</ul>
-<p>还有很多常用的命令，用到了在学……</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -254,123 +182,61 @@
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基础</a>
         		</li>
-      		 
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/09/04/MySql/" class="archive-article-date">
+  	<time datetime="2019-09-04T05:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/09/04/MySql/">MYSQL的学习</a>
+    </h1>
+  
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基础</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/27/Linux常用shell命令/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/03/24/MyBatis/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/02/26/Win常用操作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Windows常用命令的学习笔记</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -394,8 +260,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

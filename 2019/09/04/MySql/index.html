@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Linux常用shell命令 | 归来仍是少年</title>
+  <title>MYSQL的学习 | 归来仍是少年</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux学习笔记学习一下Linux的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
-<meta name="keywords" content="基础,笔记">
+  <meta name="description" content="MYSQL的学习MySQL是一个关系型数据库管理系统。本文主要是记录mysql在Linux上的安装和开放远程连接。  安装先下载，或者直接使用yum命令安装。 安装： 1234wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpmrpm -ivh mysql-community-release-el7-5.noarch">
+<meta name="keywords" content="基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux常用shell命令">
-<meta property="og:url" content="http://yoursite.com/2019/02/27/Linux常用shell命令/index.html">
+<meta property="og:title" content="MYSQL的学习">
+<meta property="og:url" content="http://yoursite.com/2019/09/04/MySql/index.html">
 <meta property="og:site_name" content="归来仍是少年">
-<meta property="og:description" content="Linux学习笔记学习一下Linux的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
+<meta property="og:description" content="MYSQL的学习MySQL是一个关系型数据库管理系统。本文主要是记录mysql在Linux上的安装和开放远程连接。  安装先下载，或者直接使用yum命令安装。 安装： 1234wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpmrpm -ivh mysql-community-release-el7-5.noarch">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-06T10:16:00.406Z">
+<meta property="og:image" content="http://49.235.153.134:8888/group1/M00/00/00/rBEADl3BKSiASJPVAAAU7g2CmO0038.jpg">
+<meta property="og:image" content="http://49.235.153.134:8888/group1/M00/00/00/rBEADl3BKaqACOFbAAAOgvJtZ84231.jpg">
+<meta property="og:updated_time" content="2019-11-05T08:51:58.433Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux常用shell命令">
-<meta name="twitter:description" content="Linux学习笔记学习一下Linux的常用命令，才能更好的使用linux服务器。 Shell简介Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。">
+<meta name="twitter:title" content="MYSQL的学习">
+<meta name="twitter:description" content="MYSQL的学习MySQL是一个关系型数据库管理系统。本文主要是记录mysql在Linux上的安装和开放远程连接。  安装先下载，或者直接使用yum命令安装。 安装： 1234wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpmrpm -ivh mysql-community-release-el7-5.noarch">
+<meta name="twitter:image" content="http://49.235.153.134:8888/group1/M00/00/00/rBEADl3BKSiASJPVAAAU7g2CmO0038.jpg">
   
     <link rel="alternative" href="/atom.xml" title="归来仍是少年" type="application/atom+xml">
   
@@ -150,74 +153,53 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Linux常用shell命令" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MySql" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Linux常用shell命令
+      MYSQL的学习
     </h1>
   
 
         
-        <a href="/2019/02/27/Linux常用shell命令/" class="archive-article-date">
-  	<time datetime="2019-02-27T06:07:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-02-27</time>
+        <a href="/2019/09/04/MySql/" class="archive-article-date">
+  	<time datetime="2019-09-04T05:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h1><p>学习一下Linux的常用命令，才能更好的使用linux服务器。</p>
-<h2 id="Shell简介"><a href="#Shell简介" class="headerlink" title="Shell简介"></a>Shell简介</h2><p>Shell 是一种命令语言，又是一种程序设计语言。Linux系统的shell作为操作系统的外壳，为用户提供使用操作系统的接口。</p>
-<a id="more"></a>
-<p>shell有两种执行指令的方式，第一种方法是用户事先编写一个sh脚本文件，内含shell脚本，而后使用shell程序执行该脚本，这种方式，我们习惯称为shell编程。</p>
-<p>第二种形式，则是用户直接在shell界面上执行shell命令，由于shell界面的关系，大家都习惯一行行的书写，很少写出成套的程序来一起执行，所以也称命令行。</p>
-<h2 id="常用的Linux命令"><a href="#常用的Linux命令" class="headerlink" title="常用的Linux命令"></a>常用的Linux命令</h2><ul>
-<li>help//获取命令帮助</li>
-<li>man//和help差不多，比较简略</li>
-<li>pwd//显示当前目录</li>
-<li>cd//切换当前目录到指定目录<ul>
-<li>cd dir　切换到当前目录下的dir目录</li>
-<li>cd /　切换到根目录</li>
-<li>cd ..　切换到到上一级目录</li>
-<li>cd ../..　切换到上二级目录</li>
-<li>cd ~　切换到用户目录，比如是root用户，则切换到/root下</li>
-</ul>
-</li>
-<li>ls//列出对应目录清单<ul>
-<li>ll  /  ls -l    //-l:除文件名外，打印包括文件权限，大小等详细信息</li>
-</ul>
-</li>
-<li>find//查找文件<ul>
-<li>find /k8s -name ‘face*’ -type f //type:按类型查找文件d(目录)、f(普通文件)  //name 按文件名查找文件</li>
-</ul>
-</li>
-<li>grep//一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来<ul>
-<li>grep ‘关键词’ catalina.2019-05-16.out –color -b2 -a3 -n  //color:标色、A/B:显示前/后、C显示前后=A+B、n:显示行号</li>
-</ul>
-</li>
-<li>head//显示文件的开头，默认为前10行</li>
-<li>tail//显示文件末尾内容<ul>
-<li>tail  catalina.2019-05-16.out -n 1 -f //-f:实时查看  -n 1 显示1行</li>
-</ul>
-</li>
-<li>mkdir//创建目录名</li>
-<li>rm//删除目录中的文件或目录</li>
-<li>mv//移动或更改文件名，常用来备份文件或目录</li>
-<li>cp//复制文件或目录</li>
-<li>sz rz//下载、上传</li>
-<li>wget//下载</li>
-<li>tar//解压</li>
-<li>vim//文本编辑器</li>
-<li>lsof -i//查看进程   [:端口号]查看端口占用</li>
-<li>netstat -tunlp  //netstat -tunlp|grep 端口号  //查看进程</li>
-<li>kill -9 进程id  //杀掉进程</li>
-<li>nohup java -jar xx.jar  //部署</li>
-</ul>
-<p>还有很多常用的命令，用到了在学……</p>
+        <h1 id="MYSQL的学习"><a href="#MYSQL的学习" class="headerlink" title="MYSQL的学习"></a>MYSQL的学习</h1><p><a href="https://www.mysql.com/" target="_blank" rel="noopener">MySQL</a>是一个关系型数据库管理系统。本文主要是记录mysql在Linux上的安装和开放远程连接。</p>
+<!-- MOER -->
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>先<a href="https://dev.mysql.com/downloads/mysql/" target="_blank" rel="noopener">下载</a>，或者直接<a href="https://www.runoob.com/mysql/mysql-install.html" target="_blank" rel="noopener">使用</a>yum命令安装。</p>
+<p>安装：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">rpm -ivh mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">yum update</span><br><span class="line">yum install mysql-server</span><br></pre></td></tr></table></figure>
+<p>修改端口：修改/etc/my.cnf  ：port=13306（默认3306）</p>
+<p>权限设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown mysql:mysql -R /var/lib/mysql</span><br></pre></td></tr></table></figure>
+<p>初始化 MySQL：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize</span><br></pre></td></tr></table></figure>
+<p>启动 MySQL：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure>
+<p>连接MySQL：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p    //连接</span><br></pre></td></tr></table></figure>
+<p>重启mysql：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/mysqld restart</span><br><span class="line">或 service mysqld restart</span><br></pre></td></tr></table></figure>
+<h3 id="远程连接权限"><a href="#远程连接权限" class="headerlink" title="远程连接权限"></a>远程连接权限</h3><p>先把防火墙的3306端口开放（为了保证数据安全，一般只允许本地或者内网访问MySQL）</p>
+<p><code>firewall-cmd --zone=public --add-port=3306/tcp --permanent</code></p>
+<p>授权MySQL远程连接</p>
+<p><code>grant all privileges on *.* to &#39;username&#39;@&#39;%&#39;identified by &#39;password&#39; with grant option;</code></p>
+<p><code>flush privileges;</code></p>
+<p>其中username是登入名，password是密码。</p>
+<p>取消权限</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># mysql -u root -p</span></span><br><span class="line"><span class="meta">#  use mysql;</span></span><br><span class="line"><span class="meta"># select host,user from user;</span></span><br><span class="line"> <span class="comment">//修改root用户的host属性，确保其为localhost，这表示只能本地访问（%表示可以远程访问）；</span></span><br><span class="line"><span class="meta"># update user set host = <span class="meta-string">"localhost"</span> where user = <span class="meta-string">"root"</span> and host = <span class="meta-string">"%"</span>;</span></span><br><span class="line"><span class="meta"># UPDATE user SET Host='%' WHERE User='root' AND Host='localhost' LIMIT 1;</span></span><br><span class="line">  <span class="comment">//刷新</span></span><br><span class="line"><span class="meta"># flush privileges;</span></span><br></pre></td></tr></table></figure>
+<p>如果开放了端口和远程连接，很容易遇到下面这种情况：</p>
+<p><img src="http://49.235.153.134:8888/group1/M00/00/00/rBEADl3BKSiASJPVAAAU7g2CmO0038.jpg" alt="aaa_read_this_now"></p>
+<p><img src="http://49.235.153.134:8888/group1/M00/00/00/rBEADl3BKaqACOFbAAAOgvJtZ84231.jpg" alt="please_read_me_vvv"></p>
 
       
 
@@ -253,10 +235,6 @@
 			 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基础</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
         		</li>
       		
 		</ul>
@@ -312,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/02/27/Linux常用shell命令/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/04/MySql/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -326,18 +304,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/24/MyBatis/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/09/04/vue-element-admin-master/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          (no title)
+          vue-element-admin的学习
         
       </div>
     </a>
   
   
-    <a href="/2019/02/26/Win常用操作/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Windows常用命令的学习笔记</div>
+    <a href="/2019/08/03/fastDFS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">fastDFS的学习</div>
       <i class="icon-circle-right"></i>
     </a>
   
