@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="归来仍是少年">
 <meta property="og:description" content="Nginx的学习简介Nginx(“engine x”)是一款是由俄罗斯的程序设计师Igor Sysoev所开发高性能的 Web和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 代理服务器。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-18T10:27:54.600Z">
+<meta property="og:updated_time" content="2019-11-06T08:39:30.642Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="nginx">
 <meta name="twitter:description" content="Nginx的学习简介Nginx(“engine x”)是一款是由俄罗斯的程序设计师Igor Sysoev所开发高性能的 Web和 反向代理 服务器，也是一个 IMAP/POP3/SMTP 代理服务器。">
@@ -54,7 +54,7 @@
 			<img src="/img/2.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">linPng</a></h1>
+		  <h1 class="header-author"><a href="/">linPeng</a></h1>
 		  <h6 class="header-author">学习使我快乐！</h6>
 		</hgroup>
 		
@@ -110,7 +110,7 @@
 				<img src="/img/2.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">linPng</h1>
+			  <h1 class="header-author js-header-author">linPeng</h1>
 			</hgroup>
 			
 			
@@ -184,6 +184,11 @@
 <p>/usr/nginx/sbin/nginx -V      //版本信息 和 模块</p>
 <p>cd /usr/nginx/sbin</p>
 <p>./nginx   //启动</p>
+<h3 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h3><p>报错：</p>
+<p>the HTTP rewrite module requires the PCRE library.<br>You can either disable the module by using –without-http_rewrite_module<br>option, or install the PCRE library into the system, or build the PCRE library<br>statically from the source with nginx by using –with-pcre=<path> option.</path></p>
+<p>make: *** No rule to make target <code>build&#39;, needed by</code>default’.  Stop.</p>
+<p>解决：根据报错或者查看安装环境，缺少了就安装；</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>gcc -v        //yum install gcc</span><br><span class="line"><span class="meta">#</span>rpm -qa pcre  //yum install pcre pcre-devel</span><br><span class="line"><span class="meta">#</span>yum list |grep zlib*  //yum install zlib zlib-devel</span><br><span class="line"><span class="meta">#</span>openssl version    //yum install openssl openssl-devel</span><br><span class="line"></span><br><span class="line">yum -y install pcre-devel    #the HTTP rewrite module requires the PCRE library.</span><br><span class="line">yum install openssl openssl-devel #./configure: error: SSL modules require the OpenSSL library.</span><br></pre></td></tr></table></figure>
 <h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>/usr/nginx/sbin/nginx -s reload            # 重新载入配置文件</p>
 <p>/usr/nginx/sbin/nginx -s reopen            # 重启 Nginx</p>
 <p>/usr/nginx/sbin/nginx -s stop              # 停止 Nginx</p>
@@ -352,11 +357,11 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 linPng
+    		&copy; 2020 linPeng
     	</div>
       	<div class="footer-right">
       	<!--	<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
-		2019-11-06
+		2020-06-12
       	</div>
     </div>
   </div>
@@ -440,15 +445,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心得</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
             
             <div class="clearfix"></div>

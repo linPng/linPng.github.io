@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>归来仍是少年</title>
+  <title>Linux的开发环境搭建 | 归来仍是少年</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="的学习简介">
+  <meta name="description" content="Linux开发环境[TOC]">
 <meta name="keywords" content="基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="归来仍是少年">
-<meta property="og:url" content="http://yoursite.com/2019/03/24/MyBatis/index.html">
+<meta property="og:title" content="Linux的开发环境搭建">
+<meta property="og:url" content="http://yoursite.com/2020/06/07/Linux软件安装/index.html">
 <meta property="og:site_name" content="归来仍是少年">
-<meta property="og:description" content="的学习简介">
+<meta property="og:description" content="Linux开发环境[TOC]">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-05-23T07:50:45.643Z">
+<meta property="og:updated_time" content="2020-06-12T09:07:22.532Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="归来仍是少年">
-<meta name="twitter:description" content="的学习简介">
+<meta name="twitter:title" content="Linux的开发环境搭建">
+<meta name="twitter:description" content="Linux开发环境[TOC]">
   
     <link rel="alternative" href="/atom.xml" title="归来仍是少年" type="application/atom+xml">
   
@@ -54,7 +54,7 @@
 			<img src="/img/2.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">linPng</a></h1>
+		  <h1 class="header-author"><a href="/">linPeng</a></h1>
 		  <h6 class="header-author">学习使我快乐！</h6>
 		</hgroup>
 		
@@ -110,7 +110,7 @@
 				<img src="/img/2.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">linPng</h1>
+			  <h1 class="header-author js-header-author">linPeng</h1>
 			</hgroup>
 			
 			
@@ -150,12 +150,142 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MyBatis" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Linux软件安装" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Linux的开发环境搭建
+    </h1>
+  
+
+        
+        <a href="/2020/06/07/Linux软件安装/" class="archive-article-date">
+  	<time datetime="2020-06-07T05:46:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-07</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="的学习"><a href="#的学习" class="headerlink" title="的学习"></a>的学习</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2>
+        <h1 id="Linux开发环境"><a href="#Linux开发环境" class="headerlink" title="Linux开发环境"></a>Linux开发环境</h1><p>[TOC]</p>
+<a id="more"></a>
+<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><p><code>yum install -y java-1.8.0-openjdk*</code></p>
+<p>如果<code>java -version</code>显示的是openjdk，说明安装的openjdk。</p>
+<p>或者安装Oracle JDK，下载<a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank" rel="noopener">安装包</a>，手动安装。</p>
+<p><code>rpm -qa | grep java</code>查看当前版本</p>
+<p><code>yum -y remove java-1.8.0-openjdk*</code>先卸载</p>
+<p>开始安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ </span><br><span class="line">mkdir java </span><br><span class="line">cd java</span><br><span class="line">tar -zxvf /root/jdk-8u251-linux-i586.tar.gz -C ./  </span><br><span class="line"><span class="meta">#</span>jdk-8u251-linux-i586.tar.gz就是刚才下载的安装包</span><br></pre></td></tr></table></figure>
+<p>解压完之后， /usr/local/java ⽬录中会出现⼀个 jdk1.8.0_161 的⽬录</p>
+<p>配置JDK环境变量 </p>
+<p>编辑 /etc/profile ⽂件，在⽂件尾部加⼊如下 JDK 环境配置即可</p>
+<figure class="highlight profile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/usr/local/java/jdk1.8.0_161 </span><br><span class="line">CLASSPATH=$JAVA_HOME/lib/ </span><br><span class="line">PATH=$PATH:$JAVA_HOME/bin </span><br><span class="line">export PATH JAVA_HOME CLASSPATH</span><br></pre></td></tr></table></figure>
+<p>然后执⾏如下命令让环境变量⽣效</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<h2 id="NODE"><a href="#NODE" class="headerlink" title="NODE"></a>NODE</h2><p>下载<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">安装包</a>：node-v12.18.0-linux-x64.tar.xz，放在root目录下。</p>
+<p>开始安装 <a href="https://github.com/nodejs/help/wiki/Installation" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ </span><br><span class="line">mkdir node</span><br><span class="line">cd node</span><br><span class="line">tar -xJvf /root/node-v12.18.0-linux-x64.tar.xz -C ./</span><br></pre></td></tr></table></figure>
+<p>配置环境变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bash_profile</span><br><span class="line"><span class="meta">#</span>Centos7系统命名为.bash_profile，其他系统可能是.bash_login或.profile,只对当前用户有效.</span><br></pre></td></tr></table></figure>
+<figure class="highlight profile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#PATH拼上node的bin路径</span><br><span class="line">PATH=/usr/local/node/node-v12.18.0-linux-x64/bin:$PATH</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><p>下载<a href="https://www.python.org/downloads/source/" target="_blank" rel="noopener">安装包</a>：Python-3.8.3.tgz，放在root目录下。</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ </span><br><span class="line">mkdir python3 </span><br><span class="line">cd python3</span><br><span class="line">tar -zxvf /root/Python-3.8.3.tgz -C ./</span><br></pre></td></tr></table></figure>
+<p>编译安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.8.3/</span><br><span class="line">./configure prefix=/usr/local/python3/    #</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>添加软链接 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/python3 /usr/bin/python3</span><br><span class="line">ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+<h2 id="MAVEN"><a href="#MAVEN" class="headerlink" title="MAVEN"></a>MAVEN</h2><p>下载<a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">安装包</a>：apache-maven-3.6.3-bin.tar.gz，放在root目录下。</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ </span><br><span class="line">mkdir maven </span><br><span class="line">cd maven</span><br><span class="line">tar -zxvf /root/apache-maven-3.6.3-bin.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<p>配置MAVEN加速镜像</p>
+<p>编辑修改 /usr/local/maven/apache-maven-3.6.3/conf/settings.xml </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--mirror要放在&lt;mirrors&gt;&lt;/mirrors&gt;标签内--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>配置环境变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export MAVEN_HOME=/usr/local/maven/apache-maven-3.6.3 </span><br><span class="line">export PATH=$MAVEN_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
+<p>刷新环境变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<p>查看版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -v</span><br></pre></td></tr></table></figure>
+<h2 id="MYSQL"><a href="#MYSQL" class="headerlink" title="MYSQL"></a>MYSQL</h2><p><a href="https://linpng.github.io/2019/09/04/MySql/" target="_blank" rel="noopener">参考前文</a></p>
+<h2 id="REDIS"><a href="#REDIS" class="headerlink" title="REDIS"></a>REDIS</h2><p>下载<a href="https://www.python.org/downloads/source/" target="_blank" rel="noopener">安装包</a>：redis-6.0.4.tar.gz，放在root目录下。</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir redis </span><br><span class="line">cd redis</span><br><span class="line">tar -zxvf /root/redis-6.0.4.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<p>编译安装 <a href="https://blog.csdn.net/YY_WG/article/details/106391337" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd redis-6.0.4/</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"><span class="meta">#</span>报错has no member named，gcc版本要高于5.3</span><br><span class="line"><span class="meta">#</span>gcc升级到9</span><br><span class="line">yum -y install centos-release-scl</span><br><span class="line">yum -y install devtoolset-9-gcc devtoolset-9-gcc-c++ devtoolset-9-binutils</span><br><span class="line">scl enable devtoolset-9 bash</span><br><span class="line">gcc -v</span><br></pre></td></tr></table></figure>
+<p>将 REDIS 安装为系统服务并后台启动 <a href="https://stackoverflow.com/questions/61694459/installing-redis-use-install-server-sh" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd utils/</span><br><span class="line">./install_server.sh</span><br><span class="line"><span class="meta">#</span>可配置端口,配置文件路径等参数</span><br><span class="line"><span class="meta">#</span>遇到This system seems to use systemd. 注释掉if [ "$&#123;_pid_1_exe##*/&#125;" = systemd ] 模块</span><br></pre></td></tr></table></figure>
+<p>启动⾃带的 redis-cli 客户端</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -p 16379</span><br><span class="line"><span class="meta">#</span>默认是6379，-h 指定ip -p 指定端口 -a 指定密码</span><br></pre></td></tr></table></figure>
+<p>设置允许远程连接并配置密码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/redis/redis-6.0.4/16379.conf  </span><br><span class="line"><span class="meta">#</span>这个路径是在./install_server.sh时候配置的</span><br><span class="line"><span class="meta">#</span>将 bind 127.0.0.1 修改为 0.0.0.0</span><br><span class="line"><span class="meta">#</span>将 #requirepass foobared改为requirepass 密码</span><br></pre></td></tr></table></figure>
+<p>重启服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart redis_16379.service</span><br></pre></td></tr></table></figure>
+<p>查看服务状态</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status redis_16379.service</span><br></pre></td></tr></table></figure>
+<h2 id="RABBITMQ"><a href="#RABBITMQ" class="headerlink" title="RABBITMQ"></a>RABBITMQ</h2><p>开发语言：Erlang</p>
+<p>所以要先安装<a href="https://www.rabbitmq.com/which-erlang.html" target="_blank" rel="noopener">对应版本</a>的<a href="https://www.erlang.org/" target="_blank" rel="noopener">Erlang</a>，下载<a href="https://www.erlang.org/downloads" target="_blank" rel="noopener">安装包</a>：otp_src_22.3.tar.gz，放在root下。</p>
+<p>ErLang解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir erlang </span><br><span class="line">cd erlang</span><br><span class="line">tar -zxvf /root/otp_src_21.3.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<p>ErLang安装依赖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc gcc-c++ unixODBC-devel openssl-devel ncurses-devel</span><br><span class="line">cd otp_src_21.3/</span><br><span class="line">./configure --prefix=/usr/local/erlang</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>配置Erlang环境变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"><span class="meta">#</span>PATH添加Erlang export PATH=$PATH:/usr/local/erlang/bin</span><br><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<p>验证erlang是否安装成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">erl</span><br><span class="line">ssl:versions().</span><br><span class="line">halt().</span><br></pre></td></tr></table></figure>
+<p>开始安装RabbitMQ，<a href="https://www.rabbitmq.com/install-rpm.html" target="_blank" rel="noopener">官方</a>推荐用yum存储库。</p>
+<p>一种快速的安装方法是使用<a href="https://packagecloud.io/rabbitmq/rabbitmq-server/install#bash-rpm" target="_blank" rel="noopener">Package Cloud提供的脚本</a>。Package Cloud也可以用于<a href="https://packagecloud.io/rabbitmq/erlang/install#bash-rpm" target="_blank" rel="noopener">通过yum安装最新的Erlang版本</a>。</p>
+<p>安装ErLang</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | sudo bash</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install erlang-23.0.2-1.el7.x86_64</span><br></pre></td></tr></table></figure>
+<p>安装rabbitmq</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm --import https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc</span><br><span class="line">yum install rabbitmq-server-3.8.4-1.el7.noarch</span><br></pre></td></tr></table></figure>
+<p>设置RABBITMQ开机启动 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig rabbitmq-server on</span><br></pre></td></tr></table></figure>
+<p>启动RABBITMQ服务 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start rabbitmq-server.service</span><br></pre></td></tr></table></figure>
+<p>开启WEB可视化管理插件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins enable rabbitmq_management</span><br><span class="line"><span class="meta">#</span>WEB地址为 服务器IP:15672</span><br></pre></td></tr></table></figure>
+<p>添加⽤户/密码对</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rabbitmqctl add_user USERNAME PASSWORD</span><br><span class="line">rabbitmqctl set_user_tags USERNAME administrator</span><br></pre></td></tr></table></figure>
+<h2 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h2><p><a href="https://linpng.github.io/2019/07/20/nginx/" target="_blank" rel="noopener">参考前文</a></p>
+<h2 id="FastDFS"><a href="#FastDFS" class="headerlink" title="FastDFS"></a>FastDFS</h2><p><a href="https://linpng.github.io/2019/08/03/fastDFS/" target="_blank" rel="noopener">参考前文</a></p>
+<h2 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h2><p><a href="https://linpng.github.io/2019/04/24/MongoDB/" target="_blank" rel="noopener">参考前文</a></p>
+<h2 id="DOCKER"><a href="#DOCKER" class="headerlink" title="DOCKER"></a>DOCKER</h2><p>安装DOCKER </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y docker</span><br></pre></td></tr></table></figure>
+<p>开启DOCKER服务 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker.service</span><br></pre></td></tr></table></figure>
+<p>查看安装结果 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure>
+<p>设置开机启动 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable docker.service</span><br></pre></td></tr></table></figure>
+<p>加速镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
+<p>添加 Docker中国区官方镜像、网易、ustc 的加速地址 </p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"registry-mirrors"</span>: [</span><br><span class="line">    <span class="string">"https://registry.docker-cn.com"</span>,</span><br><span class="line">    <span class="string">"http://hub-mirror.c.163.com"</span>,</span><br><span class="line">    <span class="string">"https://docker.mirrors.ustc.edu.cn"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker.service</span><br></pre></td></tr></table></figure>
+<h2 id="KUBERNETES"><a href="#KUBERNETES" class="headerlink" title="KUBERNETES"></a>KUBERNETES</h2><p><a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/" target="_blank" rel="noopener">官网</a>推荐使用kubeadm搭建集群，。</p>
+<ul>
+<li>一台或多台运行与deb / rpm兼容的Linux操作系统的计算机；例如：Ubuntu或CentOS。</li>
+<li>每台机器2 GB或更多的RAM-更少的空间为您的应用程序留出了很少的空间。</li>
+<li>用作控制平面节点的计算机上至少有2个CPU。</li>
+<li>群集中所有计算机之间的完全网络连接。您可以使用公共网络或专用网络。</li>
+</ul>
+<p>先要安装docker。</p>
+<p><a href="https://www.cnblogs.com/rainingnight/p/using-kubeadm-to-create-a-cluster.html#%E5%AE%89%E8%A3%85-kubeadm-kubelet-and-kubectl" target="_blank" rel="noopener">参考</a></p>
+<p>安装<a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/" target="_blank" rel="noopener">kubeadm</a>，kubelet和<a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux" target="_blank" rel="noopener">kubectl</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>/etc/yum.repos.d/kubernetes.repo  添加yum配置</span><br><span class="line">cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br><span class="line">repo_gpgcheck=1</span><br><span class="line">gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg</span><br><span class="line">exclude=kubelet kubeadm kubectl</span><br><span class="line">EOF</span><br><span class="line"><span class="meta">#</span>Kubernetes国内yum源</span><br><span class="line">cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br><span class="line">repo_gpgcheck=1</span><br><span class="line">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> Set SELinux in permissive mode (effectively disabling it)</span><br><span class="line"><span class="meta">#</span> 使用getenforce命令查看SELinux状态，setenforce 0关闭SELinux</span><br><span class="line">setenforce 0</span><br><span class="line"><span class="meta">#</span>sed 替换修改/etc/selinux/config</span><br><span class="line">sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config</span><br><span class="line"><span class="meta">#</span>安装kubelet kubeadm kubectl</span><br><span class="line">yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes</span><br><span class="line"><span class="meta">#</span>报错：Trying other mirror. 用aliyun的yum源</span><br><span class="line"></span><br><span class="line">systemctl enable --now kubelet</span><br></pre></td></tr></table></figure>
+<p>初始化master节点</p>
+<p><a href="https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init" target="_blank" rel="noopener">kubeadm init</a>引导Kubernetes控制平面节点  有关配置选项的完整列表，请参阅<a href="https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/#config-file" target="_blank" rel="noopener">配置文件文档</a>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kubeadm init --apiserver-advertise-address 47.106.236.137 --pod-network-cidr=192.168.0.0/16</span><br><span class="line"><span class="meta">#</span>kubeadm 使用 eth0 的默认网络接口（通常是内网IP）做为 Master 节点的 advertise address ，如果我们想使用不同的网络接口，可以使用 --apiserver-advertise-address=&lt;ip-address&gt; 参数来设置</span><br><span class="line"><span class="meta">#</span>pod-network-cidr: 指定pod网络的IP地址范围，它的值取决于你在下一步选择的哪个网络网络插件，比如我在本文中使用的是Calico网络，需要指定为192.168.0.0/16。</span><br></pre></td></tr></table></figure>
+<p>安装网络插件</p>
+<p>加入其他节点</p>
+<h2 id="ZOOKEEPER"><a href="#ZOOKEEPER" class="headerlink" title="ZOOKEEPER"></a>ZOOKEEPER</h2><h2 id="KAFKA"><a href="#KAFKA" class="headerlink" title="KAFKA"></a>KAFKA</h2><h2 id="ELASTICSEARCH"><a href="#ELASTICSEARCH" class="headerlink" title="ELASTICSEARCH"></a>ELASTICSEARCH</h2><h2 id="JENKINS"><a href="#JENKINS" class="headerlink" title="JENKINS"></a>JENKINS</h2><h2 id="ELK"><a href="#ELK" class="headerlink" title="ELK"></a>ELK</h2>
       
 
       
@@ -245,7 +375,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/03/24/MyBatis/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/07/Linux软件安装/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -259,18 +389,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/26/POJO与javabean的区别/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          POJO与javabean的区别
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/24/maven学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Maven学习笔记</div>
+    <a href="/2020/05/16/Docker/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Docker的学习</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -313,11 +434,11 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 linPng
+    		&copy; 2020 linPeng
     	</div>
       	<div class="footer-right">
       	<!--	<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
-		2019-11-06
+		2020-06-12
       	</div>
     </div>
   </div>
@@ -401,15 +522,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心得</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
             
             <div class="clearfix"></div>

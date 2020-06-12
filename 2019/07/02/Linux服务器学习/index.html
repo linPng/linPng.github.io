@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Linux的学习 | 归来仍是少年</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux服务器初始化lrzsz：yum -y install lrzsz">
+  <meta name="description" content="Linux服务器[TOC]">
 <meta name="keywords" content="基础">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux的学习">
 <meta property="og:url" content="http://yoursite.com/2019/07/02/Linux服务器学习/index.html">
 <meta property="og:site_name" content="归来仍是少年">
-<meta property="og:description" content="Linux服务器初始化lrzsz：yum -y install lrzsz">
+<meta property="og:description" content="Linux服务器[TOC]">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-05T10:48:42.414Z">
+<meta property="og:updated_time" content="2020-06-12T10:04:09.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux的学习">
-<meta name="twitter:description" content="Linux服务器初始化lrzsz：yum -y install lrzsz">
+<meta name="twitter:description" content="Linux服务器[TOC]">
   
     <link rel="alternative" href="/atom.xml" title="归来仍是少年" type="application/atom+xml">
   
@@ -54,7 +54,7 @@
 			<img src="/img/2.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">linPng</a></h1>
+		  <h1 class="header-author"><a href="/">linPeng</a></h1>
 		  <h6 class="header-author">学习使我快乐！</h6>
 		</hgroup>
 		
@@ -110,7 +110,7 @@
 				<img src="/img/2.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">linPng</h1>
+			  <h1 class="header-author js-header-author">linPeng</h1>
 			</hgroup>
 			
 			
@@ -170,19 +170,47 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Linux服务器"><a href="#Linux服务器" class="headerlink" title="Linux服务器"></a>Linux服务器</h1><h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><p><a href="https://www.ohse.de/uwe/software/lrzsz.html" target="_blank" rel="noopener">lrzsz</a>：yum -y install lrzsz</p>
+        <h1 id="Linux服务器"><a href="#Linux服务器" class="headerlink" title="Linux服务器"></a>Linux服务器</h1><p>[TOC]</p>
 <a id="more"></a>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><h4 id="修改hostname"><a href="#修改hostname" class="headerlink" title="修改hostname"></a>修改hostname</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl --static set-hostname  NewHostname</span><br></pre></td></tr></table></figure>
+<h4 id="基础软件安装"><a href="#基础软件安装" class="headerlink" title="基础软件安装"></a>基础软件安装</h4><p><a href="https://www.ohse.de/uwe/software/lrzsz.html" target="_blank" rel="noopener">lrzsz</a>：yum -y install lrzsz</p>
 <p><a href="https://www.cnblogs.com/imyalost/p/8715688.html" target="_blank" rel="noopener">Git</a>：安装：<code>yum install git</code>   <code>git --version</code>//<a href="https://github.com/git/git/archive/v2.23.0.tar.gz" target="_blank" rel="noopener">下载地址</a> <a href="https://www.cnblogs.com/salt-fish1/p/10207878.html" target="_blank" rel="noopener">遇到的错误</a></p>
-<p><a href="https://blog.csdn.net/github_38336924/article/details/82221258" target="_blank" rel="noopener">JDK</a>：yum install -y java-1.8.0-openjdk*</p>
 <p><a href="https://blog.csdn.net/qq_39231550/article/details/79858640" target="_blank" rel="noopener">telnet</a>：yum install -y telnet*</p>
 <p><a href="https://baike.baidu.com/item/lsof/339061?fr=aladdin" target="_blank" rel="noopener">lsof</a>：yum install lsof</p>
-<h3 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h3><p>CentOS 7 一般是firewalld</p>
-<h5 id="firewalld的常用命令"><a href="#firewalld的常用命令" class="headerlink" title="firewalld的常用命令"></a>firewalld的常用命令</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br><span class="line">systemctl status firewalld</span><br><span class="line">systemctl start firewalld</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl enable firewalld</span><br><span class="line">systemctl disable firewalld</span><br><span class="line">systemctl is-enabled firewalld    <span class="comment">//查看是否开机自启</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --permanent --add-rich-rule=<span class="string">"rule family="</span>ipv4<span class="string">" source address="</span><span class="number">49.235</span>.153.134<span class="string">" port protocol="</span>tcp<span class="string">" port="</span><span class="number">22122</span>-<span class="number">23000</span><span class="string">" accept"</span></span><br><span class="line">firewall-cmd --permanent --remove-rich-rule=<span class="string">"rule family="</span>ipv4<span class="string">" source address="</span><span class="number">49.235</span>.153.134<span class="string">" port protocol="</span>tcp<span class="string">" port="</span><span class="number">22122</span><span class="string">" accept"</span></span><br><span class="line">firewall-cmd --zone=<span class="keyword">public</span> --add-port=<span class="number">80</span>/tcp --permanent  <span class="comment">//开放端口</span></span><br><span class="line">firewall-cmd  --permanent --remove-port=<span class="number">80</span>/tcp <span class="comment">//关闭端口</span></span><br></pre></td></tr></table></figure>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>sh run.sh</p>
-<p><code>nohup &quot;java&quot; -jar spring-boot-service-1.0-SNAPSHOT.jar  &gt; /dev/null 2&gt;&amp;1 &amp;</code></p>
-<p>sh stop.sh</p>
-<p><code>kill -9 $(netstat -nlp | grep :8080 | awk &#39;{print $7}&#39; | awk -F&#39;/&#39; &#39;{ print $1 }&#39;)</code></p>
-<p>8050是进程号</p>
+<h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><p>CentOS 7 一般是firewalld</p>
+<h5 id="firewalld的常用命令"><a href="#firewalld的常用命令" class="headerlink" title="firewalld的常用命令"></a>firewalld的常用命令</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br><span class="line">systemctl status firewalld</span><br><span class="line">systemctl start firewalld</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl enable firewalld</span><br><span class="line">systemctl disable firewalld</span><br><span class="line">systemctl is-enabled firewalld    <span class="comment">//查看是否开机自启</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --permanent --add-rich-rule=<span class="string">"rule family="</span>ipv4<span class="string">" source address="</span>xx.xxx.xxx.xxx<span class="string">" port protocol="</span>tcp<span class="string">" port="</span><span class="number">1</span>-<span class="number">65535</span><span class="string">" accept"</span></span><br><span class="line">firewall-cmd --permanent --remove-rich-rule=<span class="string">"rule family="</span>ipv4<span class="string">" source address="</span>xx.xxx.xxx.xxx<span class="string">" port protocol="</span>tcp<span class="string">" port="</span><span class="number">22122</span><span class="string">" accept"</span></span><br><span class="line">firewall-cmd --zone=<span class="keyword">public</span> --add-port=<span class="number">80</span>/tcp --permanent  <span class="comment">//开放端口</span></span><br><span class="line">firewall-cmd  --permanent --remove-port=<span class="number">80</span>/tcp <span class="comment">//关闭端口</span></span><br></pre></td></tr></table></figure>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p><a href="https://www.runoob.com/linux/linux-command-manual.html" target="_blank" rel="noopener">参考</a></p>
+<p><code>help</code>//获取命令帮助</p>
+<p><code>sh/</code>/执行脚本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sh run.sh</span><br><span class="line">sh stop.sh</span><br></pre></td></tr></table></figure>
+<p><code>pwd</code>//显示当前目录</p>
+<p><code>cd/</code>//切换当前目录到指定目录</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd dir　#切换到当前目录下的dir目录</span><br><span class="line">cd /　#切换到根目录</span><br><span class="line">cd ..　#切换到到上一级目录</span><br><span class="line">cd ../..　#切换到上二级目录</span><br><span class="line">cd ~　#切换到用户目录，比如是root用户，则切换到/root下</span><br></pre></td></tr></table></figure>
+<p><code>ls</code>//列出对应目录清单</p>
+<ul>
+<li><p>ll  /  ls -l    //-l:除文件名外，打印包括文件权限，大小等详细信息</p>
+<p><code>grep</code> //命令用于查找文件里符合条件的字符串</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grep [-abcEFGhHilLnqrsvVwxy][-A&lt;显示列数&gt;][-B&lt;显示列数&gt;][-C&lt;显示列数&gt;][-d&lt;进行动作&gt;][-e&lt;范本样式&gt;][-f&lt;范本文件&gt;][--help][范本样式][文件或目录...]</span><br><span class="line">grep -C50 '内容' catalina.out</span><br></pre></td></tr></table></figure>
+<p><code>tail</code> //命令可用于查看文件的内容，有一个常用的参数 <code>-f</code> 常用于查阅正在改变的日志文件 <a href="https://www.runoob.com/linux/linux-comm-tail.html" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tail [参数] [文件]  </span><br><span class="line">tail -f catalina.out</span><br></pre></td></tr></table></figure>
+<p><code>mkdir</code>//创建目录名</p>
+<p><code>rm</code>//删除目录中的文件或目录</p>
+<p><code>mv</code>//移动或更改文件名，常用来备份文件或目录</p>
+<p><code>cp</code>//复制文件或目录</p>
+<p><code>sz</code> <code>rz</code>//下载、上传</p>
+<p><code>wget</code>//下载</p>
+<p><code>tar</code>//解压</p>
+<p><code>vim</code>//文本编辑器</p>
+<p><code>lsof -i</code>//查看进程   [:端口号]查看端口占用</p>
+<p><code>netstat -tunlp</code>  //netstat -tunlp|grep 端口号  //查看进程</p>
+<p><code>kill -9 进程id</code>  //杀掉进程</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -9 $(netstat -nlp | grep :8080 | awk '&#123;print $7&#125;' | awk -F'/' '&#123; print $1 &#125;')</span><br></pre></td></tr></table></figure>
+<p><code>nohup java -jar xx.jar</code>  //部署</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup "java" -jar spring-boot-service-1.0-SNAPSHOT.jar  &gt; /dev/null 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+<p><code>find</code>//查找文件 <a href="https://www.runoob.com/linux/linux-comm-find.html" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">find . -name "*.c" #将目前目录及其子目录下所有延伸档名是 c 的文件列出来。</span><br><span class="line">find . -type f #将目前目录其其下子目录中所有一般文件列出</span><br><span class="line">find . -ctime -20 #将目前目录及其子目录下所有最近 20 天内更新过的文件列出</span><br><span class="line">find /var/log -type f -mtime +7 -ok rm &#123;&#125; \;#查找/var/log目录中更改时间在7日以前的普通文件，并在删除之前询问它们</span><br><span class="line">find . -type f -perm 644 -exec ls -l &#123;&#125; \;#查找前目录中文件属主具有读、写权限，并且文件所属组的用户和其他用户具有读权限的文件</span><br><span class="line">find / -type f -size 0 -exec ls -l &#123;&#125; \;#为了查找系统中所有文件长度为0的普通文件，并列出它们的完整路径</span><br></pre></td></tr></table></figure>
 
       
 
@@ -341,11 +369,11 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 linPng
+    		&copy; 2020 linPeng
     	</div>
       	<div class="footer-right">
       	<!--	<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
-		2019-11-06
+		2020-06-12
       	</div>
     </div>
   </div>
@@ -429,15 +457,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心得</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
             
             <div class="clearfix"></div>

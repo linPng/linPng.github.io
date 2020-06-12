@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="归来仍是少年">
 <meta property="og:description" content="fastDFS的学习简介FastDFS是一个开源的轻量级分布式文件系统。参考资料1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-05T08:52:03.676Z">
+<meta property="og:updated_time" content="2019-11-06T08:39:36.034Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="fastDFS的学习">
 <meta name="twitter:description" content="fastDFS的学习简介FastDFS是一个开源的轻量级分布式文件系统。参考资料1">
@@ -54,7 +54,7 @@
 			<img src="/img/2.png" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">linPng</a></h1>
+		  <h1 class="header-author"><a href="/">linPeng</a></h1>
 		  <h6 class="header-author">学习使我快乐！</h6>
 		</hgroup>
 		
@@ -110,7 +110,7 @@
 				<img src="/img/2.png" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">linPng</h1>
+			  <h1 class="header-author js-header-author">linPeng</h1>
 			</hgroup>
 			
 			
@@ -191,20 +191,23 @@
 <p>//修改配置base_path=/home/yuqing/FastDFS-&gt;base_path=/home/FastDFS</p>
 <p>mkdir /home/FastDFS      //如果目录不存在</p>
 <p>/usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf restart   //启动</p>
-<p>vim /etc/rc.d/rc.local    //末行加上restart</p>
+<p>vim /etc/rc.d/rc.local    //末行加上 /usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf restart</p>
 <h5 id="安装storage服务"><a href="#安装storage服务" class="headerlink" title="安装storage服务"></a>安装storage服务</h5><p>vim /etc/fdfs/storage.conf</p>
 <p>修改了以下内容：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">base_path=/home/FastDFS</span><br><span class="line"></span><br><span class="line">store_path0=/home/image</span><br><span class="line"></span><br><span class="line">tracker_server=49.235.153.134:22122</span><br></pre></td></tr></table></figure>
 <p>/usr/bin/fdfs_storaged /etc/fdfs/storage.conf restart //启动</p>
-<p>vim /etc/rc.d/rc.local //末行加上restart</p>
+<p>vim /etc/rc.d/rc.local //末行加上/usr/bin/fdfs_storaged /etc/fdfs/storage.conf restart</p>
 <h5 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h5><p>/usr/bin/fdfs_test /etc/fdfs/client.conf upload /home/test/test.jpg</p>
 <p>报错：</p>
 <p>ERROR - file: ../client/client_func.c, line: 257, “/home/yuqing/fastdfs” can’t be accessed, error info: No such file or directory</p>
 <p>修改：</p>
 <p>vim /etc/fdfs/client.conf</p>
+<p>报错：</p>
+<p>ERROR - file: tracker_proto.c, line: 49, server: 172.18.224.114:22122, response status 2 != 0<br>ERROR - file: ../client/tracker_client.c, line: 1077, fdfs_recv_response fail, result: 2<br>ERROR - file: tracker_proto.c, line: 49, server: 172.18.224.114:22122, response status 2 != 0<br>ERROR - file: ../client/tracker_client.c, line: 899, fdfs_recv_response fail, result: 2<br>tracker_query_storage fail, error no: 2, error info: No such file or directory</p>
+<p>修改：vim /etc/fdfs/tracker.conf       配置allow_hosts</p>
 <p>结果</p>
 <p>example file url: <a href="http://49.235.153.134/group1/M00/00/00/rBEADl1uK92AMU4kABB9d1VCjF8914.jpg" target="_blank" rel="noopener">http://49.235.153.134/group1/M00/00/00/rBEADl1uK92AMU4kABB9d1VCjF8914.jpg</a></p>
-<h3 id="FastDFS-和nginx整合"><a href="#FastDFS-和nginx整合" class="headerlink" title="FastDFS 和nginx整合"></a>FastDFS 和nginx整合</h3><p>在Storage上安装nginx，需<a href="https://blog.csdn.net/wo18237095579/article/details/84307252" target="_blank" rel="noopener">添加 FastDFS 模块</a>。</p>
+<h3 id="FastDFS-和nginx整合"><a href="#FastDFS-和nginx整合" class="headerlink" title="FastDFS 和nginx整合"></a>FastDFS 和nginx整合</h3><p>在Storage上<a href="https://linpng.github.io/2019/07/20/nginx/" target="_blank" rel="noopener">安装nginx</a>，或给Nginx<a href="https://blog.csdn.net/wo18237095579/article/details/84307252" target="_blank" rel="noopener">添加 FastDFS 模块</a>。</p>
 <p>cd /usr/fastDFS/fastdfs-nginx-module/src/</p>
 <p>vim config  //去掉其中的/local</p>
 <p>cp mod_fastdfs.conf /etc/fdfs/</p>
@@ -213,7 +216,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">base_path=/home/FastDFS</span><br><span class="line"></span><br><span class="line">tracker_server=49.235.153.134:22122</span><br><span class="line"></span><br><span class="line">url_have_group_name=true             #url中包含group名称</span><br><span class="line"></span><br><span class="line">store_path0=/home/image   #指定文件存储路径</span><br></pre></td></tr></table></figure>
 <p>cp /usr/lib64/libfdfsclient.so /usr/lib/    //可能已存在</p>
 <p>mkdir -p /var/temp/nginx/client  //创建nginx/client目录</p>
-<h5 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h5><p>./configure –prefix=/usr/local/webserver/nginx –with-http_stub_status_module –with-http_ssl_module –prefix=/usr/local/nginx –pid-path=/var/run/nginx/nginx.pid –lock-path=/var/lock/nginx.lock –error-log-path=/var/log/nginx/error.log –http-log-path=/var/log/nginx/access.log –with-http_gzip_static_module –http-client-body-temp-path=/var/temp/nginx/client –http-proxy-temp-path=/var/temp/nginx/proxy –http-fastcgi-temp-path=/var/temp/nginx/fastcgi –http-uwsgi-temp-path=/var/temp/nginx/uwsgi –http-scgi-temp-path=/var/temp/nginx/scgi –add-module=/usr/fastDFS/fastdfs-nginx-module/src</p>
+<h5 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h5><p>./configure –prefix=/usr/nginx –with-http_stub_status_module –with-http_ssl_module  –pid-path=/var/run/nginx/nginx.pid –lock-path=/var/lock/nginx.lock –error-log-path=/var/log/nginx/error.log –http-log-path=/var/log/nginx/access.log –with-http_gzip_static_module –http-client-body-temp-path=/var/temp/nginx/client –http-proxy-temp-path=/var/temp/nginx/proxy –http-fastcgi-temp-path=/var/temp/nginx/fastcgi –http-uwsgi-temp-path=/var/temp/nginx/uwsgi –http-scgi-temp-path=/var/temp/nginx/scgi –add-module=/usr/fastDFS/fastdfs-nginx-module/src</p>
 <p>make</p>
 <p>make install</p>
 <h5 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h5><p>server {<br>        listen       80;<br>        server_name  localhost;#自己的地址<br>        location /group1/M00/{</p>
@@ -332,11 +335,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/09/04/MySql/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/09/04/vue-element-admin-master/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          MYSQL的学习
+          vue-element-admin的学习
         
       </div>
     </a>
@@ -386,11 +389,11 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 linPng
+    		&copy; 2020 linPeng
     	</div>
       	<div class="footer-right">
       	<!--	<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
-		2019-11-06
+		2020-06-12
       	</div>
     </div>
   </div>
@@ -474,15 +477,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心得</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
             
             <div class="clearfix"></div>
