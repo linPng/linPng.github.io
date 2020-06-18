@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="归来仍是少年">
 <meta property="og:description" content="Linux服务器[TOC]">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-12T10:04:09.507Z">
+<meta property="og:updated_time" content="2020-06-15T10:18:11.206Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux的学习">
 <meta name="twitter:description" content="Linux服务器[TOC]">
@@ -179,6 +179,10 @@
 <p><a href="https://baike.baidu.com/item/lsof/339061?fr=aladdin" target="_blank" rel="noopener">lsof</a>：yum install lsof</p>
 <h4 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h4><p>CentOS 7 一般是firewalld</p>
 <h5 id="firewalld的常用命令"><a href="#firewalld的常用命令" class="headerlink" title="firewalld的常用命令"></a>firewalld的常用命令</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --list-all</span><br><span class="line">systemctl status firewalld</span><br><span class="line">systemctl start firewalld</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl enable firewalld</span><br><span class="line">systemctl disable firewalld</span><br><span class="line">systemctl is-enabled firewalld    <span class="comment">//查看是否开机自启</span></span><br><span class="line">firewall-cmd --reload</span><br><span class="line">firewall-cmd --permanent --add-rich-rule=<span class="string">"rule family="</span>ipv4<span class="string">" source address="</span>xx.xxx.xxx.xxx<span class="string">" port protocol="</span>tcp<span class="string">" port="</span><span class="number">1</span>-<span class="number">65535</span><span class="string">" accept"</span></span><br><span class="line">firewall-cmd --permanent --remove-rich-rule=<span class="string">"rule family="</span>ipv4<span class="string">" source address="</span>xx.xxx.xxx.xxx<span class="string">" port protocol="</span>tcp<span class="string">" port="</span><span class="number">22122</span><span class="string">" accept"</span></span><br><span class="line">firewall-cmd --zone=<span class="keyword">public</span> --add-port=<span class="number">80</span>/tcp --permanent  <span class="comment">//开放端口</span></span><br><span class="line">firewall-cmd  --permanent --remove-port=<span class="number">80</span>/tcp <span class="comment">//关闭端口</span></span><br></pre></td></tr></table></figure>
+<h5 id="网络连接测试"><a href="#网络连接测试" class="headerlink" title="网络连接测试"></a>网络连接测试</h5><p>ping ip</p>
+<p>telnet ip port        ctrl+]  -&gt;  quit   退出</p>
+<p>curl ip:port</p>
+<p>wget ip:port</p>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p><a href="https://www.runoob.com/linux/linux-command-manual.html" target="_blank" rel="noopener">参考</a></p>
 <p><code>help</code>//获取命令帮助</p>
 <p><code>sh/</code>/执行脚本</p>
@@ -211,6 +215,28 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup "java" -jar spring-boot-service-1.0-SNAPSHOT.jar  &gt; /dev/null 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 <p><code>find</code>//查找文件 <a href="https://www.runoob.com/linux/linux-comm-find.html" target="_blank" rel="noopener">参考</a></p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">find . -name "*.c" #将目前目录及其子目录下所有延伸档名是 c 的文件列出来。</span><br><span class="line">find . -type f #将目前目录其其下子目录中所有一般文件列出</span><br><span class="line">find . -ctime -20 #将目前目录及其子目录下所有最近 20 天内更新过的文件列出</span><br><span class="line">find /var/log -type f -mtime +7 -ok rm &#123;&#125; \;#查找/var/log目录中更改时间在7日以前的普通文件，并在删除之前询问它们</span><br><span class="line">find . -type f -perm 644 -exec ls -l &#123;&#125; \;#查找前目录中文件属主具有读、写权限，并且文件所属组的用户和其他用户具有读权限的文件</span><br><span class="line">find / -type f -size 0 -exec ls -l &#123;&#125; \;#为了查找系统中所有文件长度为0的普通文件，并列出它们的完整路径</span><br></pre></td></tr></table></figure>
+<h1 id="vim的使用"><a href="#vim的使用" class="headerlink" title="vim的使用"></a>vim的使用</h1><p><a href="https://www.runoob.com/linux/linux-vim.html" target="_blank" rel="noopener">参考</a></p>
+<h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><ul>
+<li><strong>i</strong> 切换到输入模式，以输入字符。</li>
+<li><strong>:</strong> 切换到底线命令模式，以在最底一行输入命令。</li>
+<li>dd 剪切</li>
+<li>p 复制</li>
+<li>GG 跳转到页末</li>
+<li>gg 跳转到页首</li>
+<li>数字+gg 跳转到对应行</li>
+<li>$ (shift+4) 跳转到行末</li>
+<li>0 跳转到行首</li>
+</ul>
+<h3 id="输入模式"><a href="#输入模式" class="headerlink" title="输入模式"></a>输入模式</h3><ul>
+<li><strong>ESC</strong>，退出输入模式，切换到命令模式</li>
+</ul>
+<h3 id="底线命令模式"><a href="#底线命令模式" class="headerlink" title="底线命令模式"></a>底线命令模式</h3><ul>
+<li>set nu/set nonu 显示/取消显示行号</li>
+<li>/xx 搜索，n下一项，N上一项</li>
+<li>q 退出程序</li>
+<li>w 保存文件</li>
+<li>q! 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。</li>
+</ul>
 
       
 
@@ -373,7 +399,7 @@
     	</div>
       	<div class="footer-right">
       	<!--	<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
-		2020-06-12
+		2020-06-18
       	</div>
     </div>
   </div>
@@ -457,11 +483,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+                <a href="javascript:void(0)" class="js-tag color3">心得</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">心得</a>
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
               </li>
              
               <li class="article-tag-list-item">
