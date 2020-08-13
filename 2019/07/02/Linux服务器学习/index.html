@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="归来仍是少年">
 <meta property="og:description" content="Linux服务器[TOC]">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-07-08T10:29:32.677Z">
+<meta property="og:updated_time" content="2020-08-06T10:46:28.719Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux的学习">
 <meta name="twitter:description" content="Linux服务器[TOC]">
@@ -220,6 +220,25 @@
 <p><code>cat /etc/redhat-release</code>//查看linux版本</p>
 <p><code>poweroff</code>关机</p>
 <p><code>reboot</code>重启</p>
+<p><code>ln  -s  [源文件或目录]  [目标文件或目录]</code> 创建软链接</p>
+<p><code>ln –snf  [新的源文件或目录]  [目标文件或目录]</code> 修改软链接</p>
+<p><code>rm –rf 软链接名称</code>  删除软链接</p>
+<p><code>du -bsh *</code>查看硬盘占用</p>
+<p><code>free -m</code>查看内存</p>
+<p><code>netstat -ntlap|grep 1521</code> 查看连接</p>
+<h2 id="常用的目录"><a href="#常用的目录" class="headerlink" title="常用的目录"></a>常用的目录</h2><p><a href="https://www.sohu.com/a/327605222_120047065" target="_blank" rel="noopener">参考</a></p>
+<p>/bin (binary)是二进制执行文件目录，主要用于具体应用</p>
+<p>/sbin (system binary)是系统管理员专用的二进制代码存放目录，主要用于系统管理</p>
+<p>/usr (unix system resource)unix系统资源文件目录,该目录经常用于安装各种软件</p>
+<p>/dev (device)系统硬件设备目录</p>
+<p>/home (home)家目录</p>
+<p>/proc (process)内存映射目录</p>
+<p>/var (variable)该目录存储的文件经常会发生变化</p>
+<p>/boot 系统启动核心目录，用于储存系统启动文件</p>
+<p>/etc 系统主要配置文件目录</p>
+<p>/lib (library)系统资源文件类库目录</p>
+<p>/mnt 存放临时的映射文件系统，我们常把软驱和光驱挂装在这里的floppy和cdrom子目录下</p>
+<p>/tmp 存放临时文件的目录</p>
 <h1 id="vim的使用"><a href="#vim的使用" class="headerlink" title="vim的使用"></a>vim的使用</h1><p><a href="https://www.runoob.com/linux/linux-vim.html" target="_blank" rel="noopener">参考</a></p>
 <h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><ul>
 <li><strong>i</strong> 切换到输入模式，以输入字符。</li>
@@ -242,6 +261,8 @@
 <li>w 保存文件</li>
 <li>q! 若曾修改过档案，又不想储存，使用 ! 为强制离开不储存档案。</li>
 </ul>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p><a href="https://blog.csdn.net/made4971/article/details/105744962" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"><span class="meta">#</span>在文档最后新增</span><br><span class="line">MYSQL_HOME=/home/xyg/mysql</span><br><span class="line">export PATH=$PATH:$MYSQL_HOME/bin</span><br><span class="line"><span class="meta">#</span>保存退出</span><br><span class="line">source /etc/profile</span><br><span class="line"><span class="meta">#</span>或者</span><br><span class="line">source ~/.bash_profile</span><br><span class="line"><span class="meta">#</span>或者</span><br><span class="line">. ~/.bash_profile</span><br><span class="line"><span class="meta">#</span>使之生效</span><br></pre></td></tr></table></figure>
 
       
 
@@ -346,11 +367,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/07/20/nginx/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/07/13/学习游泳/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          nginx
+          学习游泳
         
       </div>
     </a>
@@ -404,7 +425,7 @@
     	</div>
       	<div class="footer-right">
       	<!--	<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten -->
-		2020-07-08
+		2020-08-13
       	</div>
     </div>
   </div>
@@ -488,15 +509,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">心得</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">学习笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">笔记</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">学习</a>
               </li>
             
             <div class="clearfix"></div>
