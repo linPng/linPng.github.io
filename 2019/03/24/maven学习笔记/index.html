@@ -385,9 +385,9 @@
 <p>解压</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ </span><br><span class="line">mkdir nexus </span><br><span class="line">cd nexus</span><br><span class="line">tar -zxvf /root/nexus-3.27.0-03-unix.tar.gz -C ./</span><br><span class="line">unzip /root/nexus-3.27.0-03-unix.tar.gz</span><br></pre></td></tr></table></figure>
 <p>配置</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>run_as_user=""  修改运行nexus所使用的用户</span><br><span class="line">vim /usr/local/nexus/nexus-3.27.0-03/bin/nexus.rc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>可配置端口,默认8081</span><br><span class="line">vim /usr/local/nexus/nexus-3.27.0-03/etc/nexus-default.properties</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">run_as_user=<span class="string">""</span>  修改运行nexus所使用的用户</span></span><br><span class="line">vim /usr/local/nexus/nexus-3.27.0-03/bin/nexus.rc</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">可配置端口,默认8081</span></span><br><span class="line">vim /usr/local/nexus/nexus-3.27.0-03/etc/nexus-default.properties</span><br></pre></td></tr></table></figure>
 <p>启动</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nexus/nexus-3.27.0-03/bin</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>sudo chmod -R 777 /usr/local/nexus/nexus-3.27.0-03/bin</span><br><span class="line">./nexus start</span><br><span class="line"><span class="meta">#</span>其他命令</span><br><span class="line">./nexus restart</span><br><span class="line">./nexus stop</span><br><span class="line">./nexus run &amp;</span><br><span class="line">./nexus status</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nexus/nexus-3.27.0-03/bin</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">sudo chmod -R 777 /usr/<span class="built_in">local</span>/nexus/nexus-3.27.0-03/bin</span></span><br><span class="line">./nexus start</span><br><span class="line"><span class="meta">#</span><span class="bash">其他命令</span></span><br><span class="line">./nexus restart</span><br><span class="line">./nexus stop</span><br><span class="line">./nexus run &amp;</span><br><span class="line">./nexus status</span><br></pre></td></tr></table></figure>
 <p>访问8081端口:密码在/usr/local/nexus/sonatype-work/nexus3/admin.password下.</p>
 <p>默认安装有以下这几个仓库，在控制台也可以修改远程仓库的地址，第三方仓库等。</p>
 <ul>
@@ -537,8 +537,12 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            linPng
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/基础/" class="post-category">
+                                    基础
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -548,6 +552,14 @@
                     
                     <a href="/tags/笔记/">
                         <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                    <a href="/tags/windows/">
+                        <span class="chip bg-color">windows</span>
+                    </a>
+                    
+                    <a href="/tags/命令/">
+                        <span class="chip bg-color">命令</span>
                     </a>
                     
                 </div>
@@ -777,6 +789,10 @@
 
 
 
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
 
 </div>
     </div>
