@@ -328,12 +328,12 @@
                                 <span class="chip bg-color">环境</span>
                             </a>
                         
-                            <a href="/tags/linux/">
-                                <span class="chip bg-color">linux</span>
-                            </a>
-                        
                             <a href="/tags/安装/">
                                 <span class="chip bg-color">安装</span>
+                            </a>
+                        
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
                             </a>
                         
                     </div>
@@ -426,11 +426,11 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
 <p>查看版本</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -v</span><br></pre></td></tr></table></figure>
-<h4 id="配置本地仓库"><a href="#配置本地仓库" class="headerlink" title="配置本地仓库"></a>配置本地仓库</h4><p><a href="https://linpng.gitee.io/2019/03/24/maven%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">参考前文</a></p>
+<h4 id="配置本地仓库"><a href="#配置本地仓库" class="headerlink" title="配置本地仓库"></a>配置本地仓库</h4><p><a href="https://linpng.gitee.io/2019/03/24/maven%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" target="_blank" rel="noopener">参考前文</a></p>
 <p>下载安装包：nexus-3.26.1-02-unix.tar.gz，放在root目录下。</p>
 <p>解压</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ </span><br><span class="line">mkdir nexus </span><br><span class="line">cd nexus</span><br><span class="line">tar -zxvf /root/nexus-3.26.1-02-unix.tar.gz -C ./</span><br></pre></td></tr></table></figure>
-<h2 id="MYSQL"><a href="#MYSQL" class="headerlink" title="MYSQL"></a>MYSQL</h2><p><a href="https://linpng.github.io/2019/09/04/MySql/" target="_blank" rel="noopener">参考前文</a></p>
+<h2 id="MYSQL"><a href="#MYSQL" class="headerlink" title="MYSQL"></a>MYSQL</h2><p><a href="https://linpng.github.io/2019/09/04/MySql/">参考前文</a></p>
 <h2 id="REDIS"><a href="#REDIS" class="headerlink" title="REDIS"></a>REDIS</h2><p>下载<a href="https://www.python.org/downloads/source/" target="_blank" rel="noopener">安装包</a>：redis-6.0.4.tar.gz，放在root目录下。</p>
 <p>解压</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir redis </span><br><span class="line">cd redis</span><br><span class="line">tar -zxvf /root/redis-6.0.4.tar.gz -C ./</span><br></pre></td></tr></table></figure>
@@ -472,9 +472,9 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins enable rabbitmq_management</span><br><span class="line"><span class="meta">#</span><span class="bash">WEB地址为 服务器IP:15672</span></span><br></pre></td></tr></table></figure>
 <p>添加⽤户/密码对</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rabbitmqctl add_user USERNAME PASSWORD</span><br><span class="line">rabbitmqctl set_user_tags USERNAME administrator</span><br></pre></td></tr></table></figure>
-<h2 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h2><p><a href="https://linpng.github.io/2019/07/20/nginx/" target="_blank" rel="noopener">参考前文</a></p>
-<h2 id="FastDFS"><a href="#FastDFS" class="headerlink" title="FastDFS"></a>FastDFS</h2><p><a href="https://linpng.github.io/2019/08/03/fastDFS/" target="_blank" rel="noopener">参考前文</a></p>
-<h2 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h2><p><a href="https://linpng.github.io/2019/04/24/MongoDB/" target="_blank" rel="noopener">参考前文</a> <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat-tarball/" target="_blank" rel="noopener">参考官网</a> </p>
+<h2 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h2><p><a href="https://linpng.github.io/2019/07/20/nginx/">参考前文</a></p>
+<h2 id="FastDFS"><a href="#FastDFS" class="headerlink" title="FastDFS"></a>FastDFS</h2><p><a href="https://linpng.github.io/2019/08/03/fastDFS/">参考前文</a></p>
+<h2 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h2><p><a href="https://linpng.github.io/2019/04/24/MongoDB/">参考前文</a> <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat-tarball/" target="_blank" rel="noopener">参考官网</a> </p>
 <p>去<a href="https://www.mongodb.com/try/download/community" target="_blank" rel="noopener">官网下载</a>偶数的稳定版本:mongodb-linux-x86_64-rhel80-4.2.8.tgz</p>
 <p>前提条件</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install libcurl openssl</span><br></pre></td></tr></table></figure>
@@ -692,12 +692,12 @@
                                     <span class="chip bg-color">环境</span>
                                 </a>
                             
-                                <a href="/tags/linux/">
-                                    <span class="chip bg-color">linux</span>
-                                </a>
-                            
                                 <a href="/tags/安装/">
                                     <span class="chip bg-color">安装</span>
+                                </a>
+                            
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
                                 </a>
                             
                         </div>
@@ -747,6 +747,59 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2020/06/27/Win开发环境/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Windows开发环境">
+                        
+                        <span class="card-title">Windows开发环境</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Windows开发环境相对于linux来说windows上想安装的开发环境要少很多.
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/基础/" class="post-category">
+                                    基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/windows/">
+                        <span class="chip bg-color">windows</span>
+                    </a>
+                    
+                    <a href="/tags/环境/">
+                        <span class="chip bg-color">环境</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2020/06/07/Linux软件安装/">
                     <div class="card-image">
                         
@@ -764,9 +817,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-07
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -792,51 +845,6 @@
                     
                     <a href="/tags/安装/">
                         <span class="chip bg-color">安装</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/05/16/Docker/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="Docker的学习">
-                        
-                        <span class="card-title">Docker的学习</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Docker的学习简介Docker 是一个轻量虚拟化容器，用于快速部署，镜像之间相互隔离，又省去了安装环境的时间。文档
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-16
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            linPng
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/基础/">
-                        <span class="chip bg-color">基础</span>
                     </a>
                     
                 </div>
