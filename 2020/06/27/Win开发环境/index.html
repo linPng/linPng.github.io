@@ -4,7 +4,7 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo的初步学习, 归来仍是少年">
+    <meta name="keywords" content="Windows开发环境, 归来仍是少年">
     <meta name="description" content>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo的初步学习 | 归来仍是少年</title>
+    <title>Windows开发环境 | 归来仍是少年</title>
     <link rel="icon" type="image/png" href="/medias/logo01.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -203,12 +203,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hexo的初步学习</h1>
+                    <h1 class="description center-align post-title">Windows开发环境</h1>
                 </div>
             </div>
         </div>
@@ -324,12 +324,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/基础/">
-                                <span class="chip bg-color">基础</span>
+                            <a href="/tags/windows/">
+                                <span class="chip bg-color">windows</span>
                             </a>
                         
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
+                            <a href="/tags/环境/">
+                                <span class="chip bg-color">环境</span>
                             </a>
                         
                     </div>
@@ -340,8 +340,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/前端/" class="post-category">
-                                前端
+                            <a href="/categories/基础/" class="post-category">
+                                基础
                             </a>
                         
                     </div>
@@ -353,7 +353,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-02-11
+                    2020-06-27
                 </div>
                 
 
@@ -374,36 +374,66 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Hexo简介"><a href="#Hexo简介" class="headerlink" title="Hexo简介"></a>Hexo简介</h2><p>Hexo是一款基于Node.js的静态博客框架，可以直接在github page平台上托管我们的博客。</p>
-<p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo官网</a><br><a id="more"></a></p>
-<h2 id="Hexo安装准备"><a href="#Hexo安装准备" class="headerlink" title="Hexo安装准备"></a>Hexo安装准备</h2><p>需要先安装Node.js和Git</p>
-<p>cmd查看安装版本：<code>Git --version &amp;&amp; node -v</code></p>
-<h2 id="具体安装步骤"><a href="#具体安装步骤" class="headerlink" title="具体安装步骤"></a>具体安装步骤</h2><h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1.安装"></a>1.安装</h3><p> cmd命令<code>cnpm install -g hexo-cli</code></p>
-<p>查看版本<code>hexo -v</code></p>
-<p>先进入对应目录生成hexo项目 <code>hexo init</code></p>
-<h3 id="2-本地预览"><a href="#2-本地预览" class="headerlink" title="2.本地预览"></a>2.本地预览</h3><p>在hexo根目录下<code>hexo s</code></p>
-<p>启动本地调试 localhost:4000</p>
-<h3 id="3-克隆主题"><a href="#3-克隆主题" class="headerlink" title="3.克隆主题"></a>3.克隆主题</h3><p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
-<h5 id="配置文件修改"><a href="#配置文件修改" class="headerlink" title="配置文件修改"></a>配置文件修改</h5><p>_config.yml</p>
-<p>#theme: landscape<br>theme: yilia</p>
-<h3 id="4-部署到github"><a href="#4-部署到github" class="headerlink" title="4.部署到github"></a>4.部署到github</h3><p>重新编译一下<code>hexo clean &amp;&amp; hexo g</code> </p>
-<p>部署github<code>hexo d</code></p>
-<h5 id="配置文件修改-1"><a href="#配置文件修改-1" class="headerlink" title="配置文件修改"></a>配置文件修改</h5><p>需要先配好自己的github page</p>
-<p>_config.yml<br>deploy:<br>  type: git<br>  repo: <a href="https://github.com/linPng/linPng.github.io.git" target="_blank" rel="noopener">https://github.com/linPng/linPng.github.io.git</a><br>  branch: master</p>
-<h5 id="可能遇到的错误"><a href="#可能遇到的错误" class="headerlink" title="可能遇到的错误"></a>可能遇到的错误</h5><p> ERROR Deployer not found: git </p>
-<p>解决方案：<code>npm install --save hexo-deployer-git</code></p>
-<p>Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.</p>
-<p>解决方案: 右键-&gt;Git Bash Here</p>
-<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email "email"</span><br><span class="line">git config --global user.name "name"</span><br><span class="line">#三个问题都用默认就好,直接回车三次</span><br><span class="line">ssh-keygen -t rsa -C "email"</span><br><span class="line">#在默认的路径下(C:\Users\username\.ssh)找到id_rsa.pub</span><br><span class="line">#将内容添加的GitHub的SSH key</span><br><span class="line">#验证是否可以连接</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">#将_config.yml中的repo改为git@github.com:用户名/仓库名.git</span><br></pre></td></tr></table></figure>
-<p>Failed to connect to github.com port 443</p>
-<p>解决方法:<code>git config --global --unset http.proxy</code>可以试着取消代理,或者加上代理 <code>git config --global http.proxy http://127.0.0.1:1080</code></p>
-<h3 id="5-常用操作"><a href="#5-常用操作" class="headerlink" title="5.常用操作"></a>5.常用操作</h3><p>清除缓存<code>hexo clean</code></p>
-<p>编译<code>hexo g</code></p>
-<p>本地调试<code>hexo s</code></p>
-<p>部署github<code>hexo d</code></p>
-<p>常规三连<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code></p>
-<p>bat:<code>cmd /k &quot;cd /d D:\work\hexo&amp;&amp;hexo clean &amp;&amp; hexo g &amp;&amp; hexo d&quot;</code></p>
-
+                <h1 id="Windows使用环境"><a href="#Windows使用环境" class="headerlink" title="Windows使用环境"></a>Windows使用环境</h1><p>记录一下个人window系统的使用环境,方便重装和上新设备.配合github仓库使用.</p>
+<a id="more"></a>
+<!--toc-->
+<h2 id="基础开发环境"><a href="#基础开发环境" class="headerlink" title="基础开发环境"></a>基础开发环境</h2><p>jdk1.6~1.8</p>
+<p>git</p>
+<p>node</p>
+<p>python3</p>
+<p>maven</p>
+<p>nginx</p>
+<h3 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h3><p>idea</p>
+<p>plsql</p>
+<p>Navicat</p>
+<p>RedisDesktopManager</p>
+<p>Xshell 7/Xftp 7</p>
+<h3 id="本地数据库"><a href="#本地数据库" class="headerlink" title="本地数据库"></a>本地数据库</h3><p>mysql</p>
+<p>redis</p>
+<p>oracle</p>
+<p>MongoDB</p>
+<h1 id="Windows命令和定时计划"><a href="#Windows命令和定时计划" class="headerlink" title="Windows命令和定时计划"></a>Windows命令和定时计划</h1><p>平时都是基于windows的办公环境,需要坚持同步多台设备和github;<br><!--more--></p>
+<h2 id="bat脚本"><a href="#bat脚本" class="headerlink" title="bat脚本"></a>bat脚本</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>执行cmd命令 /c会关闭窗口   /k不会关闭窗口</span><br><span class="line">cmd /c|/k dir</span><br><span class="line"><span class="meta">#</span>命令有多条用&amp;&amp;|&amp;连接  &amp;&amp;如果遇到失败会停止,&amp;会继续</span><br><span class="line"><span class="meta">#</span>cd /d(会修改盘符)</span><br></pre></td></tr></table></figure>
+<h2 id="windows定时计划"><a href="#windows定时计划" class="headerlink" title="windows定时计划"></a>windows定时计划</h2><p>菜单-&gt;任务计划程序-&gt;创建基本任务</p>
+<h1 id="Windows常用命令的学习"><a href="#Windows常用命令的学习" class="headerlink" title="Windows常用命令的学习"></a>Windows常用命令的学习</h1><p>虽然也不是很经常用，但是还是很有必要了解一下的。</p>
+<!--more-->
+<h2 id="CMD常用命令"><a href="#CMD常用命令" class="headerlink" title="CMD常用命令"></a>CMD常用命令</h2><p>获取命令<code>help</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">help   //查看命令</span><br><span class="line">cd /?   //查看某个命令（比如cd）的详情</span><br></pre></td></tr></table></figure>
+<p>切换目录<code>cd</code>/<code>pushd  popd</code></p>
+<figure class="highlight plain"><figcaption><span> </span><a href="//">显示当前目录</a></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd ..   // 进入父目录</span><br><span class="line">cd /d d:   // 进入上次d盘所在的目录（或在直接输入：d:）</span><br><span class="line">cd /d d:\   // 进入d盘根目录</span><br><span class="line">cd d: // 显示上次d盘所在的目录</span><br><span class="line">cd /d d:\src // 进入d:\src目录</span><br><span class="line">cd prj\src\view  // 进入当前目录下的prj\src\view文件夹</span><br><span class="line">pushd c:\mp3 // 将当前目录d:\mp4入栈，并切换当前目录为c:\mp3</span><br><span class="line">popd  // 将刚才保存的d:\mp4弹栈，并设置为当前目录</span><br></pre></td></tr></table></figure>
+<p>显示目录中的内容<code>dir</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dir   // 显示当前目录中的子文件夹与文件</span><br></pre></td></tr></table></figure>
+<p>文件查看<code>type</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">例：type c:\11.txt   // 显示c盘中11.txt的文本内容</span><br><span class="line">例：type conf.ini  // 显示当前目录下conf.ini的文本内容</span><br><span class="line">例：type c:\11.txt | more  // 分页显示c盘中11.txt的文本内容</span><br></pre></td></tr></table></figure>
+<p>显示目录结构<code>tree</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tree d:\myfiles  // 显示d:\myfiles目录结构</span><br></pre></td></tr></table></figure>
+<p>创建目录<code>md</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">md 123   //创建123文件夹</span><br><span class="line">md movie music  // 在当前目录中创建名为movie和music的文件夹</span><br><span class="line">md d:\test\movie  // 创建d:\test\movie目录</span><br></pre></td></tr></table></figure>
+<p>文件或目录重命名<code>ren</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ren rec.txt rec.ini  // 将当前目录下的rec.txt文件重命名为rec.ini</span><br><span class="line"></span><br><span class="line">ren c:\test test_01  // 将c盘下的test文件夹重命名为test_01</span><br><span class="line"></span><br><span class="line">ren Logs.txt Logs-%date:~0,4%%date:~5,2%%date:~8,2%_%time:~0,2%%time:~3,2%.txt  // 将当前目录下的Logs.txt文件重命名为Logs-20150114_2135.txt或Logs-20150114_ 812.txt（注意：小时只有个位数时会多一个空格，可以使用字符串替换：将空格替换成0）</span><br></pre></td></tr></table></figure>
+<p>删除目录<code>rd</code> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">rd movie // 删除当前目录下的movie空文件夹</span><br><span class="line"></span><br><span class="line">rd /s /q d:\test  // 使用安静模式删除d:\test（除目录本身外，还将删除指定目录下的所有子目录和文件）</span><br></pre></td></tr></table></figure>
+<p>拷贝文件<code>copy</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">copy key.txt c:\doc  // 将当前目录下的key.txt拷贝到c:\doc下（若doc中也存在一个key.txt文件，会询问是否覆盖）</span><br><span class="line"></span><br><span class="line">copy jobs c:\doc  // 将当前目录下jobs文件夹中文件（不递归子目录）拷贝到c:\doc下（若doc中也存在相应的文件，会询问是否覆盖）</span><br><span class="line"></span><br><span class="line">copy key.txt c:\doc\key_bak.txt  // 将当前目录下的key.txt拷贝到c:\doc下，并重命名为key_bak.txt（若doc中也存在一个key_bak.txt文件，会询问是否覆盖）</span><br><span class="line"></span><br><span class="line">copy /Y key.txt c:\doc  // 将当前目录下的key.txt拷贝到c:\doc下（不询问，直接覆盖写）</span><br><span class="line"></span><br><span class="line">copy key.txt +  // 复制文件到自己，实际上是修改了文件日期</span><br><span class="line"></span><br><span class="line">copy /Y key1.txt + key2.txt key.txt  // 将当前目录下的key1.txt与key2.txt的内容合并写入key.txt中（不询问，直接覆盖写）</span><br><span class="line"></span><br><span class="line">copy /B art_2.7z.* art_2.7z    // 将当前目录下的art_2.7z.开头的所有文件（按照名称升序排序）依次合并生成art_2.7z</span><br><span class="line"></span><br><span class="line">copy /B art_2.7z.001+art_2.7z.002 art_2.7z    // 将当前目录下的art_2.7z.001、art_2.7z.002文件合并生成art_2.7z</span><br></pre></td></tr></table></figure>
+<p>  更强大的复制命令<code>xcopy</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xcopy c:\bat\hai d:\hello\ /s /h /e /f /c    // 将c:\bat\hai中的所有内容拷贝到d:\hello中  注意：需要在hello后加上\  表示hello为一个目录，否则xcopy会询问hello是F，还是D</span><br><span class="line"></span><br><span class="line">xcopy c:\bat\hai d:\hello\ /d:12-29-2010  // 将c:\bat\hai中的2010年12月29日后更改的文件拷贝到d:\hello中</span><br></pre></td></tr></table></figure>
+<p>移动文件<code>move</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">move *.png test  // 将当前目录下的png图片移动到当前目录下test文件夹中 （若test中也存在同名的png图片，会询问是否覆盖）</span><br><span class="line"></span><br><span class="line">move /Y *.png test  // 将当前目录下的png图片移动到当前目录下test文件夹中 （不询问，直接覆盖写）</span><br><span class="line"></span><br><span class="line">move 1.png d:\test\2.png  // 将当前目录下的1.png移动到d盘test文件夹中，并重命名为2.png （若test中也存在同名的png图片，会询问是否覆盖）</span><br><span class="line"></span><br><span class="line">move test d:\new  // 若d盘中存在new文件夹，将当前目录下的test文件夹移动到d盘new文件夹中；若不存在，将当前目录下的test文件夹移动到d盘，并重命名为new</span><br></pre></td></tr></table></figure>
+<p>删除文件<code>del</code>   注意：目录及子目录都不会删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">del test  // 删除当前目录下的test文件夹中的所有非只读文件（子目录下的文件不删除；删除前会进行确认；等价于del test\*）</span><br><span class="line"></span><br><span class="line">del /f test  // 删除当前目录下的test文件夹中的所有文件（含只读文件；子目录下的文件不删除；删除前会进行确认；等价于del /f test\*）</span><br><span class="line"></span><br><span class="line">del /f /s /q test d:\test2\*.doc  // 删除当前目录下的test文件夹中所有文件及d:\test2中所有doc文件（含只读文件；递归子目录下的文件；删除前不确认）</span><br></pre></td></tr></table></figure>
+<p>清除屏幕<code>cls</code> </p>
+<p>关系符<code>&amp;、&amp;&amp;、||、|</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&amp;  顺序执行多条命令，而不管命令是否执行成功</span><br><span class="line">cd /d d:\src&amp;work.exe /o c:\result.txt  // 先将当前工作目录切换到d:\src下，然后执行work.exe /o c:\result.txt命令</span><br><span class="line"></span><br><span class="line">&amp;&amp;  顺序执行多条命令，当碰到执行出错的命令后将不执行后面的命令</span><br><span class="line">find &quot;ok&quot; c:\test.txt &amp;&amp; echo 成功 // 如果找到了&quot;ok&quot;字样，就显示&quot;成功&quot;，找不到就不显示</span><br><span class="line"></span><br><span class="line">||   顺序执行多条命令，当碰到执行正确的命令后将不执行后面的命令</span><br><span class="line">find &quot;ok&quot; c:\test.txt || echo 不成功   // 如果找不到&quot;ok&quot;字样，就显示&quot;不成功&quot;，找到了就不显示</span><br><span class="line"></span><br><span class="line">|    管道命令</span><br><span class="line">dir *.* /s/a | find /c &quot;.exe&quot;   // 先执行dir命令，然后对输出结果（stdout）执行find命令（输出当前文件夹及所有子文件夹里的.exe文件的个数）</span><br></pre></td></tr></table></figure>
+<p>查询端口占用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -aon | findstr &quot;xx&quot;   //xx端口号</span><br></pre></td></tr></table></figure>
+<p>杀死进程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tasklist|findstr xx   //显示xx进程号运行的进程信息</span><br><span class="line">taskkill /f /t /im xx  //杀死xx进程</span><br><span class="line">taskkill /f /pid  xx  //杀死pidxx进程</span><br></pre></td></tr></table></figure>
+<p>文件中搜索字符串<code>find 、findstr</code> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">find /N /I &quot;pid&quot; 1.txt  // 在1.txt文件中忽略大小写查找pid字符串，并带行号显示查找后的结果</span><br><span class="line"></span><br><span class="line">find /C &quot;exe&quot; 1.txt  // 只显示在1.txt文件中查找到exe字符串的次数</span><br><span class="line"></span><br><span class="line">find /V &quot;exe&quot; 1.txt  // 显示未包含1.txt文件中未包含exe字符串的行</span><br><span class="line"></span><br><span class="line">findstr &quot;hello world&quot; 1.txt  // 在1.txt文件中搜索hello或world</span><br><span class="line"></span><br><span class="line">findstr /c:&quot;hello world&quot; 1.txt  // 在1.txt文件中搜索hello world</span><br><span class="line"></span><br><span class="line">findstr /c:&quot;hello world&quot; 1.txt nul  // 在1.txt文件中搜索hello world，并在每行结果前打印出1.txt:   注：findstr只有在2个及以上文件中搜索字符串时才会打印出每个文件的文件名，nul表示一个空文件</span><br><span class="line"></span><br><span class="line">findstr /s /i &quot;Hello&quot; *.*   // 不区分大小写，在当前目录和所有子目录中的所有文件中的hello</span><br><span class="line"></span><br><span class="line">findstr  &quot;^[0-9][a-z]&quot; 1.txt  // 在1.txt中搜索以1个数字+1个小写字母开头子串的行</span><br></pre></td></tr></table></figure>
+<p>进程</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tasklist  // 显示当前运行的进程信息（可查看PID）</span><br><span class="line"></span><br><span class="line">taskkill  结束指定的进程</span><br></pre></td></tr></table></figure>
+<p>网络</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ping  // 用于检测网络是否通畅，以及网络时延情况（工作在ICMP协议上）</span><br><span class="line"></span><br><span class="line">ipconfig /all  // 查看本地ip地址等详细信息</span><br></pre></td></tr></table></figure>
                 
             </div>
             <hr>
@@ -417,12 +447,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/基础/">
-                                    <span class="chip bg-color">基础</span>
+                                <a href="/tags/windows/">
+                                    <span class="chip bg-color">windows</span>
                                 </a>
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
+                                <a href="/tags/环境/">
+                                    <span class="chip bg-color">环境</span>
                                 </a>
                             
                         </div>
@@ -470,7 +500,8 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2020/06/27/Win开发环境/">
                     <div class="card-image">
@@ -488,9 +519,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -503,6 +534,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -522,7 +554,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2019/02/11/Hexo的初步学习/">
@@ -557,7 +589,6 @@ Hexo官网
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
