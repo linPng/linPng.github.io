@@ -1,0 +1,1281 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Java学习, 归来仍是少年">
+    <meta name="description" content>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Java学习 | 归来仍是少年</title>
+    <link rel="icon" type="image/png" href="/medias/logo01.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo02.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">归来仍是少年</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo02.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">归来仍是少年</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Java学习</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/学习/">
+                                <span class="chip bg-color">学习</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-11-25
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Java学习"><a href="#Java学习" class="headerlink" title="Java学习"></a>Java学习</h1><p>[TOC]</p>
+<h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><h3 id="Java基础语法"><a href="#Java基础语法" class="headerlink" title="Java基础语法"></a>Java基础语法</h3><ul>
+<li><strong>对象</strong>：对象是类的一个实例，有状态和行为。<ul>
+<li>创建对象:对象是根据类创建的。<ul>
+<li>声明：声明一个对象，包括对象名称和对象类型。</li>
+<li>实例化：使用关键字new来创建一个对象。</li>
+<li>初始化：使用new创建对象时，会调用构造方法初始化对象。</li>
+</ul>
+</li>
+<li>构造方法:每个类都有构造方法。如果没有显式地为类定义构造方法，Java编译器将会为该类提供一个默认构造方法。在创建一个对象的时候，至少要调用一个构造方法。构造方法的名称必须与类同名，一个类可以有多个构造方法。</li>
+</ul>
+</li>
+<li><strong>类</strong>：类是一个模板，它描述一类对象的行为和状态。</li>
+<li><strong>方法</strong>：方法就是行为，一个类可以有很多方法。逻辑运算、数据修改以及所有动作都是在方法中完成的。</li>
+<li>常量:常量指不能改变的量。 在Java中用final标志.</li>
+<li><strong>变量</strong>：在 Java 语言中，所有的变量在使用前必须声明。<ul>
+<li>实例变量:每个对象都有独特的实例变量，对象的状态由这些实例变量的值决定。<ul>
+<li>实例变量声明在一个类中，但在方法、构造方法和语句块之外；</li>
+<li>当一个对象被实例化之后，每个实例变量的值就跟着确定；</li>
+<li>实例变量在对象创建的时候创建，在对象被销毁的时候销毁；</li>
+<li>实例变量的值应该至少被一个方法、构造方法或者语句块引用，使得外部能够通过这些方式获取实例变量信息；</li>
+<li>实例变量可以声明在使用前或者使用后；</li>
+<li>访问修饰符可以修饰实例变量；</li>
+<li>实例变量对于类中的方法、构造方法或者语句块是可见的。一般情况下应该把实例变量设为私有。通过使用访问修饰符可以使实例变量对子类可见；</li>
+<li>实例变量具有默认值。数值型变量的默认值是0，布尔型变量的默认值是 false，引用类型变量的默认值是 null。变量的值可以在声明时指定，也可以在构造方法中指定；</li>
+<li>实例变量可以直接通过变量名访问。但在静态方法以及其他类中，就应该使用完全限定名：ObejectReference.VariableName。</li>
+</ul>
+</li>
+<li>局部变量:在方法、构造方法或者语句块中定义的变量被称为局部变量。变量声明和初始化都是在方法中，方法结束后，变量就会自动销毁。<ul>
+<li>局部变量声明在方法、构造方法或者语句块中；</li>
+<li>局部变量在方法、构造方法、或者语句块被执行的时候创建，当它们执行完成后，变量将会被销毁；</li>
+<li>访问修饰符不能用于局部变量；</li>
+<li>局部变量只在声明它的方法、构造方法或者语句块中可见；</li>
+<li>局部变量是在栈上分配的。</li>
+<li>局部变量没有默认值，所以局部变量被声明后，必须经过初始化，才可以使用。</li>
+</ul>
+</li>
+<li>成员变量:成员变量是定义在类中，方法体之外的变量。这种变量在创建对象的时候实例化。成员变量可以被类中方法、构造方法和特定类的语句块访问。</li>
+<li>类变量(静态变量):类变量也声明在类中，方法体之外，但必须声明为static类型。<ul>
+<li>类变量也称为静态变量，在类中以 static 关键字声明，但必须在方法、构造方法和语句块之外。</li>
+<li>无论一个类创建了多少个对象，类只拥有类变量的一份拷贝。</li>
+<li>静态变量除了被声明为常量外很少使用。常量是指声明为 public/private，final 和 static 类型的变量。常量初始化后不可改变。</li>
+<li>静态变量储存在静态存储区。经常被声明为常量，很少单独使用 static 声明变量。</li>
+<li>静态变量在程序开始时创建，在程序结束时销毁。</li>
+<li>与实例变量具有相似的可见性。但为了对类的使用者可见，大多数静态变量声明为 public 类型。</li>
+<li>默认值和实例变量相似。数值型变量默认值是0，布尔型默认值是 false，引用类型默认值是 null。变量的值可以在声明的时候指定，也可以在构造方法中指定。此外，静态变量还可以在静态语句块中初始化。</li>
+<li>静态变量可以通过：ClassName.VariableName 的方式访问。</li>
+<li>类变量被声明为 public static final 类型时，类变量名称必须使用大写字母。如果静态变量不是 public 和 final 类型，其命名方式与实例变量以及局部变量的命名方式一致。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>编写Java程序时，应注意以下几点:</p>
+<ul>
+<li><strong>大小写敏感</strong>：Java是大小写敏感的，这就意味着标识符Hello与hello是不同的。</li>
+<li><strong>类名</strong>：对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首字母应该大写，例如 MyFirstJavaClass 。</li>
+<li><strong>方法名</strong>：所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字母大写。</li>
+<li><strong>源文件名</strong>：源文件名必须和类名相同。当保存文件的时候，你应该使用类名作为文件名保存（切记Java是大小写敏感的），文件名的后缀为.java。（如果文件名和类名不相同则会导致编译错误）。</li>
+<li><strong>主方法入口</strong>：所有的Java 程序由<strong>public static void main(String[] args)</strong>方法开始执行。</li>
+<li>Java标识符:<ul>
+<li>所有的标识符都应该以字母（A-Z或者a-z）,美元符（$）、或者下划线（_）开始</li>
+<li>首字符之后可以是任何字符的组合</li>
+<li>关键字不能用作标识符</li>
+<li>标识符是大小写敏感的</li>
+<li>合法标识符举例：age、$salary、_value、__1_value</li>
+<li>非法标识符举例：123abc、-salary</li>
+</ul>
+</li>
+<li>源文件声明规则<ul>
+<li>一个源文件中只能有一个public类</li>
+<li>一个源文件可以有多个非public类</li>
+<li>源文件的名称应该和public类的类名保持一致。例如：源文件中public类的类名是Employee，那么源文件应该命名为Employee.java。</li>
+<li>如果一个类定义在某个包中，那么package语句应该在源文件的首行。</li>
+<li>如果源文件包含import语句，那么应该放在package语句和类定义之间。如果没有package语句，那么import语句应该在源文件中最前面。</li>
+<li>import语句和package语句对源文件中定义的所有类都有效。在同一源文件中，不能给不同的类不同的包声明。</li>
+</ul>
+</li>
+</ul>
+<h4 id="Java-基本数据类型"><a href="#Java-基本数据类型" class="headerlink" title="Java 基本数据类型"></a>Java 基本数据类型</h4><ul>
+<li>内置数据类型:Java语言提供了八种基本类型。六种数字类型（四个整数型，两个浮点型），一种字符类型，还有一种布尔型。<br>byte、int、long、和short都可以用十进制、16进制以及8进制的方式来表示。当使用常量的时候，前缀0表明是8进制，而前缀0x代表16进制。<br>字符串常量和字符常量都可以包含任何Unicode字符。<br>Java语言支持一些特殊的转义字符序列:\n(换行),\r(回车),\f(换页符,\b(退格),\0(空字符,\s(字符串,\t制表符,\”(双引号),\’(单引号),\(反斜杠),\ddd(八进制字符),\uxxxx(16进制Unicode字符)<ul>
+<li>byte:<ul>
+<li>byte数据类型是8位、有符号的，以二进制补码表示的整数；</li>
+<li>最小值是-128（-2^7）；</li>
+<li>最大值是127（2^7-1）；</li>
+<li>默认值是0；</li>
+<li>byte类型用在大型数组中节约空间，主要代替整数，因为byte变量占用的空间只有int类型的四分之一；</li>
+<li>例子：byte a = 100，byte b = -50。</li>
+</ul>
+</li>
+<li>short:<ul>
+<li>short数据类型是16位、有符号的以二进制补码表示的整数</li>
+<li>最小值是-32768（-2^15）；</li>
+<li>最大值是32767（2^15 - 1）；</li>
+<li>Short数据类型也可以像byte那样节省空间。一个short变量是int型变量所占空间的二分之一；</li>
+<li>默认值是0；</li>
+<li>例子：short s = 1000，short r = -20000。</li>
+</ul>
+</li>
+<li>int：<ul>
+<li>int数据类型是32位、有符号的以二进制补码表示的整数；</li>
+<li>最小值是-2,147,483,648（-2^31）；</li>
+<li>最大值是2,147,483,647（2^31 - 1）；</li>
+<li>一般地整型变量默认为int类型；</li>
+<li>默认值是0；</li>
+<li>例子：int a = 100000, int b = -200000。</li>
+</ul>
+</li>
+<li>long:<ul>
+<li>long数据类型是64位、有符号的以二进制补码表示的整数；</li>
+<li>最小值是-9,223,372,036,854,775,808（-2^63）；</li>
+<li>最大值是9,223,372,036,854,775,807（2^63 -1）；</li>
+<li>这种类型主要使用在需要比较大整数的系统上；</li>
+<li>默认值是0L；</li>
+<li>例子： long a = 100000L，long b = -200000L。</li>
+</ul>
+</li>
+<li>float:<ul>
+<li>float数据类型是单精度、32位、符合IEEE 754标准的浮点数；</li>
+<li>float在储存大型浮点数组的时候可节省内存空间；</li>
+<li>默认值是0.0f；</li>
+<li>浮点数不能用来表示精确的值，如货币；</li>
+<li>例子：float f1 = 234.5f。</li>
+</ul>
+</li>
+<li>double:<ul>
+<li>double数据类型是双精度、64位、符合IEEE 754标准的浮点数；</li>
+<li>浮点数的默认类型为double类型；</li>
+<li>double类型同样不能表示精确的值，如货币；</li>
+<li>默认值是0.0d；</li>
+<li>例子：double d1 = 123.4。</li>
+</ul>
+</li>
+<li>boolean:<ul>
+<li>boolean数据类型表示一位的信息；</li>
+<li>只有两个取值：true和false；</li>
+<li>这种类型只作为一种标志来记录true/false情况；</li>
+<li>默认值是false；</li>
+<li>例子：boolean one = true。</li>
+</ul>
+</li>
+<li>char:<ul>
+<li>char类型是一个单一的16位Unicode字符；</li>
+<li>最小值是’\u0000’（即为0）；</li>
+<li>最大值是’\uffff’（即为65,535）；</li>
+<li>char数据类型可以储存任何字符；</li>
+<li>例子：char letter = ‘A’。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>引用数据类型<ul>
+<li>引用类型变量由类的构造函数创建，可以使用它们访问所引用的对象。这些变量在声明时被指定为一个特定的类型，比如Employee、Pubby等。变量一旦声明后，类型就不能被改变了。</li>
+<li>对象、数组都是引用数据类型。</li>
+<li>所有引用类型的默认值都是null。</li>
+<li>一个引用变量可以用来引用与任何与之兼容的类型。</li>
+</ul>
+</li>
+</ul>
+<h4 id="Java-修饰符"><a href="#Java-修饰符" class="headerlink" title="Java 修饰符"></a>Java 修饰符</h4><p>修饰符用来定义类、方法或者变量，通常放在语句的最前端。</p>
+<ul>
+<li><p>访问修饰符</p>
+<ul>
+<li>默认的，也称为 default，在同一包内可见，不使用任何修饰符。</li>
+<li>私有的，以 private 修饰符指定，在同一类内可见。</li>
+<li>共有的，以 public 修饰符指定，对所有类可见。</li>
+<li>受保护的，以 protected 修饰符指定，对同一包内的类和所有子类可见。</li>
+</ul>
+</li>
+<li><p>非访问修饰符</p>
+<ul>
+<li><p>static 修饰符，用来创建类方法和类变量。</p>
+<ul>
+<li><p><strong>静态变量：</strong></p>
+<p>static 关键字用来声明独立于对象的静态变量，无论一个类实例化多少对象，它的静态变量只有一份拷贝。静态变量也被称为类变量。局部变量不能被声明为static变量。</p>
+</li>
+<li><p><strong>静态方法：</strong></p>
+<p>static 关键字用来声明独立于对象的静态方法。静态方法不能使用类的非静态变量。静态方法从参数列表得到数据，然后计算这些数据。</p>
+</li>
+</ul>
+</li>
+<li><p>final 修饰符，用来修饰类、方法和变量，final 修饰的类不能够被继承，修饰的方法不能被继承类重新定义，修饰的变量为常量，是不可修改的。</p>
+<ul>
+<li><strong>final 变量：</strong>final 变量能被显式地初始化并且只能初始化一次。被声明为final的对象的引用不能指向不同的对象。但是 final 对象里的数据可以被改变。也就是说 final 对象的引用不能改变，但是里面的值可以改变。final 修饰符通常和 static 修饰符一起使用来创建类常量。</li>
+</ul>
+</li>
+<li><p>abstract 修饰符，用来创建抽象类和抽象方法。</p>
+</li>
+<li><p>synchronized 和 volatile 修饰符，主要用于线程的编程。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="语法结构"><a href="#语法结构" class="headerlink" title="语法结构"></a>语法结构</h4><p><strong>if</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(布尔表达式 <span class="number">1</span>)&#123;</span><br><span class="line">   <span class="comment">//如果布尔表达式 1的值为true执行代码</span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(布尔表达式 <span class="number">2</span>)&#123;</span><br><span class="line">   <span class="comment">//如果布尔表达式 2的值为true执行代码</span></span><br><span class="line">&#125;<span class="keyword">else</span> <span class="keyword">if</span>(布尔表达式 <span class="number">3</span>)&#123;</span><br><span class="line">   <span class="comment">//如果布尔表达式 3的值为true执行代码</span></span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">   <span class="comment">//如果以上布尔表达式都不为true执行代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>switch</strong></p>
+<p>switch和if-else相比，由于使用了Binary Tree算法，绝大部分情况下switch会快一点，除非是if-else的第一个条件就为true。相比于if-else结构，switch的效率绝对是要高很多的，但是switch使用查找表的方式决定了case的条件必须是一个连续的常量。而if-else则可以灵活的多。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> i=<span class="number">3</span>;</span><br><span class="line"><span class="keyword">final</span> <span class="keyword">int</span> NUM2=<span class="number">2</span>;</span><br><span class="line"><span class="keyword">int</span> b = <span class="number">3</span>;</span><br><span class="line"><span class="keyword">switch</span>(i)<span class="comment">//参数只能是整型或者可以转换为整型的数值类型，比如byte、short、int、char、还有枚举;</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        System.out.println(<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">break</span>;<span class="comment">//没有break会继续执行下面的case</span></span><br><span class="line">    <span class="keyword">case</span> NUM2:<span class="comment">//case是常量表达式(final修饰)</span></span><br><span class="line">        System.out.println(<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">default</span>:<span class="comment">//default并不是必须的,没有对应的case则执行</span></span><br><span class="line">        System.out.println(<span class="string">"default"</span>);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>while</strong></p>
+<p>只要布尔表达式为true，循环体会一直执行下去。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>( 布尔表达式 ) &#123;</span><br><span class="line">	<span class="comment">//循环内容</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>do…while</strong></p>
+<p>do…while循环至少会执行一次</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">       <span class="comment">//代码语句</span></span><br><span class="line">&#125;<span class="keyword">while</span>(布尔表达式);</span><br></pre></td></tr></table></figure>
+<p><strong>for</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化; 布尔表达式; 更新) &#123;</span><br><span class="line">    <span class="comment">//代码语句</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(声明语句 : 表达式)<span class="comment">//Java5引入了一种主要用于数组的增强型for循环</span></span><br><span class="line">&#123;</span><br><span class="line">   <span class="comment">//代码句子</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>break</strong>:break主要用在循环语句或者switch语句中，用来跳出整个语句块。</p>
+<p><strong>continue</strong>:continue适用于任何循环控制结构中。作用是让程序立刻跳转到下一次循环的迭代。</p>
+<h4 id="常用类"><a href="#常用类" class="headerlink" title="常用类"></a>常用类</h4><h5 id="Java-StringBuffer-和-StringBuilder-类"><a href="#Java-StringBuffer-和-StringBuilder-类" class="headerlink" title="Java StringBuffer 和 StringBuilder 类"></a>Java StringBuffer 和 StringBuilder 类</h5><p>和String类不同的是，StringBuffer 和 StringBuilder 类的对象能够被多次的修改，并且不产生新的未使用对象。StringBuilder 与StringBuffer 之间的最大不同在于 StringBuilder 的方法不是线程安全的。反之StringBuilder消耗低，速度快。</p>
+<h5 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h5><p>LocalDateTime</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">LocalDateTime nowDateTime = LocalDateTime.now();</span><br><span class="line">System.out.println(nowDateTime.format(DateTimeFormatter.ISO_DATE));</span><br><span class="line">System.out.println(nowDateTime.format(DateTimeFormatter.ISO_TIME));</span><br><span class="line">System.out.println(nowDateTime.format(DateTimeFormatter.ofPattern(<span class="string">"HH:mm:ss"</span>)));</span><br><span class="line">System.out.println(nowDateTime.format(DateTimeFormatter.ofPattern(<span class="string">"yyyy-MM-dd HH:mm:ss"</span>)));</span><br></pre></td></tr></table></figure>
+<h5 id="正则"><a href="#正则" class="headerlink" title="正则"></a>正则</h5><p><strong>Pattern</strong>+<strong>Matcher</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.regex.*;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RegexExample1</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span></span>&#123;</span><br><span class="line">      String content = <span class="string">"I am noob "</span> +</span><br><span class="line">        <span class="string">"from runoob.com."</span>;</span><br><span class="line"> </span><br><span class="line">      String pattern = <span class="string">".*runoob.*"</span>;</span><br><span class="line"> </span><br><span class="line">      <span class="keyword">boolean</span> isMatch = Pattern.matches(pattern, content);</span><br><span class="line">      System.out.println(<span class="string">"字符串中是否包含了 'runoob' 子字符串? "</span> + isMatch);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="文件流"><a href="#文件流" class="headerlink" title="文件流"></a>文件流</h5><p><strong>FileInputStream</strong></p>
+<p><strong>FileOutputStream</strong></p>
+<p><strong>File</strong></p>
+<p><strong>FileReader</strong></p>
+<p><strong>FileWriter</strong></p>
+<h5 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h5><p><strong>Exception</strong></p>
+<p>通过extends Exception 自定义异常</p>
+<h3 id="Java特性"><a href="#Java特性" class="headerlink" title="Java特性"></a>Java特性</h3><h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p><strong>extends</strong>,<strong>implements</strong></p>
+<h4 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h4><p>重写是子类对父类的允许访问的方法的实现过程进行重新编写！返回值和形参都不能改变。</p>
+<h4 id="重载"><a href="#重载" class="headerlink" title="重载"></a>重载</h4><p>重载 (overloading) 是在一个类里面，方法名字相同，而参数不同。</p>
+<h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><p>多态是同一个行为具有不同表现形式或形态的能力.</p>
+<p>使用多态必须满足三个必要条件。</p>
+<ol>
+<li>继承</li>
+<li>重写</li>
+<li>父类引用指向子类</li>
+</ol>
+<h4 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h4><p>抽象类除了不能实例化对象之外，类的其它功能依然存在，成员变量、成员方法和构造方法的访问方式和普通类一样。</p>
+<p>由于抽象类不能实例化对象，所以抽象类必须被继承，才能被使用。</p>
+<h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><p>封装可以被认为是一个保护屏障，防止该类的代码和数据被外部类定义的代码随机访问。</p>
+<p>要访问该类的代码和数据，必须通过严格的接口控制。</p>
+<p>封装最主要的功能在于我们能修改自己的实现代码，而不用修改那些调用我们代码的程序片段。</p>
+<h4 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h4><p>接口并不是类，编写接口的方式和类很相似，但是它们属于不同的概念。类描述对象的属性和方法。接口则包含类要实现的方法。</p>
+<p>除非实现接口的类是抽象类，否则该类要定义接口中的所有方法。</p>
+<h4 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h4><p>泛型，即“参数化类型”(把类型当作是参数一样传递)。<strong>把类型明确的工作推迟到创建对象或调用方法的时候才去明确的特殊的类型</strong></p>
+<p>在面向对象编程及各种设计模式中有非常广泛的应用。Java中的泛型，只在编译阶段有效。在编译之后程序会采取去泛型化的措施，泛型信息不会进入到运行时阶段。泛型类型在逻辑上可以看成是多个不同的类型，实际上都是相同的基本类型。</p>
+<h4 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h4><p>主要是指程序可以访问，检测和修改它本身状态或行为的一种能力，并能根据自身行为的状态和结果，调整或修改应用所描述行为的状态和相关的语义。</p>
+<p><strong>java.lang.reflect</strong></p>
+<p><strong>Class</strong></p>
+<p>forName():根据类名返回类</p>
+<p>getSimpleName():根据类名返回类名</p>
+<p>getModifiers():返回修饰符:default是0,public  是1,private 是 2,protected 是 4,static 是 8,final 是 16。</p>
+<p>getPackage():返回包名</p>
+<p>getSuperclass():获取父类</p>
+<p>getInterfaces():获取接口信息</p>
+<p>getConstructors():获取构造函数(只能获取到public修饰的构造函数,需要捕获NoSuchMethodException)</p>
+<p>newInstance():获取构造函数后,生成类对象;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//创建反射对象</span></span><br><span class="line"><span class="keyword">package</span> com.example.demo;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            Class classTest = Class.forName(<span class="string">"com.example.demo.Test"</span>);</span><br><span class="line">            Constructor constructors = classTest.getConstructors()[<span class="number">0</span>];</span><br><span class="line">            Test test = (Test)constructors.newInstance(<span class="string">"newInstance test"</span>);</span><br><span class="line">            System.out.println(test.vout(<span class="string">"vout"</span>));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span>(ClassNotFoundException e1)&#123;</span><br><span class="line">            System.out.println(<span class="string">"找不到Class类"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (IllegalAccessException e2)&#123;</span><br><span class="line">            System.out.println(<span class="string">"没有访问权限"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (InstantiationException e3)&#123;</span><br><span class="line">            System.out.println(<span class="string">"实例化异常"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">catch</span> (InvocationTargetException e4)&#123;</span><br><span class="line">            System.out.println(<span class="string">"反射异常"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Test</span><span class="params">(String s)</span></span>&#123;</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">vout</span><span class="params">(String s)</span></span>&#123;</span><br><span class="line">        System.out.println(s);</span><br><span class="line">        <span class="keyword">return</span> s+<span class="string">" return"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Field</strong></p>
+<p><code>getFields()</code>方法返回所有可访问的公共字段在类中声明或继承自超类。</p>
+<p><code>getDeclaredFields()</code>方法返回所有字段只出现在类的声明中(不是从继承的字段)。</p>
+<p><code>getField(String name)</code>和<code>getDeclaredField(String name)</code>通过字段名获取<code>Field</code>对象。</p>
+<p><strong>Method</strong></p>
+<p><code>getMethods()</code>返回所有公有方法,返回的是Executable对象,具有getModifiers,getParameters,getExceptionList</p>
+<p><code>getDeclaredMethods()</code>获取本类所有方法</p>
+<h3 id="Java-集合"><a href="#Java-集合" class="headerlink" title="Java 集合"></a>Java 集合</h3><h4 id="Collection-interface"><a href="#Collection-interface" class="headerlink" title="Collection (interface)"></a>Collection (interface)</h4><p>允许你使用一组对象，是Collection层次结构的根接口。</p>
+<p><strong>AbstractCollection</strong> (interface)</p>
+<p>实现了大部分的集合接口</p>
+<p><strong>AbstractSet</strong><br>继承于 AbstractCollection 并且实现了大部分Set接口。</p>
+<p>HashSet<br>继承了 AbstractSet，并且使用一个哈希表。</p>
+<p>LinkedHashSet<br>具有可预知迭代顺序的 Set 接口的哈希表和链接列表实现。</p>
+<p>TreeSet<br>继承于AbstractSet，使用元素的自然顺序对元素进行排序</p>
+<h5 id="Set-interface"><a href="#Set-interface" class="headerlink" title="Set (interface)"></a>Set (interface)</h5><p>继承于 <strong>Collection，是</strong>一个不包含重复元素的集合。</p>
+<p>SortedSet (interface)<br>继承于Set保存有序的集合</p>
+<h5 id="List-interface"><a href="#List-interface" class="headerlink" title="List (interface)"></a>List (interface)</h5><p>继承于<strong>Collection</strong>和一个 List实例存储一个有序集合的元素。</p>
+<p><strong>AbstractList</strong><br>继承于 AbstractCollection 并且实现了大部分List接口。</p>
+<p>ArrayList<br>通过继承 AbstractList，实现动态数组。</p>
+<p><strong>AbstractSequentialList</strong><br>继承于  AbstractList ，提供了对数据元素的链式访问而不是随机访问。</p>
+<p>LinkedList<br>继承于 AbstractSequentialList，实现了一个链表。</p>
+<h4 id="Map-interface"><a href="#Map-interface" class="headerlink" title="Map (interface)"></a>Map (interface)</h4><p>将唯一的键映射到值。</p>
+<p><strong>AbstractMap</strong><br>实现了大部分的 Map 接口。</p>
+<p>HashMap<br>继承了AbstractMap，并且使用一个哈希表。</p>
+<p>TreeMap<br>继承了 AbstractMap，并且使用一颗树。</p>
+<p>WeakHashMap<br>继承 AbstractMap类，使用弱密钥的哈希表。</p>
+<p>LinkedHashMap<br>继承于 HashMap，使用元素的自然顺序对元素进行排序.</p>
+<p>IdentityHashMap<br>继承 AbstractMap 类，比较文档时使用引用相等。</p>
+<p>SortedMap (interface)<br>继承于Map，使Key保持在升序排列。</p>
+<p>java.util 包中定义的类</p>
+<p><strong>Vector</strong> 类实现了一个动态数组。和 ArrayList 和相似，但是两者是不同的。</p>
+<p><strong>Stack</strong>栈是 Vector 的一个子类，它实现了一个标准的后进先出的栈。</p>
+<p><strong>Dictionary</strong> 类是一个抽象类，用来存储键/值对，作用和 Map 类相似。</p>
+<p><strong>Hashtable</strong> 是原始的 java.util 的一部分， 是一个 Dictionary 具体的实现 。</p>
+<p><strong>Properties</strong> 继承于 Hashtable.表示一个持久的属性集.属性列表中每个键及其对应值都是一个字符串。</p>
+<p><strong>Bitset</strong> 类创建一种特殊类型的数组来保存位值。BitSet 中数组大小会随需要增加。</p>
+<h3 id="Java网络"><a href="#Java网络" class="headerlink" title="Java网络"></a>Java网络</h3><h4 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h4><p><a href="https://blog.csdn.net/qq_41182503/article/details/80179641" target="_blank" rel="noopener">参考</a></p>
+<p>TCP连接的建立步骤：<br>客户端向服务器端发送连接请求后，就被动地等待服务器的响应。典型的TCP客户端要经过下面三步操作：</p>
+<ol>
+<li>创建一个Socket实例：构造函数向指定的远程主机和端口建立一个TCP连接；</li>
+<li>通过套接字的I/O流与服务端通信；</li>
+<li>使用Socket类的close方法关闭连接。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.TcpDemo;</span><br><span class="line"><span class="keyword">import</span> java.io.DataInputStream;<span class="comment">//导入DataInputStream类</span></span><br><span class="line"><span class="keyword">import</span> java.io.DataOutputStream;<span class="comment">//导入DataOutputStream</span></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;<span class="comment">//导入IOException类</span></span><br><span class="line"><span class="keyword">import</span> java.net.Socket;<span class="comment">//导入Socket类</span></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;<span class="comment">//导入Scanner类</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 注意用到的输入输出流DataInputStream和DataOutputStream，成对出现，最好用字节流</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// 客户端类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ChatClient</span> </span>&#123;<span class="comment">//创建公共类</span></span><br><span class="line">    <span class="keyword">private</span> String host = <span class="string">"localhost"</span>;<span class="comment">// 默认连接到本机</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> port = <span class="number">8189</span>;<span class="comment">// 默认连接到端口8189</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ChatClient</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 连接到指定的主机和端口</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ChatClient</span><span class="params">(String host, <span class="keyword">int</span> port)</span> </span>&#123;<span class="comment">//构造方法</span></span><br><span class="line">        <span class="keyword">this</span>.host = host;<span class="comment">//将构造方法的参数host传递给类变量host</span></span><br><span class="line">        <span class="keyword">this</span>.port = port;<span class="comment">//将构造方法的参数port传递给类变量port</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">chat</span><span class="params">()</span> </span>&#123;<span class="comment">//chat方法</span></span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 连接到服务器</span></span><br><span class="line">            Socket socket = <span class="keyword">new</span> Socket(host, port);<span class="comment">//创建Socket类对象</span></span><br><span class="line"></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">                DataInputStream in = <span class="keyword">new</span> DataInputStream(socket</span><br><span class="line">                        .getInputStream());<span class="comment">// 读取服务器端传过来信息的DataInputStream</span></span><br><span class="line"></span><br><span class="line">                DataOutputStream out = <span class="keyword">new</span> DataOutputStream(socket</span><br><span class="line">                        .getOutputStream());<span class="comment">// 向服务器端发送信息的DataOutputStream</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">                Scanner scanner = <span class="keyword">new</span> Scanner(System.in);<span class="comment">// 装饰标准输入流，用于从控制台输入</span></span><br><span class="line"></span><br><span class="line">                <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                    String send = scanner.nextLine();<span class="comment">//读取控制台输入的内容</span></span><br><span class="line">                    System.out.println(<span class="string">"客户端："</span> + send);<span class="comment">//输出键盘输出内容提示 ，也就是客户端向服务器端发送的消息</span></span><br><span class="line">                    <span class="comment">// 把从控制台得到的信息传送给服务器</span></span><br><span class="line">                    out.writeUTF(<span class="string">"客户端："</span> + send);<span class="comment">//将客户端的信息传递给服务器</span></span><br><span class="line">                    String accpet = in.readUTF();<span class="comment">// 读取来自服务器的信息</span></span><br><span class="line">                    System.out.println(accpet);<span class="comment">//输出来自服务器的信息</span></span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                socket.close();<span class="comment">//关闭Socket监听</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;<span class="comment">//捕获异常</span></span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;<span class="comment">//主程序方法</span></span><br><span class="line">        <span class="keyword">new</span> ChatClient().chat();<span class="comment">//调用chat方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>服务端的工作是建立一个通信终端，并被动地等待客户端的连接。典型的TCP服务端执行如下操作：</p>
+<ol>
+<li>创建ServerSocket对象，绑定并监听端口</li>
+<li>通过accept监听客户端的请求</li>
+<li>建立连接后，通过输出输入流进行读写操作</li>
+<li>关闭相关资源</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.TcpDemo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.DataInputStream; <span class="comment">//导入 DataInputStream类</span></span><br><span class="line"><span class="keyword">import</span> java.io.DataOutputStream;<span class="comment">//导入DataOutputStream类</span></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;<span class="comment">//导入IOException类</span></span><br><span class="line"><span class="keyword">import</span> java.net.ServerSocket;<span class="comment">//导入ServerSocket类</span></span><br><span class="line"><span class="keyword">import</span> java.net.Socket; <span class="comment">//导入Socket 类</span></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner; <span class="comment">//导入Scanner类</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 模拟qq聊天功能： 实现客户端与服务器（一对一）的聊天功能，客户端首先发起聊天，输入的内容在服务器端和客户端显示，</span></span><br><span class="line"><span class="comment"> * 然后服务器端也可以输入信息，同样信息也在客户端和服务器端显示</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 服务器类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ChatServer</span> </span>&#123;<span class="comment">//ChatServer类</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> port = <span class="number">8189</span>;<span class="comment">// 默认服务器端口</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ChatServer</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建指定端口的服务器</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ChatServer</span><span class="params">(<span class="keyword">int</span> port)</span> </span>&#123;<span class="comment">//构造方法</span></span><br><span class="line">        <span class="keyword">this</span>.port = port;<span class="comment">//将方法参数赋值给类参数</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 提供服务</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">service</span><span class="params">()</span> </span>&#123;<span class="comment">//创建service方法</span></span><br><span class="line">        <span class="keyword">try</span> &#123;<span class="comment">// 建立服务器连接</span></span><br><span class="line">            ServerSocket server = <span class="keyword">new</span> ServerSocket(port);<span class="comment">//创建  ServerSocket类</span></span><br><span class="line">            Socket socket = server.accept();<span class="comment">// 等待客户连接</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                DataInputStream in = <span class="keyword">new</span> DataInputStream(socket</span><br><span class="line">                        .getInputStream());<span class="comment">// 读取客户端传过来信息的DataInputStream</span></span><br><span class="line">                DataOutputStream out = <span class="keyword">new</span> DataOutputStream(socket</span><br><span class="line">                        .getOutputStream());<span class="comment">// 向客户端发送信息的DataOutputStream</span></span><br><span class="line">                Scanner scanner = <span class="keyword">new</span> Scanner(System.in);<span class="comment">//从键盘接受数据</span></span><br><span class="line">                <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                    String accpet = in.readUTF();<span class="comment">// 读取来自客户端的信息</span></span><br><span class="line">                    System.out.println(accpet);<span class="comment">//输出来自客户端的信息</span></span><br><span class="line">                    String send = scanner.nextLine();<span class="comment">//nextLine方式接受字符串</span></span><br><span class="line">                    System.out.println(<span class="string">"服务器："</span> + send);<span class="comment">//输出提示信息</span></span><br><span class="line">                    out.writeUTF(<span class="string">"服务器："</span> + send);<span class="comment">//把服务器端的输入发给客户端</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">finally</span> &#123;<span class="comment">// 建立连接失败的话不会执行socket.close();</span></span><br><span class="line">                socket.close();<span class="comment">//关闭连接</span></span><br><span class="line">                server.close();<span class="comment">//关闭</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;<span class="comment">//捕获异常</span></span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;<span class="comment">//主程序方法</span></span><br><span class="line">        <span class="keyword">new</span> ChatServer().service();<span class="comment">//调用 service方法</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>accept() 会阻塞程序执行（后面代码不能被执行），直到有新的请求到来，所以每次输入都只能一行，还要一问一答才行。</p>
+<h4 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h4><p><a href="https://blog.csdn.net/m0_38056893/article/details/80384311" target="_blank" rel="noopener">参考</a></p>
+<p>接收端</p>
+<ol>
+<li>创建发送端socket对象（需要指定端口）</li>
+<li>创建一个数据包（接收容器） </li>
+<li>调用socket对象的接收方法接收数据</li>
+<li>解析数据并显示在控制台</li>
+<li>释放资源</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.UdpDemo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.DatagramPacket;</span><br><span class="line"><span class="keyword">import</span> java.net.DatagramSocket;</span><br><span class="line"><span class="keyword">import</span> java.net.InetAddress;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> *  UDP协议接收数据：</span></span><br><span class="line"><span class="comment">	（1）创建发送端socket对象</span></span><br><span class="line"><span class="comment">	（2）创建一个数据包（接收容器）</span></span><br><span class="line"><span class="comment">	（3）调用socket对象的接收方法接收数据</span></span><br><span class="line"><span class="comment">	（4）解析数据并显示在控制台</span></span><br><span class="line"><span class="comment">	（5）释放资源</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ReceiveDemo</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// （1）创建发送端socket对象</span></span><br><span class="line">        <span class="comment">// public DatagramSocket(int port)：创建数据报套接字并将其绑定到本地主机上的指定端口。</span></span><br><span class="line">        DatagramSocket ds = <span class="keyword">new</span> DatagramSocket(<span class="number">10086</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// （2）创建一个数据包（接收容器）</span></span><br><span class="line">        <span class="comment">// DatagramPacket(byte[] buf, int length)：构造DatagramPacket，用来接收长度为</span></span><br><span class="line">        <span class="comment">// length 的数据包。</span></span><br><span class="line">        <span class="keyword">byte</span>[] bys = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="keyword">int</span> len = bys.length;</span><br><span class="line"></span><br><span class="line">        DatagramPacket dp = <span class="keyword">new</span> DatagramPacket(bys, len);</span><br><span class="line">        <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">            <span class="comment">// （3）调用socket对象的接收方法接收数据</span></span><br><span class="line">            <span class="comment">// public void receive(DatagramPacket p)：从此套接字接收数据报包。</span></span><br><span class="line">            ds.receive(dp);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// （4）解析数据并显示在控制台</span></span><br><span class="line">            <span class="comment">// 获取对方的IP</span></span><br><span class="line">            <span class="comment">// public InetAddress getAddress()：返回某台机器的 IP地址，此数据报将要发往该机器或者是从该机器接收到的。</span></span><br><span class="line">            InetAddress address = dp.getAddress();</span><br><span class="line">            String ip = address.getHostAddress();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// public byte[] getData()：返回数据缓冲区。</span></span><br><span class="line">            <span class="comment">// public int getLength()：返回将要发送或接收到的数据的长度。</span></span><br><span class="line">            <span class="keyword">byte</span>[] bys2 = dp.getData();</span><br><span class="line">            <span class="keyword">int</span> len2 = dp.getLength();</span><br><span class="line">            String s = <span class="keyword">new</span> String(bys2, <span class="number">0</span>, len2);</span><br><span class="line">            System.out.println(ip + <span class="string">":"</span> + s);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// （5）释放资源</span></span><br><span class="line">            <span class="comment">//ds.close();</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>发送端</p>
+<ol>
+<li>创建发送端socket对象</li>
+<li>创建数据并把数据打包</li>
+<li>调用socket对象的发送方法发送数据包</li>
+<li>释放资源</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.demo.UdpDemo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.DatagramPacket;</span><br><span class="line"><span class="keyword">import</span> java.net.DatagramSocket;</span><br><span class="line"><span class="keyword">import</span> java.net.InetAddress;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 	UDP协议发送数据：</span></span><br><span class="line"><span class="comment"> * 	（1）创建发送端socket对象</span></span><br><span class="line"><span class="comment"> * 	（2）创建数据并把数据打包</span></span><br><span class="line"><span class="comment"> * 	（3）调用socket对象的发送方法发送数据包</span></span><br><span class="line"><span class="comment"> * 	（4）释放资源</span></span><br><span class="line"><span class="comment"> * */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SendDemo</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//（1）创建发送端socket对象</span></span><br><span class="line">        <span class="comment">// DatagramSocket()：构造数据报套接字并将其绑定到本地主机上任何可用的端口。</span></span><br><span class="line">        DatagramSocket ds = <span class="keyword">new</span> DatagramSocket();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//（2）创建数据并把数据打包</span></span><br><span class="line">        <span class="comment">// public DatagramPacket(byte[] buf,int length,InetAddress address,int port)</span></span><br><span class="line">        <span class="comment">// 1-创建数据</span></span><br><span class="line">        <span class="keyword">byte</span>[] bys = <span class="string">"hello UDP，我来了"</span>.getBytes();</span><br><span class="line">        <span class="comment">// 2-长度</span></span><br><span class="line">        <span class="keyword">int</span> len = bys.length;</span><br><span class="line">        <span class="comment">// 3-IP地址</span></span><br><span class="line">        InetAddress address = InetAddress.getByName(<span class="string">"127.0.0.1"</span>);</span><br><span class="line">        <span class="comment">// 4-端口</span></span><br><span class="line">        <span class="keyword">int</span> port = <span class="number">10086</span>;</span><br><span class="line">        DatagramPacket dp = <span class="keyword">new</span> DatagramPacket(bys,len,address,port);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//（3）调用socket对象的发送方法发送数据包</span></span><br><span class="line">        ds.send(dp);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//（4）释放资源</span></span><br><span class="line">        ds.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h4><p><a href="https://blog.csdn.net/riemann_/article/details/90539829" target="_blank" rel="noopener">参考</a></p>
+<p>在Java项目中调用第三方接口的方式有：</p>
+<ol>
+<li>通过JDK网络类Java.net.HttpURLConnection；</li>
+<li>通过common封装好的HttpClient；</li>
+<li>通过Apache封装好的CloseableHttpClient；</li>
+<li>通过SpringBoot-RestTemplate；</li>
+</ol>
+<h5 id="HttpURLConnection"><a href="#HttpURLConnection" class="headerlink" title="HttpURLConnection"></a>HttpURLConnection</h5><p><strong>java.net.HttpURLConnection</strong></p>
+<p>可以通过URL.openConnection()创建连接,setRequestMethod,setConnectTimeout,setRequestProperty等设置参数,connect()开启连接,getResponseCode(),getInputStream()获得返回结果.</p>
+<h5 id="HttpClient"><a href="#HttpClient" class="headerlink" title="HttpClient"></a>HttpClient</h5><p>httpClient的get或post请求方式步骤：</p>
+<ul>
+<li>生成一个HttpClient对象并设置相应的参数；</li>
+<li>生成一个GetMethod对象或PostMethod并设置响应的参数；</li>
+<li>用HttpClient生成的对象来执行GetMethod生成的Get方法；</li>
+<li>处理响应状态码；</li>
+<li>若响应正常，处理HTTP响应内容；</li>
+<li>释放连接。</li>
+</ul>
+<p>jar依赖:</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--HttpClient--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-httpclient<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-httpclient<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>addRequestHeader 自定义header头</p>
+<p>GetMethod Get请求</p>
+<p>PostMethod Post请求</p>
+<p>httpClient.executeMethod(getMethod) 执行HTTP 请求</p>
+<h5 id="CloseableHttpClient"><a href="#CloseableHttpClient" class="headerlink" title="CloseableHttpClient"></a>CloseableHttpClient</h5><p>CloseableHttpClient是在HttpClient的基础上修改更新而来的.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--CloseableHttpClient--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.httpcomponents<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>httpclient<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.5.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>addHeader自定义header头 </p>
+<p>HttpGet Get请求</p>
+<p>HttpPost Post请求</p>
+<p>httpClient.execute(httpPost) 执行HTTP 请求</p>
+<h5 id="SpringBoot-RestTemplate"><a href="#SpringBoot-RestTemplate" class="headerlink" title="SpringBoot-RestTemplate"></a>SpringBoot-RestTemplate</h5><p>springBoot-RestTemple是上面三种方式的集大成者，代码编写更加简单，目前可以采用的调用第三方接口有：</p>
+<ul>
+<li>delete() 在特定的URL上对资源执行HTTP DELETE操作</li>
+<li><strong>exchange()</strong> 在URL上执行特定的HTTP方法，返回包含对象的ResponseEntity，这个对象是从响应体中映射得到的</li>
+<li>execute() 在URL上执行特定的HTTP方法，返回一个从响应体映射得到的对象</li>
+<li><strong>getForEntity()</strong> 发送一个HTTP GET请求，返回的ResponseEntity包含了响应体所映射成的对象</li>
+<li><strong>getForObject()</strong> 发送一个HTTP GET请求，返回的请求体将映射为一个对象</li>
+<li><strong>postForEntity()</strong> POST 数据到一个URL，返回包含一个对象的ResponseEntity，这个对象是从响应体中映射得到的</li>
+<li><strong>postForObject()</strong> POST 数据到一个URL，返回根据响应体匹配形成的对象</li>
+<li>headForHeaders() 发送HTTP HEAD请求，返回包含特定资源URL的HTTP头</li>
+<li>optionsForAllow() 发送HTTP OPTIONS请求，返回对特定URL的Allow头信息</li>
+<li>postForLocation() POST 数据到一个URL，返回新创建资源的URL</li>
+<li>put() PUT 资源到特定的URL</li>
+</ul>
+<p>需要引用spring-web-5.0.10.RELEASE.jar</p>
+<p>import org.springframework.web.client.RestTemplate;    引包</p>
+<p>@Autowired private RestTemplate restTemplate;    注入RestTemplate </p>
+<p>exchange 执行特定的HTTP方法</p>
+
+                
+            </div>
+            <hr>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/学习/">
+                                    <span class="chip bg-color">学习</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/11/30/Python学习/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="学习Python">
+                        
+                        <span class="card-title">学习Python</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-30
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            linPeng
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/学习/">
+                        <span class="chip bg-color">学习</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/11/04/Java虚拟机/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="学习JVM">
+                        
+                        <span class="card-title">学习JVM</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-04
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JAVA/" class="post-category">
+                                    JAVA
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/学习/">
+                        <span class="chip bg-color">学习</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class>
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2700388203" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">linPeng</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/linPng" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

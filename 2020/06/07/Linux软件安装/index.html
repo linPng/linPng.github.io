@@ -1,0 +1,1248 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Linux的开发环境搭建, 归来仍是少年">
+    <meta name="description" content>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>Linux的开发环境搭建 | 归来仍是少年</title>
+    <link rel="icon" type="image/png" href="/medias/logo01.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo02.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">归来仍是少年</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo02.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">归来仍是少年</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Linux的开发环境搭建</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/基础/">
+                                <span class="chip bg-color">基础</span>
+                            </a>
+                        
+                            <a href="/tags/环境/">
+                                <span class="chip bg-color">环境</span>
+                            </a>
+                        
+                            <a href="/tags/安装/">
+                                <span class="chip bg-color">安装</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/linux/" class="post-category">
+                                linux
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-06-07
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="Linux开发环境"><a href="#Linux开发环境" class="headerlink" title="Linux开发环境"></a>Linux开发环境</h1><p>本文的linux系统是华为云、阿里云、腾讯云上的CentOS7。</p>
+<p>[TOC]</p>
+<a id="more"></a>
+<h2 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h2><p><code>yum install -y java-1.8.0-openjdk*</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install java-1.8.0-openjdk</span><br><span class="line">yum install java-1.8.0-openjdk-devel</span><br></pre></td></tr></table></figure>
+<p>yum默认安装在<code>/usr/lib/jvm</code></p>
+<p>配置变量:<code>/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64</code></p>
+<p>如果<code>java -version</code>显示的是openjdk，说明安装的openjdk。</p>
+<p>配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">输入以下内容</span></span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/java-1.8.0</span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre</span><br><span class="line">export CLASS_PATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib</span><br><span class="line">export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">退出保存</span></span><br><span class="line">source /etc/profile</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">验证</span></span><br><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure>
+<p>或者安装Oracle JDK，下载<a href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html" target="_blank" rel="noopener">安装包</a>，手动安装。</p>
+<p><code>rpm -qa | grep java</code>查看当前版本</p>
+<p><code>yum -y remove java-1.8.0-openjdk*</code>先卸载</p>
+<p>开始安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ </span><br><span class="line">mkdir java </span><br><span class="line">cd java</span><br><span class="line">tar -zxvf /root/jdk-8u251-linux-i586.tar.gz -C ./  </span><br><span class="line"><span class="meta">#</span><span class="bash">jdk-8u251-linux-i586.tar.gz就是刚才下载的安装包</span></span><br></pre></td></tr></table></figure>
+<p>解压完之后， /usr/local/java ⽬录中会出现⼀个 jdk1.8.0_161 的⽬录</p>
+<p>配置JDK环境变量 </p>
+<p>编辑 /etc/profile ⽂件，在⽂件尾部加⼊如下 JDK 环境配置即可</p>
+<figure class="highlight profile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME=/usr/local/java/jdk1.8.0_161 </span><br><span class="line">CLASSPATH=$JAVA_HOME/lib/ </span><br><span class="line">PATH=$PATH:$JAVA_HOME/bin </span><br><span class="line">export PATH JAVA_HOME CLASSPATH</span><br></pre></td></tr></table></figure>
+<p>然后执⾏如下命令让环境变量⽣效</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<h2 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h2><p>安装：<code>yum install git</code> <code>git --version</code>//<a href="https://github.com/git/git/archive/v2.23.0.tar.gz" target="_blank" rel="noopener">下载地址</a> <a href="https://www.cnblogs.com/salt-fish1/p/10207878.html" target="_blank" rel="noopener">遇到的错误</a></p>
+<h2 id="NODE"><a href="#NODE" class="headerlink" title="NODE"></a>NODE</h2><p>下载<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">安装包</a>：node-v12.18.0-linux-x64.tar.xz，放在root目录下。</p>
+<p>开始安装 <a href="https://github.com/nodejs/help/wiki/Installation" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ </span><br><span class="line">mkdir node</span><br><span class="line">cd node</span><br><span class="line">tar -xJvf /root/node-v12.18.0-linux-x64.tar.xz -C ./</span><br></pre></td></tr></table></figure>
+<p>配置环境变量 <code>vim ~/.bash_profile</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bash_profile</span><br><span class="line"><span class="meta">#</span><span class="bash">Centos7系统命名为.bash_profile，其他系统可能是.bash_login或.profile,只对当前用户有效.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight profile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#PATH拼上node的bin路径</span><br><span class="line">PATH=/usr/local/node/node-v12.18.0-linux-x64/bin:$PATH</span><br><span class="line">export PATH</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bash_profile</span><br></pre></td></tr></table></figure>
+<h2 id="Python"><a href="#Python" class="headerlink" title="Python"></a>Python</h2><p>下载<a href="https://www.python.org/downloads/source/" target="_blank" rel="noopener">安装包</a>：Python-3.8.3.tgz，放在root目录下。</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ </span><br><span class="line">mkdir python3 </span><br><span class="line">cd python3</span><br><span class="line">tar -zxvf /root/Python-3.8.3.tgz -C ./</span><br></pre></td></tr></table></figure>
+<p>编译安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd Python-3.8.3/</span><br><span class="line">./configure prefix=/usr/local/python3/    #</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>添加软链接 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/python3 /usr/bin/python3</span><br><span class="line">ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+<h2 id="MAVEN"><a href="#MAVEN" class="headerlink" title="MAVEN"></a>MAVEN</h2><p>下载<a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">安装包</a>：apache-maven-3.6.3-bin.tar.gz，放在root目录下。</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ </span><br><span class="line">mkdir maven </span><br><span class="line">cd maven</span><br><span class="line">tar -zxvf /root/apache-maven-3.6.3-bin.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<p>配置MAVEN加速镜像</p>
+<p>编辑修改 /usr/local/maven/apache-maven-3.6.3/conf/settings.xml </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--mirror要放在&lt;mirrors&gt;&lt;/mirrors&gt;标签内--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mirror</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span>&gt;</span>alimaven<span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>aliyun maven<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">url</span>&gt;</span>http://maven.aliyun.com/nexus/content/groups/public/<span class="tag">&lt;/<span class="name">url</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mirrorOf</span>&gt;</span>central<span class="tag">&lt;/<span class="name">mirrorOf</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mirror</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>配置环境变量</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export MAVEN_HOME=/usr/local/maven/apache-maven-3.6.3 </span><br><span class="line">export PATH=$MAVEN_HOME/bin:$PATH</span><br></pre></td></tr></table></figure>
+<p>刷新环境变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<p>查看版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn -v</span><br></pre></td></tr></table></figure>
+<h4 id="配置本地仓库"><a href="#配置本地仓库" class="headerlink" title="配置本地仓库"></a>配置本地仓库</h4><p><a href="https://linpng.gitee.io/2019/03/24/maven%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">参考前文</a></p>
+<p>下载安装包：nexus-3.26.1-02-unix.tar.gz，放在root目录下。</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/ </span><br><span class="line">mkdir nexus </span><br><span class="line">cd nexus</span><br><span class="line">tar -zxvf /root/nexus-3.26.1-02-unix.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<h2 id="MYSQL"><a href="#MYSQL" class="headerlink" title="MYSQL"></a>MYSQL</h2><p><a href="https://linpng.github.io/2019/09/04/MySql/" target="_blank" rel="noopener">参考前文</a></p>
+<h2 id="REDIS"><a href="#REDIS" class="headerlink" title="REDIS"></a>REDIS</h2><p>下载<a href="https://www.python.org/downloads/source/" target="_blank" rel="noopener">安装包</a>：redis-6.0.4.tar.gz，放在root目录下。</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir redis </span><br><span class="line">cd redis</span><br><span class="line">tar -zxvf /root/redis-6.0.4.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<p>编译安装 <a href="https://blog.csdn.net/YY_WG/article/details/106391337" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">cd redis-6.0.4/</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line"><span class="meta">#</span><span class="bash">报错has no member named，gcc版本要高于5.3</span></span><br><span class="line"><span class="meta">#</span><span class="bash">gcc升级到9</span></span><br><span class="line">yum -y install centos-release-scl</span><br><span class="line">yum -y install devtoolset-9-gcc devtoolset-9-gcc-c++ devtoolset-9-binutils</span><br><span class="line">scl enable devtoolset-9 bash</span><br><span class="line"><span class="meta">#</span><span class="bash"> 这样退出shell重新打开就是新版的gcc了</span></span><br><span class="line">echo "source /opt/rh/devtoolset-9/enable" &gt;&gt;/etc/profile</span><br><span class="line">gcc -v</span><br></pre></td></tr></table></figure>
+<p>将 REDIS 安装为系统服务并后台启动 <a href="https://stackoverflow.com/questions/61694459/installing-redis-use-install-server-sh" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd utils/</span><br><span class="line">./install_server.sh</span><br><span class="line"><span class="meta">#</span><span class="bash">可配置端口,配置文件路径等参数</span></span><br><span class="line"><span class="meta">#</span><span class="bash">遇到This system seems to use systemd. 注释掉<span class="keyword">if</span> [ <span class="string">"<span class="variable">$&#123;_pid_1_exe##*/&#125;</span>"</span> = systemd ] 模块</span></span><br></pre></td></tr></table></figure>
+<p>启动⾃带的 redis-cli 客户端</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">redis-cli -p 16379</span><br><span class="line"><span class="meta">#</span><span class="bash">默认是6379，-h 指定ip -p 指定端口 -a 指定密码</span></span><br></pre></td></tr></table></figure>
+<p>设置允许远程连接并配置密码</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/redis/redis-6.0.4/16379.conf</span><br><span class="line"><span class="meta">#</span><span class="bash">这个路径是在./install_server.sh时候配置的</span></span><br><span class="line"><span class="meta">#</span><span class="bash">将 <span class="built_in">bind</span> 127.0.0.1 修改为 0.0.0.0</span></span><br><span class="line"><span class="meta">#</span><span class="bash">将 <span class="comment">#requirepass foobared改为requirepass 密码</span></span></span><br></pre></td></tr></table></figure>
+<p>重启服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart redis_16379.service</span><br></pre></td></tr></table></figure>
+<p>查看服务状态</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status redis_16379.service</span><br></pre></td></tr></table></figure>
+<h2 id="RABBITMQ"><a href="#RABBITMQ" class="headerlink" title="RABBITMQ"></a>RABBITMQ</h2><p>开发语言：Erlang</p>
+<p>所以要先安装<a href="https://www.rabbitmq.com/which-erlang.html" target="_blank" rel="noopener">对应版本</a>的<a href="https://www.erlang.org/" target="_blank" rel="noopener">Erlang</a>，下载<a href="https://www.erlang.org/downloads" target="_blank" rel="noopener">安装包</a>：otp_src_22.3.tar.gz，放在root下。</p>
+<p>ErLang解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir erlang </span><br><span class="line">cd erlang</span><br><span class="line">tar -zxvf /root/otp_src_21.3.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<p>ErLang安装依赖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yum install -y gcc gcc-c++ unixODBC-devel openssl-devel ncurses-devel</span><br><span class="line">cd otp_src_21.3/</span><br><span class="line">./configure --prefix=/usr/local/erlang</span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+<p>配置Erlang环境变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"><span class="meta">#</span><span class="bash">PATH添加Erlang <span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:/usr/<span class="built_in">local</span>/erlang/bin</span></span><br><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<p>验证erlang是否安装成功</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">erl</span><br><span class="line">ssl:versions().</span><br><span class="line">halt().</span><br></pre></td></tr></table></figure>
+<p>开始安装RabbitMQ，<a href="https://www.rabbitmq.com/install-rpm.html" target="_blank" rel="noopener">官方</a>推荐用yum存储库。</p>
+<p>一种快速的安装方法是使用<a href="https://packagecloud.io/rabbitmq/rabbitmq-server/install#bash-rpm" target="_blank" rel="noopener">Package Cloud提供的脚本</a>。Package Cloud也可以用于<a href="https://packagecloud.io/rabbitmq/erlang/install#bash-rpm" target="_blank" rel="noopener">通过yum安装最新的Erlang版本</a>。</p>
+<p>安装ErLang</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | sudo bash</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install erlang-23.0.2-1.el7.x86_64</span><br></pre></td></tr></table></figure>
+<p>安装rabbitmq</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s https://packagecloud.io/install/repositories/rabbitmq/rabbitmq-server/script.rpm.sh | sudo bash</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rpm --import https://github.com/rabbitmq/signing-keys/releases/download/2.0/rabbitmq-release-signing-key.asc</span><br><span class="line">yum install rabbitmq-server-3.8.4-1.el7.noarch</span><br></pre></td></tr></table></figure>
+<p>设置RABBITMQ开机启动 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chkconfig rabbitmq-server on</span><br></pre></td></tr></table></figure>
+<p>启动RABBITMQ服务 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start rabbitmq-server.service</span><br></pre></td></tr></table></figure>
+<p>开启WEB可视化管理插件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins enable rabbitmq_management</span><br><span class="line"><span class="meta">#</span><span class="bash">WEB地址为 服务器IP:15672</span></span><br></pre></td></tr></table></figure>
+<p>添加⽤户/密码对</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">rabbitmqctl add_user USERNAME PASSWORD</span><br><span class="line">rabbitmqctl set_user_tags USERNAME administrator</span><br></pre></td></tr></table></figure>
+<h2 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h2><p><a href="https://linpng.github.io/2019/07/20/nginx/" target="_blank" rel="noopener">参考前文</a></p>
+<h2 id="FastDFS"><a href="#FastDFS" class="headerlink" title="FastDFS"></a>FastDFS</h2><p><a href="https://linpng.github.io/2019/08/03/fastDFS/" target="_blank" rel="noopener">参考前文</a></p>
+<h2 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h2><p><a href="https://linpng.github.io/2019/04/24/MongoDB/" target="_blank" rel="noopener">参考前文</a> <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat-tarball/" target="_blank" rel="noopener">参考官网</a> </p>
+<p>去<a href="https://www.mongodb.com/try/download/community" target="_blank" rel="noopener">官网下载</a>偶数的稳定版本:mongodb-linux-x86_64-rhel80-4.2.8.tgz</p>
+<p>前提条件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install libcurl openssl</span><br></pre></td></tr></table></figure>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir mongobd </span><br><span class="line">cd mongobd</span><br><span class="line">tar -zxvf /root/mongodb-linux-x86_64-rhel80-4.2.8.tgz -C ./</span><br></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /data/db</span><br><span class="line">cd /usr/local/mongobd/mongodb-linux-x86_64-rhel80-4.2.8/bin</span><br></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/mongobd/mongodb-linux-x86_64-rhel80-4.2.8/bin</span><br><span class="line"><span class="meta">#</span><span class="bash">./mongod --<span class="built_in">help</span> 获取开放的参数</span></span><br><span class="line"><span class="meta">#</span><span class="bash">--dbpath  --logpath  --bind_ip_all  --port  --fork(后台)   --shutdown</span></span><br><span class="line">./mongod --bind_ip &#123;ip&#125;</span><br></pre></td></tr></table></figure>
+<p>报错</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">./mongod: error <span class="keyword">while</span> loading shared libraries: libcrypto.so.1.1: cannot open shared object file: No such file or directory</span></span><br><span class="line">yum install http://repo.okay.com.mx/centos/7/x86_64/release/okay-release-1-1.noarch.rpm</span><br><span class="line">yum install openssl11-libs</span><br><span class="line"><span class="meta">#</span><span class="bash">查看libcrypto.so.1.1</span></span><br><span class="line">cd /usr/lib64</span><br><span class="line">ll -h | grep libcrypto</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">./mongod: /lib64/libc.so.6: version `GLIBC_2.18<span class="string">' not found (required by ./mongod)</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">升级GLIBC有风险，有可能会导致系统崩溃，必须要指定--prefix=/usr</span></span><br><span class="line">cd /usr/local/</span><br><span class="line">mkdir glibc</span><br><span class="line">cd glibc</span><br><span class="line">curl -O http://ftp.gnu.org/gnu/glibc/glibc-2.18.tar.gz</span><br><span class="line">tar zxf glibc-2.18.tar.gz </span><br><span class="line">cd glibc-2.18/</span><br><span class="line">mkdir build</span><br><span class="line">cd build/</span><br><span class="line">../configure --prefix=/usr</span><br><span class="line">make -j2</span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">Error parsing INI config file: unrecognised option <span class="string">'nohttpinterface'</span></span></span><br></pre></td></tr></table></figure>
+<h2 id="DOCKER"><a href="#DOCKER" class="headerlink" title="DOCKER"></a>DOCKER</h2><p>安装DOCKER </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y docker</span><br></pre></td></tr></table></figure>
+<p>开启DOCKER服务 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker.service</span><br></pre></td></tr></table></figure>
+<p>查看安装结果 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker version</span><br></pre></td></tr></table></figure>
+<p>设置开机启动 </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable docker.service</span><br></pre></td></tr></table></figure>
+<p>加速镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/docker/daemon.json</span><br></pre></td></tr></table></figure>
+<p>添加 Docker中国区官方镜像、网易、ustc 的加速地址，还是阿里的比较快。 </p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"registry-mirrors"</span>: [</span><br><span class="line">      <span class="string">"https://99jidmxe.mirror.aliyuncs.com"</span></span><br><span class="line">    //<span class="string">"https://registry.docker-cn.com"</span>,</span><br><span class="line">    //<span class="string">"http://hub-mirror.c.163.com"</span>,</span><br><span class="line">    //<span class="string">"https://docker.mirrors.ustc.edu.cn"</span></span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart docker.service</span><br></pre></td></tr></table></figure>
+<h2 id="KUBERNETES"><a href="#KUBERNETES" class="headerlink" title="KUBERNETES"></a>KUBERNETES</h2><p><a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/" target="_blank" rel="noopener">官网</a>推荐使用kubeadm搭建集群，我是把三个不同的云集群起来，已经配好了安全组和防火墙三台云服务之间都是端口全开的。</p>
+<ul>
+<li>一台或多台运行与deb / rpm兼容的Linux操作系统的计算机；例如：Ubuntu或CentOS。</li>
+<li>每台机器2 GB或更多的RAM-更少的空间为您的应用程序留出了很少的空间。</li>
+<li>用作控制平面节点的计算机上至少有2个CPU。</li>
+<li>群集中所有计算机之间的完全网络连接。您可以使用公共网络或专用网络。</li>
+</ul>
+<p>先要安装docker。</p>
+<p><a href="https://www.cnblogs.com/rainingnight/p/using-kubeadm-to-create-a-cluster.html#%E5%AE%89%E8%A3%85-kubeadm-kubelet-and-kubectl" target="_blank" rel="noopener">参考</a></p>
+<p>安装<a href="https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/" target="_blank" rel="noopener">kubeadm</a>，kubelet和<a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-on-linux" target="_blank" rel="noopener">kubectl</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">/etc/yum.repos.d/kubernetes.repo  添加yum配置</span></span><br><span class="line">cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br><span class="line">repo_gpgcheck=1</span><br><span class="line">gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg</span><br><span class="line">exclude=kubelet kubeadm kubectl</span><br><span class="line">EOF</span><br><span class="line"><span class="meta">#</span><span class="bash">Kubernetes国内yum源</span></span><br><span class="line">cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https://mirrors.aliyun.com/kubernetes/yum/repos/kubernetes-el7-x86_64</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br><span class="line">repo_gpgcheck=1</span><br><span class="line">gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Set SELinux <span class="keyword">in</span> permissive mode (effectively disabling it)</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 使用getenforce命令查看SELinux状态，setenforce 0关闭SELinux</span></span><br><span class="line">setenforce 0</span><br><span class="line"><span class="meta">#</span><span class="bash">sed 替换修改/etc/selinux/config</span></span><br><span class="line">sed -i 's/^SELINUX=enforcing$/SELINUX=permissive/' /etc/selinux/config</span><br><span class="line"><span class="meta">#</span><span class="bash">安装kubelet kubeadm kubectl</span></span><br><span class="line">yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes</span><br><span class="line"><span class="meta">#</span><span class="bash">报错：Trying other mirror. 用aliyun的yum源</span></span><br><span class="line"></span><br><span class="line">systemctl enable --now kubelet</span><br></pre></td></tr></table></figure>
+<h4 id="初始化master节点"><a href="#初始化master节点" class="headerlink" title="初始化master节点"></a>初始化master节点</h4><p><a href="https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init" target="_blank" rel="noopener">kubeadm init</a>引导Kubernetes控制平面节点  有关配置选项的完整列表，请参阅<a href="https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/#config-file" target="_blank" rel="noopener">配置文件文档</a>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">kubeadm init --apiserver-advertise-address 124.70.178.225 --pod-network-cidr=192.168.0.0/16</span><br><span class="line"><span class="meta">#</span><span class="bash">kubeadm 使用 eth0 的默认网络接口（通常是内网IP）做为 Master 节点的 advertise address ，如果我们想使用不同的网络接口，可以使用 --apiserver-advertise-address=&lt;ip-address&gt; 参数来设置</span></span><br><span class="line"><span class="meta">#</span><span class="bash">pod-network-cidr: 指定pod网络的IP地址范围，它的值取决于你在下一步选择的哪个网络网络插件，比如我在本文中使用的是Calico网络，需要指定为192.168.0.0/16。kubectl cluster-info dump | grep -m 1 cluster-cidr  可查看当前的cidr。</span></span><br><span class="line"><span class="meta">#</span><span class="bash">--kubernetes-version=v1.18.1 指定版本号</span></span><br></pre></td></tr></table></figure>
+<h5 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h5><p>This might take a minute or two, depending on the speed of your internet connection</p>
+<p>如果不能连上google，那就要自己下载相关镜像。<a href="https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/#running-kubeadm-without-an-internet-connection" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">列出所需的镜像列表。</span></span><br><span class="line">kubeadm config images list</span><br><span class="line"><span class="meta">#</span><span class="bash">k8s.gcr.io/kube-apiserver:v1.18.3</span></span><br><span class="line"><span class="meta">#</span><span class="bash">k8s.gcr.io/kube-controller-manager:v1.18.3</span></span><br><span class="line"><span class="meta">#</span><span class="bash">k8s.gcr.io/kube-scheduler:v1.18.3</span></span><br><span class="line"><span class="meta">#</span><span class="bash">k8s.gcr.io/kube-proxy:v1.18.3</span></span><br><span class="line"><span class="meta">#</span><span class="bash">k8s.gcr.io/pause:3.2</span></span><br><span class="line"><span class="meta">#</span><span class="bash">k8s.gcr.io/etcd:3.4.3-0</span></span><br><span class="line"><span class="meta">#</span><span class="bash">k8s.gcr.io/coredns:1.6.7</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">k8s.gcr.io 无法访问，需要通过hub.docker.com获取可访问镜像。</span></span><br><span class="line">docker pull kubesphere/kube-apiserver:v1.18.3</span><br><span class="line">docker pull kubesphere/kube-controller-manager:v1.18.3</span><br><span class="line">docker pull kubesphere/kube-scheduler:v1.18.3</span><br><span class="line">docker pull kubesphere/kube-proxy:v1.18.3</span><br><span class="line">docker pull kubesphere/pause:3.2</span><br><span class="line">docker pull azhu/etcd:3.4.3-0</span><br><span class="line">docker pull coredns/coredns:1.6.7</span><br><span class="line"></span><br><span class="line">docker tag kubesphere/kube-apiserver:v1.18.3 k8s.gcr.io/kube-apiserver:v1.18.3</span><br><span class="line">docker tag kubesphere/kube-controller-manager:v1.18.3 k8s.gcr.io/kube-controller-manager:v1.18.3</span><br><span class="line">docker tag kubesphere/kube-scheduler:v1.18.3 k8s.gcr.io/kube-scheduler:v1.18.3</span><br><span class="line">docker tag kubesphere/kube-proxy:v1.18.3 k8s.gcr.io/kube-proxy:v1.18.3</span><br><span class="line">docker tag kubesphere/pause:3.2 k8s.gcr.io/pause:3.2</span><br><span class="line">docker tag azhu/etcd:3.4.3-0 k8s.gcr.io/etcd:3.4.3-0</span><br><span class="line">docker tag coredns/coredns:1.6.7 k8s.gcr.io/coredns:1.6.7</span><br><span class="line"><span class="meta">#</span><span class="bash">查看本地的镜像</span></span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">删除镜像</span></span><br><span class="line">docker rmi kubesphere/kube-apiserver:v1.18.3</span><br><span class="line">docker rmi kubesphere/kube-controller-manager:v1.18.3</span><br><span class="line">docker rmi kubesphere/kube-scheduler:v1.18.3</span><br><span class="line">docker rmi kubesphere/kube-proxy:v1.18.3</span><br><span class="line">docker rmi kubesphere/pause:3.2</span><br><span class="line">docker rmi azhu/etcd:3.4.3-0</span><br><span class="line">docker rmi coredns/coredns:1.6.7</span><br></pre></td></tr></table></figure>
+<p>Port 10257 is in use</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm reset</span><br></pre></td></tr></table></figure>
+<p>[kubelet-check] Initial timeout of 40s passed. <a href="https://stackoverflow.com/questions/53525975/kubernetes-error-uploading-crisocket-timed-out-waiting-for-the-condition" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">swapoff -a    # will turn off the swap </span><br><span class="line">kubeadm reset</span><br><span class="line">systemctl daemon-reload</span><br><span class="line">systemctl restart kubelet</span><br><span class="line">iptables -F &amp;&amp; iptables -t nat -F &amp;&amp; iptables -t mangle -F &amp;&amp; iptables -X  # will reset iptables</span><br></pre></td></tr></table></figure>
+<p>并没有解决，按照提示加上<code>--v=6</code>，查看log，发现:6443/healthz?timeout</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查看kubelet状态</span></span><br><span class="line">systemctl status kubelet</span><br><span class="line"><span class="meta">#</span><span class="bash">active (running) 正常</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">再查看docker容器</span></span><br><span class="line">docker ps -a | grep kube | grep -v pause</span><br><span class="line"><span class="meta">#</span><span class="bash">ded868a089f9 7e28efa976bd <span class="string">"kube-apiserver --..."</span> 1 second ago Exited (2)</span></span><br><span class="line"><span class="meta">#</span><span class="bash">ec86db9a54db 303ce5db0e90 <span class="string">"etcd --advertise-..."</span> 39 seconds ago Exited (1)</span></span><br><span class="line"><span class="meta">#</span><span class="bash">apiserver和etcd都没成功，查看日志</span></span><br><span class="line">docker logs ded868a089f9</span><br><span class="line"><span class="meta">#</span><span class="bash">failed to connect to https://127.0.0.1:2379</span></span><br><span class="line"><span class="meta">#</span><span class="bash">:2379 说明etcd没启动</span></span><br><span class="line">docker logs ec86db9a54db</span><br><span class="line"><span class="meta">#</span><span class="bash">listen tcp 公网ip:2380: <span class="built_in">bind</span>: cannot assign requested address</span></span><br><span class="line"><span class="meta">#</span><span class="bash">kubeadm init 的时候--apiserver-advertise-address 改成私网居然就好了</span></span><br></pre></td></tr></table></figure>
+<p>Your Kubernetes control-plane has initialized successfully!</p>
+<p>据说是公网IP绑定的网卡估计在外层网关上，机器本地肯定监听不到。<a href="https://zhuanlan.zhihu.com/p/74134318" target="_blank" rel="noopener">参考</a></p>
+<p>所以要采用kubeadm init phase的方式，手动配置etcd.yaml。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">创建默认的kubeadm-config.yaml</span></span><br><span class="line">kubeadm config print init-defaults  &gt; /etc/kubernetes/manifests/kubeadm-config.yaml</span><br><span class="line"><span class="meta">#</span><span class="bash">localAPIEndpoint:advertiseAddress: xxx.xx.xx.xx(公网)</span></span><br><span class="line"><span class="meta">#</span><span class="bash">networking:podSubnet: 192.168.0.0/16</span></span><br><span class="line">vim /etc/kubernetes/manifests/kubeadm-config.yaml</span><br><span class="line"></span><br><span class="line">kubeadm init phase preflight --config /etc/kubernetes/manifests/kubeadm-config.yaml --ignore-preflight-errors NumCPU</span><br><span class="line">kubeadm init phase certs all --config /etc/kubernetes/manifests/kubeadm-config.yaml</span><br><span class="line">kubeadm init phase kubeconfig all --config /etc/kubernetes/manifests/kubeadm-config.yaml</span><br><span class="line">kubeadm init phase kubelet-start --config /etc/kubernetes/manifests/kubeadm-config.yaml</span><br><span class="line">kubeadm init phase control-plane all --config /etc/kubernetes/manifests/kubeadm-config.yaml</span><br><span class="line">kubeadm init phase etcd local --config /etc/kubernetes/manifests/kubeadm-config.yaml</span><br><span class="line"></span><br><span class="line">vi /etc/kubernetes/manifests/etcd.yaml</span><br><span class="line"><span class="meta">#</span><span class="bash">listen-client-urls=https://127.0.0.1:2379  listen-peer-urls=https://0.0.0.0:2380</span></span><br><span class="line"></span><br><span class="line">kubeadm init --skip-phases=preflight,certs,kubeconfig,kubelet-start,control-plane,etcd --config /etc/kubernetes/manifests/kubeadm-config.yaml --v=6</span><br><span class="line"><span class="meta">#</span><span class="bash">Your Kubernetes control-plane has initialized successfully!</span></span><br><span class="line"><span class="meta">#</span><span class="bash">token <span class="built_in">hash</span> 要记下来，kubeadm join的时候用。</span></span><br></pre></td></tr></table></figure>
+<h4 id="安装网络插件"><a href="#安装网络插件" class="headerlink" title="安装网络插件"></a>安装网络插件</h4><p>为了<a href="https://docs.projectcalico.org/getting-started/kubernetes/quickstart" target="_blank" rel="noopener">Calico</a>可以正常运行，必须在执行kubeadm init时使用 <code>--pod-network-cidr=192.168.0.0/16</code>。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p $HOME/.kube</span><br><span class="line">sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config</span><br><span class="line">sudo chown $(id -u):$(id -g) $HOME/.kube/config</span><br><span class="line"><span class="meta">#</span><span class="bash">rm -rf <span class="variable">$HOME</span>/.kube     删除</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml</span><br></pre></td></tr></table></figure>
+<p>如果需要让master参与调度，需要去掉master的标记.<a href="https://blog.csdn.net/fanren224/article/details/86610741?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">去掉不可被调度标记</span></span><br><span class="line">kubectl taint nodes --all node-role.kubernetes.io/master-</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">打上不可被调度标记</span></span><br><span class="line">kubectl taint nodes master.hanli.com node-role.kubernetes.io/master=:NoSchedule</span><br></pre></td></tr></table></figure>
+<h4 id="加入其他节点"><a href="#加入其他节点" class="headerlink" title="加入其他节点"></a>加入其他节点</h4><p><a href="https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-join/" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm join --token &lt;token&gt; &lt;master-ip&gt;:&lt;master-port&gt; --discovery-token-ca-cert-hash sha256:&lt;hash&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">生成token 24小时过期</span></span><br><span class="line">kubeadm token create</span><br><span class="line"><span class="meta">#</span><span class="bash">列出token</span></span><br><span class="line">kubeadm token list  | awk -F" " '&#123;print $1&#125;' |tail -n 1</span><br><span class="line"><span class="meta">#</span><span class="bash">列出<span class="built_in">hash</span></span></span><br><span class="line">openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2&gt;/dev/null | openssl dgst -sha256 -hex | sed  's/^ .* //'</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm join 124.70.178.225:6443 --token nikoko.o6lpnpcu7ks7j65t --discovery-token-ca-cert-hash sha256:bc4e9db83aeb7146d50a17340d9de7ad22e8815b710a75a19d25b68011fb7502</span><br></pre></td></tr></table></figure>
+<p>查看节点状态</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get nodes</span><br></pre></td></tr></table></figure>
+<p>查看所有 Pod状态</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods --all-namespaces -o wide</span><br></pre></td></tr></table></figure>
+<h5 id="加入集群后的问题"><a href="#加入集群后的问题" class="headerlink" title="加入集群后的问题"></a>加入集群后的问题</h5><p>节点状态一直是NotReady</p>
+<p><a href="https://www.jianshu.com/p/3e6231eb7c8a" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查看kubelet状态</span></span><br><span class="line">systemctl status kubelet</span><br><span class="line"><span class="meta">#</span><span class="bash"> Container runtime network not ready: NetworkReady=<span class="literal">false</span> reason:NetworkPluginNotReady message:docker: ne... uninitialized</span></span><br><span class="line"><span class="meta">#</span><span class="bash">RunPodSandbox from runtime service failed: rpc error: code = Unknown desc = failed pulling image ...3: i/o timeout</span></span><br><span class="line"><span class="meta">#</span><span class="bash">说明是网络异常docker的镜像无法下载，应该也是防火墙的问题。</span></span><br><span class="line">journalctl -xeu kubelet &gt; a</span><br><span class="line"><span class="meta">#</span><span class="bash">查看详细日志：failed pulling image <span class="string">"k8s.gcr.io/pause:3.2"</span></span></span><br><span class="line">docker pull kubesphere/pause:3.2</span><br><span class="line">docker tag kubesphere/pause:3.2 k8s.gcr.io/pause:3.2</span><br><span class="line"><span class="meta">#</span><span class="bash">重新reset join</span></span><br><span class="line">kubeadm reset</span><br><span class="line">kubeadm join --token &lt;token&gt; &lt;master-ip&gt;:&lt;master-port&gt; --discovery-token-ca-cert-hash sha256:&lt;hash&gt;</span><br></pre></td></tr></table></figure>
+<p>pods状态为ImagePullBackOff</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods --all-namespaces -o wide</span><br><span class="line"><span class="meta">#</span><span class="bash">kube-system kube-proxy-xw6sd    ImagePullBackOff</span></span><br><span class="line">kubectl describe pod -n kube-system kube-proxy-xw6sd</span><br><span class="line"><span class="meta">#</span><span class="bash">Failed to pull image <span class="string">"k8s.gcr.io/kube-proxy:v1.18.3"</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">nodek节点上少了docker image,国内不能直接访问k8s.gcr.io</span></span><br><span class="line"><span class="meta">#</span><span class="bash">也先master那样pull 然后 tag 就好了</span></span><br></pre></td></tr></table></figure>
+<h4 id="拆卸集群"><a href="#拆卸集群" class="headerlink" title="拆卸集群"></a>拆卸集群</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kubectl get nodes</span><br><span class="line">kubectl drain &lt;node name&gt; --delete-local-data --force --ignore-daemonsets</span><br><span class="line">kubectl delete node &lt;node name&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="Web-UI-Dashboard"><a href="#Web-UI-Dashboard" class="headerlink" title="Web UI (Dashboard)"></a>Web UI (Dashboard)</h4><p><a href="https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener"><code>Dashboard</code></a>是Kubernetes的基于Web的用户界面。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml</span><br><span class="line"><span class="meta">#</span><span class="bash">The connection to the server raw.githubusercontent.com was refused 还是网络问题</span></span><br><span class="line"><span class="meta">#</span><span class="bash">手动找一份放在本地</span></span><br><span class="line">kubectl create -f dashboard.yaml</span><br><span class="line"><span class="meta">#</span><span class="bash">kubectl delete -f dashboard.yaml    删除</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">查看pods,发现ContainerCreating</span></span><br><span class="line">kubectl get pods --all-namespaces -o wide</span><br><span class="line">kubectl describe pod -n kubernetes-dashboard kubernetes-dashboard-7b544877d5-ggxmk</span><br><span class="line"><span class="meta">#</span><span class="bash">发现还是docker images 的问题。images的配置在dashboard.yaml中，把对应的images拉下来就好</span></span><br><span class="line">docker pull kubernetesui/dashboard:v2.0.0</span><br><span class="line">docker pull kubernetesui/metrics-scraper:v1.0.4</span><br></pre></td></tr></table></figure>
+<p>查看 dashboard的外⽹暴露端⼝ <a href="https://www.jianshu.com/p/3e05d0a0f2d9" target="_blank" rel="noopener">参考</a> <a href="https://www.cnblogs.com/RainingNight/p/deploying-k8s-dashboard-ui.html" target="_blank" rel="noopener">参考2</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl get service --namespace=kubernetes-dashboard</span><br><span class="line">kubectl -n kubernetes-dashboard get service kubernetes-dashboard</span><br></pre></td></tr></table></figure>
+<p>公网访问kubernetes-dashboard</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">kubectl cluster-info</span><br><span class="line"><span class="meta">#</span><span class="bash">查看masterip</span></span><br><span class="line"><span class="meta">#</span><span class="bash">访问https://masterip/api/v1/proxy/namespaces/kubernetes-dashboard/services/kube-ui/<span class="comment">#/dashboard/</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">报403：services <span class="string">"kube-ui"</span> is forbidden: User <span class="string">"system:anonymous"</span> cannot proxy resource <span class="string">"services"</span> <span class="keyword">in</span> API group <span class="string">""</span> <span class="keyword">in</span> the namespace <span class="string">"kube-system"</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">生成crt文件</span></span><br><span class="line">grep 'client-certificate-data' /etc/kubernetes/admin.conf \</span><br><span class="line">| head -n 1 \</span><br><span class="line">| awk '&#123;print $2&#125;' \</span><br><span class="line">| base64 -d \</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt; kubecfg.crt</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">生成key文件</span></span><br><span class="line">grep 'client-key-data' /etc/kubernetes/admin.conf \</span><br><span class="line">| head -n 1 \</span><br><span class="line">| awk '&#123;print $2&#125;' \</span><br><span class="line">| base64 -d \</span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt; kubecfg.key</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 生成p12</span></span><br><span class="line">openssl pkcs12 \</span><br><span class="line">-export \</span><br><span class="line">-clcerts \</span><br><span class="line">-inkey kubecfg.key \</span><br><span class="line">-in kubecfg.crt \</span><br><span class="line">-out kubecfg.p12 \</span><br><span class="line">-name "kubernetes-client"</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">将p12导入chrome，chrome://restart。</span></span><br><span class="line"><span class="meta">#</span><span class="bash">访问https://124.70.178.225:6443/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/</span></span><br><span class="line"><span class="meta">#</span><span class="bash">报错Error trying to reach service: <span class="string">'dial tcp 192.168.235.129:8443: i/o timeout'</span></span></span><br><span class="line">kubectl -n kubernetes-dashboard get pod -o name | grep dashboard</span><br><span class="line">kubectl --namespace=kubernetes-dashboard port-forward &lt;kubernetes-dashboard-podname&gt; 8443</span><br><span class="line"><span class="meta">#</span><span class="bash">error: error upgrading connection: error dialing backend: dial tcp 172.18.224.114:10250: i/o timeout</span></span><br><span class="line"><span class="meta">#</span><span class="bash">发现一个node的hostname的地址是内网地址，修改后重新join就正常了</span></span><br></pre></td></tr></table></figure>
+<p>创建服务账号</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># admin-user.yaml</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ServiceAccount</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">admin-user</span></span><br><span class="line"><span class="attr">  namespace:</span> <span class="string">kube-system</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f admin-user.yaml</span><br></pre></td></tr></table></figure>
+<p>绑定角色</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># admin-user-role-binding.yaml</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">rbac.authorization.k8s.io/v1beta1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ClusterRoleBinding</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">admin-user</span></span><br><span class="line"><span class="attr">roleRef:</span></span><br><span class="line"><span class="attr">  apiGroup:</span> <span class="string">rbac.authorization.k8s.io</span></span><br><span class="line"><span class="attr">  kind:</span> <span class="string">ClusterRole</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">cluster-admin</span></span><br><span class="line"><span class="attr">subjects:</span></span><br><span class="line"><span class="attr">- kind:</span> <span class="string">ServiceAccount</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">admin-user</span></span><br><span class="line"><span class="attr">  namespace:</span> <span class="string">kube-system</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f  admin-user-role-binding.yaml</span><br></pre></td></tr></table></figure>
+<p>获取Token</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '&#123;print $1&#125;')</span><br></pre></td></tr></table></figure>
+<h2 id="ZOOKEEPER"><a href="#ZOOKEEPER" class="headerlink" title="ZOOKEEPER"></a>ZOOKEEPER</h2><p><a href="https://zookeeper.apache.org/releases.html" target="_blank" rel="noopener">官网</a>下载安装包：apache-zookeeper-3.6.1-bin.tar.gz，放在root目录下。</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir zookeeper</span><br><span class="line">cd zookeeper</span><br><span class="line">tar -zxvf /root/apache-zookeeper-3.6.1-bin.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<p>配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">在apache-zookeeper-3.6.1-bin下创建data</span></span><br><span class="line">cd apache-zookeeper-3.6.1-bin/</span><br><span class="line">mkdir data</span><br><span class="line"><span class="meta">#</span><span class="bash">配置文件</span></span><br><span class="line">cd conf</span><br><span class="line">cp zoo_sample.cfg zoo.cfg</span><br><span class="line">vim zoo.cfg</span><br><span class="line"><span class="meta">#</span><span class="bash">dataDir=/usr/<span class="built_in">local</span>/zookeeper/apache-zookeeper-3.6.1-bin/data</span></span><br></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/zookeeper/apache-zookeeper-3.6.1-bin/bin</span><br><span class="line"><span class="meta">#</span><span class="bash">启动</span></span><br><span class="line">./zkServer.sh start</span><br><span class="line"><span class="meta">#</span><span class="bash">查看状态</span></span><br><span class="line">./zkServer.sh status</span><br></pre></td></tr></table></figure>
+<p>配置环境变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br><span class="line"><span class="meta">#</span><span class="bash">ZOOKEEPER_HOME=/usr/<span class="built_in">local</span>/zookeeper/apache-zookeeper-3.6.1-bin</span></span><br><span class="line"><span class="meta">#</span><span class="bash">PATH=<span class="variable">$PATH</span>:<span class="variable">$ZOOKEEPER_HOME</span>/bin</span></span><br><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure>
+<p>设置开机启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/rc.d/init.d/</span><br><span class="line">touch zookeeper</span><br><span class="line">chmod +x zookeeper</span><br><span class="line">vim zookeeper</span><br><span class="line"><span class="meta">#</span><span class="bash">添加以下内容</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/bash</span><br><span class="line"># chkconfig:   2345 10 90</span><br><span class="line"># description:  zookeeper</span><br><span class="line">source /etc/profile</span><br><span class="line">export ZOOKEEPER_HOME=/usr/local/zookeeper/apache-zookeeper-3.6.1-bin</span><br><span class="line">case &quot;$1&quot; in</span><br><span class="line">    start) su root $ZOOKEEPER_HOME/bin/zkServer.sh start;;</span><br><span class="line">    stop) su root $ZOOKEEPER_HOME/bin/zkServer.sh stop;;</span><br><span class="line">    status) su root $ZOOKEEPER_HOME/bin/zkServer.sh status;;</span><br><span class="line">    restart) su root $ZOOKEEPER_HOME/bin/zkServer.sh restart;;</span><br><span class="line">    *) echo &quot;require start|stop|status|restart&quot; ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chkconfig --add zookeeper</span><br><span class="line">chkconfig zookeeper on</span><br></pre></td></tr></table></figure>
+<h2 id="KAFKA"><a href="#KAFKA" class="headerlink" title="KAFKA"></a>KAFKA</h2><p><a href="http://kafka.apache.org/downloads.html" target="_blank" rel="noopener">官网</a>下载推荐的安装包：kafka_2.12-2.5.0.tgz，放在root目录下。</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir kafka</span><br><span class="line">cd kafka</span><br><span class="line">tar -zxvf /root/kafka_2.12-2.5.0.tgz -C ./</span><br></pre></td></tr></table></figure>
+<p>配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">在kafka_2.12-2.5.0下创建logs</span></span><br><span class="line">cd kafka_2.12-2.5.0/</span><br><span class="line">mkdir logs</span><br><span class="line"><span class="meta">#</span><span class="bash">配置文件</span></span><br><span class="line">cd config</span><br><span class="line">vim server.properties</span><br><span class="line"><span class="meta">#</span><span class="bash">log.dirs=/usr/<span class="built_in">local</span>/kafka/kafka_2.12-2.5.0/logs</span></span><br></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/kafka/kafka_2.12-2.5.0</span><br><span class="line"><span class="meta">#</span><span class="bash">启动 后台启动 -daemon </span></span><br><span class="line">./bin/kafka-server-start.sh -daemon ./config/server.properties</span><br></pre></td></tr></table></figure>
+<p>验证</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/kafka/kafka_2.12-2.5.0</span><br><span class="line"><span class="meta">#</span><span class="bash">⾸先创建⼀个名为kafkatest的topic</span></span><br><span class="line">./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 -replication-factor 1 --partitions 1 --topic kafkatest</span><br><span class="line"><span class="meta">#</span><span class="bash">创建⼀个⽣产者，⽤于在kafkatest这个topic上⽣产消息</span></span><br><span class="line">./bin/kafka-console-producer.sh --bootstrap-server localhost:9092 -topic kafkatest</span><br><span class="line"><span class="meta">#</span><span class="bash">创建⼀个消费者，⽤于在kafkatest这个topic上获取消息</span></span><br><span class="line">./bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 -topic kafkatest</span><br></pre></td></tr></table></figure>
+<h2 id="HADOOP"><a href="#HADOOP" class="headerlink" title="HADOOP"></a>HADOOP</h2><p><a href="http://hadoop.apache.org/" target="_blank" rel="noopener">官网</a>下载安装包：hadoop-3.1.3.tar.gz</p>
+<p>先要安装ssh和pdsh</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">ssh</span></span><br><span class="line">yum install pdsh</span><br><span class="line">ssh -V</span><br><span class="line"><span class="meta">#</span><span class="bash">pdsh</span></span><br><span class="line">yum install pdsh</span><br><span class="line">pdsh -V</span><br></pre></td></tr></table></figure>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir hadoop &amp;&amp; cd hadoop</span><br><span class="line">tar -zxvf /root/hadoop-3.1.3.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<p>以三种支持的模式之一伪分布式操作<a href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html#Standalone_Operation" target="_blank" rel="noopener">启动</a>Hadoop集群</p>
+<p>配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">#/usr/local/hadoop/hadoop-3.1.3/etc/hadoop/core-site.xml</span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.defaultFS<span class="tag">&lt;/<span class="name">name</span>&gt;</span> </span><br><span class="line">		<span class="tag">&lt;<span class="name">value</span>&gt;</span> hdfs://localhost:9000<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line"></span><br><span class="line">#/usr/local/hadoop/hadoop-3.1.3/etc/hadoop/hdfs-site.xml</span><br><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>查看<a href="https://cwiki.apache.org/confluence/display/HADOOP2/HadoopJavaVersions" target="_blank" rel="noopener">JDK版本</a>，最好是jdk8</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">echo $JAVA_HOME</span><br><span class="line"><span class="meta">#</span><span class="bash">配置JAVA_HOME</span></span><br><span class="line">vi /usr/local/hadoop/hadoop-3.1.3/etc/hadoop/hadoop-env.sh</span><br><span class="line">export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64</span><br></pre></td></tr></table></figure>
+<p>设置无密码SSH</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">现在检查您是否可以在不使用密码的情况下SSH到本地主机</span></span><br><span class="line">ssh localhost</span><br><span class="line"><span class="meta">#</span><span class="bash">如果没有密码就无法SSH到本地主机，请执行以下命令</span></span><br><span class="line">ssh-keygen -t rsa -P '' -f ~/.ssh/id_rsa</span><br><span class="line">cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br><span class="line">chmod 0600 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">以下说明是在本地运行MapReduce作业。如果要在YARN上执行作业，请参阅YARN在单节点上。</span></span><br><span class="line">cd /usr/local/hadoop/hadoop-3.1.3/</span><br><span class="line"><span class="meta">#</span><span class="bash">格式化文件系统</span></span><br><span class="line">bin/hdfs namenode -format</span><br><span class="line"><span class="meta">#</span><span class="bash">启动NameNode守护程序和DataNode守护程序</span></span><br><span class="line">sbin/start-dfs.sh</span><br><span class="line"><span class="meta">#</span><span class="bash">览Web界面的NameNode http://localhost:9870/</span></span><br><span class="line"><span class="meta">#</span><span class="bash">设置执行MapReduce作业所需的HDFS目录</span></span><br><span class="line">bin/hdfs dfs -mkdir /user</span><br><span class="line">bin/hdfs dfs -mkdir /user/&lt;username&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash">将输入文件复制到分布式文件系统中</span></span><br><span class="line">bin/hdfs dfs -mkdir input</span><br><span class="line">bin/hdfs dfs -put etc/hadoop/*.xml input</span><br><span class="line"><span class="meta">#</span><span class="bash">运行提供的一些示例</span></span><br><span class="line">bin/hadoop jar share/hadoop/mapreduce/hadoop-mapreduce-examples-3.1.3.jar grep input output 'dfs[a-z.]+'</span><br><span class="line"><span class="meta">#</span><span class="bash">检查输出文件</span></span><br><span class="line">bin/hdfs dfs -get output output</span><br><span class="line">cat output/*</span><br><span class="line"><span class="meta">#</span><span class="bash">or</span></span><br><span class="line">bin/hdfs dfs -cat output/*</span><br><span class="line"><span class="meta">#</span><span class="bash">完成后，使用以下命令停止守护进程</span></span><br><span class="line">sbin/stop-dfs.sh</span><br></pre></td></tr></table></figure>
+<p>报错</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">sbin/start-dfs.sh</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Attempting to operate on hdfs namenode as root</span></span><br><span class="line"><span class="meta">#</span><span class="bash">start-dfs.sh，stop-dfs.sh两个文件顶部添加以下参数</span></span><br><span class="line">HDFS_DATANODE_USER=root</span><br><span class="line">HADOOP_SECURE_DN_USER=hdfs</span><br><span class="line">HDFS_NAMENODE_USER=root</span><br><span class="line">HDFS_SECONDARYNAMENODE_USER=root</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">sbin/start-dfs.sh</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Cannot <span class="built_in">set</span> priority of namenode process 12845</span></span><br><span class="line"><span class="meta">#</span><span class="bash">/etc/hadoop/hadoop-evn.sh</span></span><br><span class="line">export HADOOP_OPTS="$HADOOP_OPTS -Djava.net.preferIPv4Stack=true -Djava.security.krb5.realm= -Djava.security.krb5.kdc="</span><br><span class="line"><span class="meta">#</span><span class="bash">core-site.xml</span></span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">&lt;value&gt;/usr/local/Cellar/hadoop/hdfs/tmp&lt;/value&gt;</span><br><span class="line">&lt;description&gt;A base for other temporary directories.&lt;/description&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;fs.default.name&lt;/name&gt;</span><br><span class="line">&lt;value&gt;hdfs://localhost:9000&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash">mapred-site.xml</span></span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;mapred.job.tracker&lt;/name&gt;</span><br><span class="line">&lt;value&gt;localhost:9010&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br><span class="line"><span class="meta">#</span><span class="bash">hdfs-site.xml</span></span><br><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">&lt;value&gt;1&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">Call From localhost/127.0.0.1 to localhost:9000 failed on connection exception</span></span><br><span class="line"><span class="meta">#</span><span class="bash">NAMENODE 没有启起来 回到格式化重新操作bin/hdfs namenode -format</span></span><br></pre></td></tr></table></figure>
+<h2 id="HBASE"><a href="#HBASE" class="headerlink" title="HBASE"></a>HBASE</h2><p><a href="https://hbase.apache.org/downloads.html" target="_blank" rel="noopener">官网</a>下载安装包：hbase-2.2.5-bin.tar.gz</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir hbase</span><br><span class="line">cd hbase</span><br><span class="line">tar -zxvf /root/hbase-2.2.5-bin.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<p>配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">cd hbase-2.2.5/</span><br><span class="line">vim conf/hbase-env.sh</span><br><span class="line"><span class="meta">#</span><span class="bash"><span class="built_in">export</span> JAVA_HOME=/etc/alternatives/java_sdk_1.8.0/</span></span><br><span class="line"></span><br><span class="line">vim conf/hbase-site.xml</span><br><span class="line">&lt;property&gt;</span><br><span class="line">&lt;name&gt;hbase.cluster.distributed&lt;/name&gt; </span><br><span class="line">&lt;value&gt;true&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line"></span><br><span class="line">vim conf/hbase-env.sh</span><br><span class="line">export HBASE_MANAGES_ZK=false</span><br></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/start-hbase.sh</span><br></pre></td></tr></table></figure>
+<p>报错</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">Could not start ZK at requested port of 2181.</span></span><br><span class="line"><span class="meta">#</span><span class="bash">修改conf/hbase-site.xml  hbase.cluster.distributed -&gt; <span class="literal">true</span></span></span><br><span class="line"><span class="meta">#</span><span class="bash">修改conf/hbase-env.sh  <span class="built_in">export</span> HBASE_MANAGES_ZK=<span class="literal">false</span></span></span><br></pre></td></tr></table></figure>
+<p>使用Hbase</p>
+<p><a href="https://blog.csdn.net/jiangsanfeng1111/article/details/53543907" target="_blank" rel="noopener">参考</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">进入hbase shell模式</span></span><br><span class="line">./bin/hbase shell</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">常用命令</span></span><br><span class="line">help/create/put/get/scan/delete</span><br></pre></td></tr></table></figure>
+<h2 id="ELASTICSEARCH"><a href="#ELASTICSEARCH" class="headerlink" title="ELASTICSEARCH"></a>ELASTICSEARCH</h2><p>到<a href="https://www.elastic.co/cn/elasticsearch/" target="_blank" rel="noopener">官网</a><a href="https://www.elastic.co/cn/downloads/elasticsearch" target="_blank" rel="noopener">下载</a>安装包：elasticsearch-7.8.0-linux-x86_64.tar.gz，放在root下。</p>
+<p>也可以选择 <a href="https://www.elastic.co/downloads/past-releases#elasticsearch" target="_blank" rel="noopener">past releases</a> 下载历史版本.</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir elasticsearch</span><br><span class="line">cd elasticsearch</span><br><span class="line">tar -zxvf /root/elasticsearch-7.8.0-linux-x86_64.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<p>ELASTICSEARCH 集群配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/elasticsearch/elasticsearch-7.8.0/config/elasticsearch.yml</span><br><span class="line"><span class="meta">#</span><span class="bash">cluster.name</span></span><br><span class="line"><span class="meta">#</span><span class="bash">node.name</span></span><br><span class="line"><span class="meta">#</span><span class="bash">path.data</span></span><br><span class="line"><span class="meta">#</span><span class="bash">path.logs</span></span><br><span class="line"><span class="meta">#</span><span class="bash">bootstrap.memory_lock</span></span><br><span class="line"><span class="meta">#</span><span class="bash">network.host</span></span><br><span class="line"><span class="meta">#</span><span class="bash">http.port</span></span><br><span class="line"><span class="meta">#</span><span class="bash">discovery.seed_hosts</span></span><br><span class="line"></span><br><span class="line">vim /etc/security/limits.conf</span><br><span class="line"><span class="meta">#</span><span class="bash">添加以下内容</span></span><br><span class="line">* soft nofile 65536</span><br><span class="line">* hard nofile 65536</span><br><span class="line">* soft nproc 32000</span><br><span class="line">* hard nproc 32000</span><br><span class="line">* hard memlock unlimited</span><br><span class="line">* soft memlock unlimited</span><br><span class="line"></span><br><span class="line">vim /etc/systemd/system.conf</span><br><span class="line"><span class="meta">#</span><span class="bash">添加以下内容</span></span><br><span class="line">DefaultLimitNOFILE=65536</span><br><span class="line">DefaultLimitNPROC=32000</span><br><span class="line">DefaultLimitMEMLOCK=infinity</span><br><span class="line"></span><br><span class="line">vim /etc/sysctl.conf</span><br><span class="line"><span class="meta">#</span><span class="bash">添加以下内容</span></span><br><span class="line">vm.max_map_count=262144</span><br></pre></td></tr></table></figure>
+<p>创建ES运行用户</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 创建用户组</span></span><br><span class="line">groupadd es</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建用户并添加至用户组</span></span><br><span class="line">useradd es -g es </span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加权限</span></span><br><span class="line">chown -R es:es /usr/local/elasticsearch/elasticsearch-7.8.0/</span><br></pre></td></tr></table></figure>
+<p>运行elasticsearch</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">su es</span><br><span class="line">cd /usr/local/elasticsearch/elasticsearch-7.8.0/bin/</span><br><span class="line"><span class="meta">#</span><span class="bash">使用内置JDK</span></span><br><span class="line">export JAVA_HOME=/usr/local/elasticsearch/elasticsearch-7.8.0/jdk</span><br><span class="line">./elasticsearch</span><br><span class="line"><span class="meta">#</span><span class="bash"> 若要后台启动，则加-d参数，-p记录进程ID为一个文件</span></span><br><span class="line">./elasticsearch -p /usr/local/elasticsearch/elasticsearch-7.8.0/elasticsearch-pid -d</span><br></pre></td></tr></table></figure>
+<p>验证一下服务是否正常</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -i "http://ip:9200"</span><br><span class="line"><span class="meta">#</span><span class="bash">浏览器访问：http://ip:9200/ 查看启动效果</span></span><br></pre></td></tr></table></figure>
+<p>命令⾏查看集群信息</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl http://127.0.0.1:9200/_cat/allocation?v</span><br></pre></td></tr></table></figure>
+<p>结束进程</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 查看运行的pid</span></span><br><span class="line">cat /usr/local/elasticsearch/elasticsearch-7.8.0/elasticsearch-pid &amp;&amp; echo</span><br><span class="line"><span class="meta">#</span><span class="bash"> 结束进程</span></span><br><span class="line">kill -SIGTERM &#123;pid&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="可能遇到的问题-1"><a href="#可能遇到的问题-1" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/elasticsearch/elasticsearch-7.8.0/bin/</span><br><span class="line">./elasticsearch</span><br><span class="line"><span class="meta">#</span><span class="bash">报错1</span></span><br><span class="line"><span class="meta">#</span><span class="bash">java.lang.RuntimeException: can not run elasticsearch as root</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建用户组</span></span><br><span class="line">groupadd es</span><br><span class="line"><span class="meta">#</span><span class="bash"> 创建用户并添加至用户组</span></span><br><span class="line">useradd es -g es </span><br><span class="line"><span class="meta">#</span><span class="bash"> 切换es用户</span></span><br><span class="line">su es</span><br><span class="line"><span class="meta">#</span><span class="bash">could not find java <span class="keyword">in</span> bundled jdk at /usr/<span class="built_in">local</span>/elasticsearch/elasticsearch-7.8.0/jdk/bin/java</span></span><br><span class="line"><span class="meta">#</span><span class="bash">需要安装jdk并添加环境变量</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">报错2</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Exception <span class="keyword">in</span> thread <span class="string">"main"</span> java.nio.file.AccessDeniedException: /usr/<span class="built_in">local</span>/elasticsearch/elasticsearch-7.8.0/config/jvm.options.d</span></span><br><span class="line"><span class="meta">#</span><span class="bash">es账号没有访问权限</span></span><br><span class="line">su root</span><br><span class="line">chown -R es:es /usr/local/elasticsearch/elasticsearch-7.8.0/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">报错3</span></span><br><span class="line"><span class="meta">#</span><span class="bash">future versions of Elasticsearch will require Java 11;</span></span><br><span class="line"><span class="meta">#</span><span class="bash">要求java 11，好在es有自带的jdk</span></span><br><span class="line">export JAVA_HOME=/usr/local/elasticsearch/elasticsearch-7.8.0/jdk</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">报错4</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Failed to <span class="built_in">bind</span> to 124.70.178.225:[9300-9400]</span></span><br><span class="line"><span class="meta">#</span><span class="bash">network.host改为network.bind_host和network.publish_host</span></span><br><span class="line"><span class="meta">#</span><span class="bash">network.bind_host: 0.0.0.0</span></span><br><span class="line"><span class="meta">#</span><span class="bash">network.publish_host: ip</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">报错5</span></span><br><span class="line"><span class="meta">#</span><span class="bash">memory locking requested <span class="keyword">for</span> elasticsearch process but memory is not locked</span></span><br><span class="line">vim /etc/security/limits.conf</span><br><span class="line"><span class="meta">#</span><span class="bash">添加以下内容</span></span><br><span class="line">* soft nofile 65536</span><br><span class="line">* hard nofile 65536</span><br><span class="line">* soft nproc 32000</span><br><span class="line">* hard nproc 32000</span><br><span class="line">* hard memlock unlimited</span><br><span class="line">* soft memlock unlimited</span><br><span class="line"></span><br><span class="line">vim /etc/systemd/system.conf</span><br><span class="line"><span class="meta">#</span><span class="bash">添加以下内容</span></span><br><span class="line">DefaultLimitNOFILE=65536</span><br><span class="line">DefaultLimitNPROC=32000</span><br><span class="line">DefaultLimitMEMLOCK=infinity</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">报错6</span></span><br><span class="line"><span class="meta">#</span><span class="bash">max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]</span></span><br><span class="line">vim /etc/sysctl.conf</span><br><span class="line"><span class="meta">#</span><span class="bash">添加以下内容</span></span><br><span class="line">vm.max_map_count=262144</span><br><span class="line"><span class="meta">#</span><span class="bash">切换到root用户</span></span><br><span class="line"><span class="meta">#</span><span class="bash">执行命令：</span></span><br><span class="line">sysctl -w vm.max_map_count=262144</span><br><span class="line"><span class="meta">#</span><span class="bash">查看结果：</span></span><br><span class="line">sysctl -a|grep vm.max_map_count</span><br><span class="line"><span class="meta">#</span><span class="bash">显示：</span></span><br><span class="line">vm.max_map_count = 262144</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">报错6</span></span><br><span class="line"><span class="meta">#</span><span class="bash">master not discovered yet</span></span><br><span class="line"><span class="meta">#</span><span class="bash">指定master节点</span></span><br><span class="line"><span class="meta">#</span><span class="bash">cluster.initial_master_nodes: [<span class="string">"node-1"</span>]</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">报错7</span></span><br><span class="line"><span class="meta">#</span><span class="bash">Killed</span></span><br><span class="line"><span class="meta">#</span><span class="bash">修改ES中config目录下的jvm.options文件</span></span><br><span class="line"><span class="meta">#</span><span class="bash">-Xms1g改为-Xms512m -Xmx1g改为-Xmx512m</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">报错8</span></span><br><span class="line"><span class="meta">#</span><span class="bash">OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 1073741824, 0) failed; error=<span class="string">'Not enough space'</span> (errno=12)</span></span><br><span class="line"><span class="meta">#</span><span class="bash">内存不够,可以考虑把别的服务关了,或者加内存</span></span><br></pre></td></tr></table></figure>
+<h4 id="Kibana"><a href="#Kibana" class="headerlink" title="Kibana"></a>Kibana</h4><p><a href="https://www.elastic.co/cn/kibana" target="_blank" rel="noopener">官网</a>下载与elasticsearch相同版本的安装包：kibana-7.8.0-linux-x86_64.tar.gz，放在root下。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local</span><br><span class="line">mkdir kibana</span><br><span class="line">cd kibana</span><br><span class="line">tar -zxvf /root/kibana-7.8.0-linux-x86_64.tar.gz -C ./</span><br><span class="line"></span><br><span class="line">vim /usr/local/kibana/kibana-7.8.0-linux-x86_64/config/kibana.yml</span><br><span class="line"><span class="meta">#</span><span class="bash">server.host: <span class="string">"0.0.0.0"</span></span></span><br><span class="line"></span><br><span class="line">cd /usr/local/kibana/kibana-7.8.0-linux-x86_64</span><br><span class="line">chown -R es:es /usr/local/kibana/kibana-7.8.0-linux-x86_64/</span><br><span class="line">su es</span><br><span class="line">./bin/kibana</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"></span></span><br></pre></td></tr></table></figure>
+<p>可能的报错</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">Babel could not write cache to file</span></span><br><span class="line">su root</span><br><span class="line">chown -R es:es /usr/local/kibana/kibana-7.8.0-linux-x86_64/</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">Error: Port 5601 is already <span class="keyword">in</span> use. Another instance of Kibana may be running!</span></span><br><span class="line">netstat -tunlp|grep 5601</span><br><span class="line">kill -9 &#123;pid&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="ik"><a href="#ik" class="headerlink" title="ik"></a>ik</h4><p><a href="https://github.com/medcl/elasticsearch-analysis-ik/releases/tag/v7.8.0" target="_blank" rel="noopener">下载</a>：elasticsearch-analysis-ik-7.8.0.zip</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/elasticsearch/elasticsearch-7.8.0/plugins/</span><br><span class="line">mkdir elasticsearch-analysis-ik-7.8.0</span><br><span class="line">unzip /root/elasticsearch-analysis-ik-7.8.0.zip -d /usr/local/elasticsearch/elasticsearch-7.8.0/plugins/elasticsearch-analysis-ik-7.8.0</span><br></pre></td></tr></table></figure>
+<p>重启 Elasticsearch集群</p>
+<h2 id="ELK"><a href="#ELK" class="headerlink" title="ELK"></a>ELK</h2><p>Elasticsearch、Logstash、Kibana</p>
+<h2 id="GitLab"><a href="#GitLab" class="headerlink" title="GitLab"></a>GitLab</h2><p><a href="https://about.gitlab.com/" target="_blank" rel="noopener">官网</a>可以申请30天免费使用，查看安装<a href="https://about.gitlab.com/install/#centos-8" target="_blank" rel="noopener">说明</a></p>
+<p><a href="https://www.jianshu.com/p/302b5b3f38d1" target="_blank" rel="noopener">参考1</a> <a href="https://www.jianshu.com/p/ade38a53b1ac" target="_blank" rel="noopener">参考2</a></p>
+<p>安装SSH</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf install -y curl policycoreutils openssh-server</span><br><span class="line">sudo systemctl enable sshd</span><br><span class="line">sudo systemctl start sshd</span><br><span class="line"><span class="meta">#</span><span class="bash"> Check <span class="keyword">if</span> opening the firewall is needed with: sudo systemctl status firewalld</span></span><br><span class="line">sudo firewall-cmd --permanent --add-service=http</span><br><span class="line">sudo firewall-cmd --permanent --add-service=https</span><br><span class="line">sudo systemctl reload firewalld</span><br></pre></td></tr></table></figure>
+<p>安装邮件服务</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install postfix</span><br><span class="line">sudo systemctl enable postfix</span><br><span class="line">sudo systemctl start postfix</span><br></pre></td></tr></table></figure>
+<p>添加GitLab软件包存储库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh | sudo bash</span><br></pre></td></tr></table></figure>
+<p>安装gitlab</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">使用yum安装gitlab</span></span><br><span class="line">yum install -y gitlab-ee</span><br><span class="line"><span class="meta">#</span><span class="bash">可以看下gitlab-ee包的内容，看到gitlab安装在/opt/gitlab目录下</span></span><br><span class="line">rpm -ql gitlab-ee | less</span><br></pre></td></tr></table></figure>
+<p>修改配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">/etc/gitlab/gitlab.rb</span></span><br><span class="line">external_url 'http://&#123;ip:post&#125;'</span><br><span class="line">nginx['listen_addresses'] = ['0.0.0.0', '[::]']</span><br><span class="line"><span class="meta">#</span><span class="bash">默认8080，改为82</span></span><br><span class="line">nginx['listen_port'] = 82</span><br></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">重新配置gitlab</span></span><br><span class="line">sudo gitlab-ctl reconfigure</span><br><span class="line"><span class="meta">#</span><span class="bash">启动</span></span><br><span class="line">sudo gitlab-ctl start</span><br><span class="line"><span class="meta">#</span><span class="bash">停止</span></span><br><span class="line">sudo gitlab-ctl stop</span><br><span class="line"><span class="meta">#</span><span class="bash">重启gitlab</span></span><br><span class="line">gitlab-ctl restart </span><br><span class="line"><span class="meta">#</span><span class="bash">查看gitlab-ctl命令的帮助信息</span></span><br><span class="line">gitlab-ctl --help</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">502 Whoops, GitLab is taking too much time to respond.</span></span><br><span class="line"><span class="meta">#</span><span class="bash">可能是内存太小，也有可能是端口占用</span></span><br></pre></td></tr></table></figure>
+<h2 id="JENKINS"><a href="#JENKINS" class="headerlink" title="JENKINS"></a>JENKINS</h2><p><a href="https://www.jianshu.com/p/83b308e0cc53" target="_blank" rel="noopener">参考</a></p>
+<p><a href="https://jenkins.io/download/" target="_blank" rel="noopener">官网</a>下载安装包：</p>
+<p>官网说需要OpenJDK，如果是Oracle’s Java需要添加显式依赖项。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $JAVA_HOME</span><br></pre></td></tr></table></figure>
+<p>RPM安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">1.赋予执行权：</span></span><br><span class="line">chmod +x jenkins-2.235.1-1.1.noarch.rpm</span><br><span class="line"><span class="meta">#</span><span class="bash">2.执行RPM安装命令：</span></span><br><span class="line">rpm -ivh jenkins-2.235.1-1.1.noarch.rpm</span><br><span class="line"><span class="meta">#</span><span class="bash">3.修改启动端口：</span></span><br><span class="line">vim  /etc/sysconfig/jenkins </span><br><span class="line">JENKINS_PORT="8091"</span><br><span class="line"><span class="meta">#</span><span class="bash">4.启动和关闭：</span></span><br><span class="line">sudo service jenkins start/stop</span><br><span class="line">sudo systemctl start jenkins</span><br></pre></td></tr></table></figure>
+<p>初始化</p>
+<p>访问ip:port</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">获取管理员密码</span></span><br><span class="line">vim /var/lib/jenkins/secrets/initialAdminPassword</span><br></pre></td></tr></table></figure>
+<h2 id="Yapi"><a href="#Yapi" class="headerlink" title="Yapi"></a>Yapi</h2><p>在github上看<a href="https://github.com/YMFE/yapi" target="_blank" rel="noopener">文档</a></p>
+<p>环境要求：</p>
+<ul>
+<li>nodejs（7.6+)</li>
+<li>mongodb（2.6+）</li>
+<li>git</li>
+</ul>
+<p>安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g yapi-cli --registry https://registry.npm.taobao.org</span><br><span class="line">yapi server</span><br></pre></td></tr></table></figure>
+<h2 id="nacos"><a href="#nacos" class="headerlink" title="nacos"></a>nacos</h2><p><a href="https://nacos.io/zh-cn/docs/quick-start.html" target="_blank" rel="noopener">官网</a> github下载<a href="https://github.com/alibaba/nacos/releases/download/1.3.1/nacos-server-1.3.1.tar.gz" target="_blank" rel="noopener">安装包</a>:nacos-server-1.3.1.tar.gz</p>
+<p>解压</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/</span><br><span class="line">mkdir nacos </span><br><span class="line">cd nacos</span><br><span class="line">tar -zxvf /root/nacos-server-1.3.1.tar.gz -C ./</span><br></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nacos/nacos/bin</span><br><span class="line"><span class="meta">#</span><span class="bash">standalone代表着单机模式运行，非集群模式</span></span><br><span class="line">sh startup.sh -m standalone</span><br><span class="line"><span class="meta">#</span><span class="bash">http://&#123;ip&#125;:8848/nacos/<span class="comment">#/login</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">关闭</span></span><br><span class="line">sh shutdown.sh</span><br></pre></td></tr></table></figure>
+<p>持久化</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/nacos/nacos/conf/application.properties</span><br><span class="line"><span class="meta">#</span><span class="bash">加上以下配置,先建一个nacos-config数据库</span></span><br><span class="line">spring.datasource.platform=mysql</span><br><span class="line">db.num=1</span><br><span class="line">db.url.0=jdbc:mysql://&#123;ip&#125;:3306/nacos-config?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true</span><br><span class="line">db.user=root</span><br><span class="line">db.password=&#123;password&#125;</span><br></pre></td></tr></table></figure>
+
+                
+            </div>
+            <hr>
+
+            
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/基础/">
+                                    <span class="chip bg-color">基础</span>
+                                </a>
+                            
+                                <a href="/tags/环境/">
+                                    <span class="chip bg-color">环境</span>
+                                </a>
+                            
+                                <a href="/tags/安装/">
+                                    <span class="chip bg-color">安装</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/06/27/Win开发环境/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Windows开发环境">
+                        
+                        <span class="card-title">Windows开发环境</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Windows使用环境记录一下个人window系统的使用环境,方便重装和上新设备.配合github仓库使用.
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-27
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/基础/" class="post-category">
+                                    基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/windows/">
+                        <span class="chip bg-color">windows</span>
+                    </a>
+                    
+                    <a href="/tags/环境/">
+                        <span class="chip bg-color">环境</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/06/07/Linux开发环境安装/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Linux的开发环境搭建">
+                        
+                        <span class="card-title">Linux的开发环境搭建</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Linux开发环境本文的linux系统是华为云、阿里云、腾讯云上的CentOS7。
+[TOC]
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/基础/" class="post-category">
+                                    基础
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/环境/">
+                        <span class="chip bg-color">环境</span>
+                    </a>
+                    
+                    <a href="/tags/安装/">
+                        <span class="chip bg-color">安装</span>
+                    </a>
+                    
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class>
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2700388203" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2022</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">linPeng</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link ">
+    <a href="https://github.com/linPng" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
