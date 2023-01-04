@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="学习JVM, 归来仍是少年">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 
@@ -324,7 +324,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/学习/">
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                                 <span class="chip bg-color">学习</span>
                             </a>
                         
@@ -400,7 +400,7 @@
 <li>每个方法执行时都会创建一个栈帧(Stack Frame),以存储局部变量,操作数栈,动态链接,方法出口等信息</li>
 <li>栈帧(Stack Frame):<ul>
 <li>局部变量表(Local Variable Table)是一组变量值存储空间,用于存放方法参数和方法内定义的局部变量.局部变量表的容量以<strong>变量槽</strong>(Variable Slot)为最小单位.一个局部变量可以保存一个类型为boolean,byte,char,short,int,float,reference和returnAddress类型的数据.reference类型表示对一个对象实例的引用.returnAddress类型是为jsr,jsr_w和ret指令服务的,目前已经很少使用了.虚拟机通过<strong>索引</strong>定位的方法查找相应的局部变量,索引的范围是从0~局部变量表最大容量.如果Slot是32位的,则遇到一个64位数据类型的变量(如long或double型),则会连续使用两个连续的Slot来存储.</li>
-<li>操作数栈(Operand Stack)也常称为操作栈,与局部变量表不同的是操作数栈是弹栈/压栈来访问.数据运算的地方,大多数指令都在操作数栈弹栈运算,然后结果压栈.</li>
+<li>操作数栈(Operand Stack)也常称为操作栈,与局部变量表不同的是操作数栈是弹栈&#x2F;压栈来访问.数据运算的地方,大多数指令都在操作数栈弹栈运算,然后结果压栈.</li>
 <li>动态链接(Dynamic Linking)在一个class文件中,一个方法要调用其他方法,需要将这些方法的符号引用转化为其在内存地址中的直接引用,而符号引用存在于方法区中的运行时常量池.Java虚拟机栈中,每个栈帧都包含一个指向运行时常量池中该栈所属方法的符号引用,持有这个引用的目的是为了支持方法调用过程中的动态连接(Dynamic Linking).这些符号引用一部分会在类加载阶段或者第一次使用时就直接转化为直接引用,这类转化称为静态解析.另一部分将在每次运行期间转化为直接引用,这类转化称为动态连接.</li>
 <li>方法返回:方法退出后都需要返回到方法被调用的位置,程序才能继续执行,返回时可能需要在当前栈帧中保存一些信息,用来帮他恢复它的上层方法执行状态.</li>
 </ul>
@@ -418,7 +418,7 @@
 <h3 id="虚拟机性能监控与故障处理"><a href="#虚拟机性能监控与故障处理" class="headerlink" title="虚拟机性能监控与故障处理"></a>虚拟机性能监控与故障处理</h3><h3 id="调优案例分析与实例"><a href="#调优案例分析与实例" class="headerlink" title="调优案例分析与实例"></a>调优案例分析与实例</h3><h2 id="虚拟机执行子系统"><a href="#虚拟机执行子系统" class="headerlink" title="虚拟机执行子系统"></a>虚拟机执行子系统</h2><h3 id="类文件结构"><a href="#类文件结构" class="headerlink" title="类文件结构"></a>类文件结构</h3><h3 id="虚拟机类加载机制"><a href="#虚拟机类加载机制" class="headerlink" title="虚拟机类加载机制"></a>虚拟机类加载机制</h3><h3 id="虚拟机字节码执行引擎"><a href="#虚拟机字节码执行引擎" class="headerlink" title="虚拟机字节码执行引擎"></a>虚拟机字节码执行引擎</h3><h3 id="类加载及执行子系统的案例与实例"><a href="#类加载及执行子系统的案例与实例" class="headerlink" title="类加载及执行子系统的案例与实例"></a>类加载及执行子系统的案例与实例</h3><h2 id="程序编译与代码优化"><a href="#程序编译与代码优化" class="headerlink" title="程序编译与代码优化"></a>程序编译与代码优化</h2><h2 id="高效并发"><a href="#高效并发" class="headerlink" title="高效并发"></a>高效并发</h2><h3 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h3><h3 id="线程安全与锁优化"><a href="#线程安全与锁优化" class="headerlink" title="线程安全与锁优化"></a>线程安全与锁优化</h3>
                 
             </div>
-            <hr>
+            <hr/>
 
             
 
@@ -429,7 +429,7 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/学习/">
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                                     <span class="chip bg-color">学习</span>
                                 </a>
                             
@@ -480,7 +480,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/25/Java学习/">
+                <a href="/2020/11/25/Java%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
@@ -510,7 +510,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习/">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">学习</span>
                     </a>
                     
@@ -525,7 +525,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/10/15/开发中常见的spring注解/">
+                <a href="/2020/10/15/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84spring%E6%B3%A8%E8%A7%A3/">
                     <div class="card-image">
                         
                         
@@ -555,7 +555,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习/">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">学习</span>
                     </a>
                     
@@ -722,10 +722,22 @@
 
     
 </style>
-<div class>
+<div class="">
     
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2700388203" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2700388203"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
         </meting-js>
     </div>
 </div>
@@ -735,11 +747,12 @@
 
     
 
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">linPeng</a>
@@ -803,7 +816,8 @@
     <div class="modal-content">
         <div class="search-header">
             <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
         </div>
         <div id="searchResult"></div>
     </div>

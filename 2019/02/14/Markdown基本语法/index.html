@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="Markdown基本语法的学习, 归来仍是少年">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 
@@ -336,7 +336,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/基础/" class="post-category">
+                            <a href="/categories/%E5%9F%BA%E7%A1%80/" class="post-category">
                                 基础
                             </a>
                         
@@ -370,19 +370,19 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h1><p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br>推荐的编辑器：<a href="https://typora.io/" target="_blank" rel="noopener">typora</a></p>
-<a id="more"></a>
+                <h1 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h1><p>Markdown是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。<br>推荐的编辑器：<a target="_blank" rel="noopener" href="https://typora.io/">typora</a></p>
+<span id="more"></span>
 <h2 id="1-标题"><a href="#1-标题" class="headerlink" title="1.标题"></a>1.标题</h2><p>一个#是一级标题，二个#是二级标题，以此类推。支持六级标题。</p>
 <hr>
 <h2 id="2-字体样式"><a href="#2-字体样式" class="headerlink" title="2.字体样式"></a>2.字体样式</h2><p>单行代码：<code>代码之间分别用一个反引号包起来</code><br>代码块：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">代码之间分别用三个反引号包起来</span><br><span class="line"></span><br><span class="line">且两边的反引号单独占一行</span><br></pre></td></tr></table></figure>
-<font color="#ff0000">字体颜色<code>&lt;font color=&#39;#ff0000&#39;&gt;&lt;/font&gt;</code></font>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">代码之间分别用三个反引号包起来</span><br><span class="line"></span><br><span class="line">且两边的反引号单独占一行</span><br></pre></td></tr></table></figure>
 
+<p><font color='#ff0000'>字体颜色<code>&lt;font color=&#39;#ff0000&#39;&gt;&lt;/font&gt;</code></font></p>
 <p><strong>要加粗的文字左右分别用两个*号包起来</strong></p>
-<p><em>要倾斜的文字左右分别用一个\</em>号包起来*</p>
-<p><strong><em>要倾斜和加粗的文字左右分别用三个\</em>号包起来*</strong></p>
+<p><em>要倾斜的文字左右分别用一个*号包起来</em></p>
+<p><em><strong>要倾斜和加粗的文字左右分别用三个*号包起来</strong></em></p>
 <p><del>要加删除线的文字左右分别用两个~~号包起来</del></p>
-<p><u>要加下划线的文字用\&lt;u>\&lt;/u>括起来</u></p>
+<p><u>要加下划线的文字用&lt;u&gt;&lt;&#x2F;u&gt;括起来</u></p>
 <blockquote>
 <p>在引用的文字前加&gt;即可。</p>
 <blockquote>
@@ -393,9 +393,9 @@
 <hr>
 <hr>
 <h2 id="3-图片与链接"><a href="#3-图片与链接" class="headerlink" title="3.图片与链接"></a>3.图片与链接</h2><h3 id="3-1图片"><a href="#3-1图片" class="headerlink" title="3.1图片"></a>3.1图片</h3><p>![图片alt](图片地址 ‘’图片title’’)</p>
-<p><img src="https://avatars2.githubusercontent.com/u/47735015?s=460&amp;v=4 title" alt="图片"></p>
+<p>![图片](<a target="_blank" rel="noopener" href="https://avatars2.githubusercontent.com/u/47735015?s=460&v=4">https://avatars2.githubusercontent.com/u/47735015?s=460&amp;v=4</a> title)</p>
 <p>图片alt就是显示在图片下面的文字，相当于对图片内容的解释。<br>图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</p>
-<h3 id="3-2链接"><a href="#3-2链接" class="headerlink" title="3.2链接"></a>3.2链接</h3><p>[超链接名](超链接地址 “超链接title”)<br>title可加可不加<br><a href="http://baidu.com" title="baidu" target="_blank" rel="noopener">百度</a></p>
+<h3 id="3-2链接"><a href="#3-2链接" class="headerlink" title="3.2链接"></a>3.2链接</h3><p>[超链接名](超链接地址 “超链接title”)<br>title可加可不加<br><a target="_blank" rel="noopener" href="http://baidu.com/" title="baidu">百度</a></p>
 <p>注： 引用图片和链接的唯一区别就是在最前方添加一个感叹号。</p>
 <h2 id="4-表格与列表"><a href="#4-表格与列表" class="headerlink" title="4.表格与列表"></a>4.表格与列表</h2><h3 id="4-1表格"><a href="#4-1表格" class="headerlink" title="4.1表格"></a>4.1表格</h3><p>| 表头 | 表头 | 表头 |<br>| —- | :–: | —: |<br>| 内容 | 内容 | 内容 |<br>| 内容 | 内容 | 内容 |</p>
 <p>第二行分割表头和内容。</p>
@@ -404,23 +404,21 @@
 <thead>
 <tr>
 <th>表头</th>
-<th style="text-align:center">表头</th>
-<th style="text-align:right">表头</th>
+<th align="center">表头</th>
+<th align="right">表头</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>内容</td>
-<td style="text-align:center">内容</td>
-<td style="text-align:right">内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
 </tr>
 <tr>
 <td>内容</td>
-<td style="text-align:center">内容</td>
-<td style="text-align:right">内容</td>
+<td align="center">内容</td>
+<td align="right">内容</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <h3 id="4-2列表"><a href="#4-2列表" class="headerlink" title="4.2列表"></a>4.2列表</h3><h4 id="4-2-1无序列表"><a href="#4-2-1无序列表" class="headerlink" title="4.2.1无序列表"></a>4.2.1无序列表</h4><ul>
 <li><p>- 列表内容</p>
 </li>
@@ -428,8 +426,8 @@
 </li>
 <li><p>* 列表内容</p>
 </li>
-<li><ul>
-<li></li>
+<li><p>* </p>
+<ul>
 <li><ul>
 <li>重复使用有多级效果</li>
 </ul>
@@ -452,11 +450,11 @@
 <p>注意：序号跟内容之间要有空格</p>
 <h2 id="5-特殊符号字符处理"><a href="#5-特殊符号字符处理" class="headerlink" title="5.特殊符号字符处理"></a>5.特殊符号字符处理</h2><h3 id="5-1特殊符号"><a href="#5-1特殊符号" class="headerlink" title="5.1特殊符号"></a>5.1特殊符号</h3><p>Markdown使用反斜杠\插入语法中用到的特殊符号。<br>在Markdown中，主要有以下几种特殊符号需要处理：</p>
 <p>\   反斜线<br>`   反引号<br>*   星号<br>_   底线<br>{}  花括号<br>[]  方括号<br>()  括弧<br>#   井字号<br>+   加号<br>-   减号<br>.   英文句点<br>!   惊叹号</p>
-<h3 id="5-2特殊字符"><a href="#5-2特殊字符" class="headerlink" title="5.2特殊字符"></a>5.2特殊字符</h3><p><code>&amp;copy;</code>      &copy;      版权<br><code>&amp;reg;</code>       &reg;       注册商标<br><code>&amp;trade;</code>     &trade;     商标<br><code>&amp;nbsp;</code>      &nbsp;      空格<br><code>&amp;amp;</code>       &amp;       和号<br><code>&amp;quot;</code>      &quot;      引号<br><code>&amp;apos;</code>      &apos;      撇号<br><code>&amp;lt;</code>        &lt;        小于号<br><code>&amp;gt;</code>        &gt;        大于号<br><code>&amp;ne;</code>        &ne;        不等号<br><code>&amp;le;</code>        &le;        小于等于<br><code>&amp;ge;</code>        &ge;        大于等于<br><code>&amp;cent;</code>      &cent;      分<br><code>&amp;pound;</code>     &pound;     磅<br><code>&amp;euro;</code>      &euro;      欧元<br><code>&amp;yen;</code>       &yen;       元<br><code>&amp;sect;</code>      &sect;      节<br><code>&amp;times;</code>     &times;     乘号<br><code>&amp;divide;</code>    &divide;    除号<br><code>&amp;plusmn;</code>    &plusmn;    正负号</p>
+<h3 id="5-2特殊字符"><a href="#5-2特殊字符" class="headerlink" title="5.2特殊字符"></a>5.2特殊字符</h3><p><code>&amp;copy;</code>      &amp;copy;      版权<br><code>&amp;reg;</code>       &amp;reg;       注册商标<br><code>&amp;trade;</code>     &amp;trade;     商标<br><code>&amp;nbsp;</code>      &amp;nbsp;      空格<br><code>&amp;amp;</code>       &amp;       和号<br><code>&amp;quot;</code>      &quot;      引号<br><code>&amp;apos;</code>      &amp;apos;      撇号<br><code>&amp;lt;</code>        &lt;        小于号<br><code>&amp;gt;</code>        &gt;        大于号<br><code>&amp;ne;</code>        &amp;ne;        不等号<br><code>&amp;le;</code>        &amp;le;        小于等于<br><code>&amp;ge;</code>        &amp;ge;        大于等于<br><code>&amp;cent;</code>      &amp;cent;      分<br><code>&amp;pound;</code>     &amp;pound;     磅<br><code>&amp;euro;</code>      &amp;euro;      欧元<br><code>&amp;yen;</code>       &amp;yen;       元<br><code>&amp;sect;</code>      &amp;sect;      节<br><code>&amp;times;</code>     &amp;times;     乘号<br><code>&amp;divide;</code>    &amp;divide;    除号<br><code>&amp;plusmn;</code>    &amp;plusmn;    正负号</p>
 
                 
             </div>
-            <hr>
+            <hr/>
 
             
 
@@ -518,7 +516,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/02/26/Win常用操作/">
+                <a href="/2019/02/26/Win%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">
                     <div class="card-image">
                         
                         
@@ -541,7 +539,7 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/基础/" class="post-category">
+                            <a href="/categories/%E5%9F%BA%E7%A1%80/" class="post-category">
                                     基础
                                 </a>
                             
@@ -552,7 +550,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/笔记/">
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">笔记</span>
                     </a>
                     
@@ -560,7 +558,7 @@
                         <span class="chip bg-color">windows</span>
                     </a>
                     
-                    <a href="/tags/命令/">
+                    <a href="/tags/%E5%91%BD%E4%BB%A4/">
                         <span class="chip bg-color">命令</span>
                     </a>
                     
@@ -575,7 +573,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/02/11/Hexo的初步学习/">
+                <a href="/2019/02/11/Hexo%E7%9A%84%E5%88%9D%E6%AD%A5%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
@@ -599,7 +597,7 @@ Hexo官网
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/前端/" class="post-category">
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
                                     前端
                                 </a>
                             
@@ -610,7 +608,7 @@ Hexo官网
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/基础/">
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
                         <span class="chip bg-color">基础</span>
                     </a>
                     
@@ -781,10 +779,22 @@ Hexo官网
 
     
 </style>
-<div class>
+<div class="">
     
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2700388203" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2700388203"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
         </meting-js>
     </div>
 </div>
@@ -794,11 +804,12 @@ Hexo官网
 
     
 
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">linPeng</a>
@@ -862,7 +873,8 @@ Hexo官网
     <div class="modal-content">
         <div class="search-header">
             <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
         </div>
         <div id="searchResult"></div>
     </div>

@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="SVN cleanup 失败处理方法, 归来仍是少年">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 
@@ -328,7 +328,7 @@
                                 <span class="chip bg-color">SVN</span>
                             </a>
                         
-                            <a href="/tags/问题/">
+                            <a href="/tags/%E9%97%AE%E9%A2%98/">
                                 <span class="chip bg-color">问题</span>
                             </a>
                         
@@ -380,11 +380,12 @@
 <li>进入cmd命令,使用sqlite3.exe操作wc.db</li>
 <li>删除work_queue</li>
 </ol>
-<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>例子</span><br><span class="line">D:\work\SVN&gt;cd TASK</span><br><span class="line"></span><br><span class="line">D:\work\SVN\TASK&gt;sqlite3.exe .svn/wc.db "select * from work_queue"</span><br><span class="line">23906|(file-install 64 202105/模板/CRTMIS_Switching/CRTMIS_Switching-路径说明.txt 1 0 1 1)</span><br><span class="line">23907|(file-install 55 202105/模板/CRTMIS_Switching/QY/CRTMIS/Update_All.bat 1 0 1 1)</span><br><span class="line">23908|(file-install 61 202105/模板/CRTMIS_Switching/QY/CRTMIS/Init/Update_Init.sql 1 0 1 1)</span><br><span class="line"></span><br><span class="line">D:\work\SVN\TASK&gt;sqlite3.exe .svn/wc.db "delete from work_queue"</span><br></pre></td></tr></table></figure>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">例子</span></span><br><span class="line">D:\work\SVN&gt;cd TASK</span><br><span class="line"></span><br><span class="line">D:\work\SVN\TASK&gt;sqlite3.exe .svn/wc.db &quot;select * from work_queue&quot;</span><br><span class="line">23906|(file-install 64 202105/模板/CRTMIS_Switching/CRTMIS_Switching-路径说明.txt 1 0 1 1)</span><br><span class="line">23907|(file-install 55 202105/模板/CRTMIS_Switching/QY/CRTMIS/Update_All.bat 1 0 1 1)</span><br><span class="line">23908|(file-install 61 202105/模板/CRTMIS_Switching/QY/CRTMIS/Init/Update_Init.sql 1 0 1 1)</span><br><span class="line"></span><br><span class="line">D:\work\SVN\TASK&gt;sqlite3.exe .svn/wc.db &quot;delete from work_queue&quot;</span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
-            <hr>
+            <hr/>
 
             
 
@@ -399,7 +400,7 @@
                                     <span class="chip bg-color">SVN</span>
                                 </a>
                             
-                                <a href="/tags/问题/">
+                                <a href="/tags/%E9%97%AE%E9%A2%98/">
                                     <span class="chip bg-color">问题</span>
                                 </a>
                             
@@ -446,12 +447,12 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2021/05/13/SVN cleanup 失败处理方法/">
+                <a href="/2021/05/13/SVN%20cleanup%20%E5%A4%B1%E8%B4%A5%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/">
                     <div class="card-image">
                         
                         
@@ -490,7 +491,7 @@
                         <span class="chip bg-color">SVN</span>
                     </a>
                     
-                    <a href="/tags/问题/">
+                    <a href="/tags/%E9%97%AE%E9%A2%98/">
                         <span class="chip bg-color">问题</span>
                     </a>
                     
@@ -505,7 +506,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/01/04/Lambda表达式/">
+                <a href="/2021/01/04/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
                     <div class="card-image">
                         
                         
@@ -535,7 +536,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习/">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">学习</span>
                     </a>
                     
@@ -702,10 +703,22 @@
 
     
 </style>
-<div class>
+<div class="">
     
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2700388203" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2700388203"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
         </meting-js>
     </div>
 </div>
@@ -715,11 +728,12 @@
 
     
 
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">linPeng</a>
@@ -783,7 +797,8 @@
     <div class="modal-content">
         <div class="search-header">
             <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
         </div>
         <div id="searchResult"></div>
     </div>

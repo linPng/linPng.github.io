@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="IDEA的简单使用, 归来仍是少年">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 
@@ -324,7 +324,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/心得/">
+                            <a href="/tags/%E5%BF%83%E5%BE%97/">
                                 <span class="chip bg-color">心得</span>
                             </a>
                         
@@ -362,41 +362,43 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>工具用得好，下班下得早。IntelliJ IDEA真的好用啊，所以很有必要花点时间深入学习一下如何使用idea。</p>
-<a id="more"></a>
-<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p><code>Ctrl+Shift+N</code>//快速找file,不带shift是针对classes,还有all、symbols、actions</p>
-<p><code>Ctrl+Shift+E</code>//打开最近修改文件列表，不带shift是打开最近打开文件列表</p>
-<p><code>Alt+Shift+C</code>//最近的更改</p>
-<p><code>Ctrl+F12</code>//显示当前文件结构</p>
-<p><code>Ctrl+H</code>//显示类结构图（类的继承层次）</p>
-<p><code>Ctrl+Shift+Space</code>//自动补全代码</p>
-<p><code>Ctrl+Shift+Backspace</code>//跳转到上次编辑的地方</p>
-<p><code>Ctrl+Alt+left/right</code>//返回至上次浏览的位置</p>
-<p><code>Alt+left/right</code>//切换代码视图</p>
-<p><code>Alt+Up/Down</code>//在方法间快速移动定位</p>
-<p><code>Ctrl+Shift+Up/Down</code>，向上/下移动代码块</p>
-<p><code>Ctrl+Shift+U</code>//大小写转化</p>
-<p><code>Ctrl+Alt+T</code>//把代码块包起来，if、try之类的</p>
-<p><code>Ctrl+Alt+J</code>//用动态模板环绕</p>
-<p><code>Ctrl+click</code>//shift再点文件列表可以打开文件所在位置或文件，对变量使用是跳转到定义处</p>
-<p><code>Alt+Shift+Up/Down</code>，上/下移一行</p>
-<p><code>Ctrl+Alt+L</code>//格式化代码</p>
-<p><code>Alt+F1</code>//查找代码所在位置</p>
-<p><code>Ctrl+Shift+V/Insert</code>//打开粘贴板</p>
-<p><code>Alt+Insert</code>//打开构造器</p>
-<p><code>Shift+Click</code>//shift再点文件列表可以关掉它，等于点那个X</p>
-<p><code>Ctrl+W</code>//可以选择单词继而语句继而行继而函数,+shift则相反</p>
-<p><code>Ctrl+[ 或]</code>//去找最近的{或}</p>
-<p><code>Ctrl+O</code>//重写方法</p>
-<p><code>Ctrl+I</code>//实现方法</p>
-<p><code>Ctrl+Y</code>//删除行</p>
-<p><code>Ctrl+X</code>//剪切行</p>
-<p><code>Ctrl+C</code>//复制行</p>
-<p><code>Ctrl+D</code>//复制黏贴行</p>
-<p><code>Shift Shift</code>//文件参数搜索</p>
-<p><code>Ctrl+Alt+B</code>//打开时实现类</p>
-<p><code>Alt+F7</code>//查找方法被调用的位置</p>
-<p><code>Ctrl+shift+T</code>//跳转或创建测试用例</p>
-<h3 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//模版一:psvm</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//模版二:sout soutp soutm soutv xx.sout</span></span><br><span class="line">    System.out.println(<span class="string">"hello world!"</span>);</span><br><span class="line">    System.out.println(<span class="string">"args = ["</span> + args + <span class="string">"]"</span>);</span><br><span class="line">    System.out.println(<span class="string">"hotkeysTest.main"</span>);</span><br><span class="line">    <span class="keyword">int</span> v=<span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> v2=<span class="number">20</span>;</span><br><span class="line">    System.out.println(<span class="string">"v = "</span> + v);</span><br><span class="line">    System.out.println(v);</span><br><span class="line">    System.out.println(v2);</span><br><span class="line">    System.out.println(<span class="string">"v2 = "</span> + v2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//模版三:fori</span></span><br><span class="line">    String[] arr=<span class="keyword">new</span> String[]&#123;<span class="string">"A"</span>,<span class="string">"B"</span>,<span class="string">"C"</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        System.out.println(<span class="string">"arr = "</span> + arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//iter</span></span><br><span class="line">    <span class="keyword">for</span> (String s : arr) &#123;</span><br><span class="line">        System.out.println(<span class="string">"s = "</span> + s);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//itar</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        String s = arr[i];</span><br><span class="line">        System.out.println(<span class="string">"s = "</span> + s);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//模版四:list.for</span></span><br><span class="line">    ArrayList list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">    list.add(<span class="number">1</span>);</span><br><span class="line">    list.add(<span class="number">2</span>);</span><br><span class="line">    list.add(<span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (Object o : list) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//list.fori</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//list.forr 逆序</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = list.size() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//模版五:ifn</span></span><br><span class="line">    <span class="keyword">if</span> (list == <span class="keyword">null</span>) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//inn</span></span><br><span class="line">    <span class="keyword">if</span> (list != <span class="keyword">null</span>) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//xx.nn /xx.null</span></span><br><span class="line">    <span class="keyword">if</span> (list != <span class="keyword">null</span>) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (list == <span class="keyword">null</span>) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//模版六psf</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> A = <span class="number">1</span>;</span><br><span class="line"><span class="comment">//prsf</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> B = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//psfi</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> C = <span class="number">3</span>;</span><br><span class="line"><span class="comment">//psfs</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String D = <span class="string">""</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">在Setting&gt;Editor&gt;Live Templates中可以设置自己的Template Group和Live Templates</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//自定义模版  </span></span><br><span class="line"><span class="comment">//例如：</span></span><br><span class="line"><span class="comment">//Abbreviation：bz  Description：添加备注带时间戳</span></span><br><span class="line"><span class="comment">//Template text：/** $remark$ $END$ @autthor: $USER$ @create: $DAY$ $TIME$*/</span></span><br><span class="line"><span class="comment">//效果</span></span><br><span class="line"><span class="comment">/**   <span class="doctag">@autthor</span>: LinP <span class="doctag">@create</span>: 2019/6/1 19:46*/</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<h3 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h3><p><code>Ctrl+Shift+N</code>&#x2F;&#x2F;快速找file,不带shift是针对classes,还有all、symbols、actions</p>
+<p><code>Ctrl+Shift+E</code>&#x2F;&#x2F;打开最近修改文件列表，不带shift是打开最近打开文件列表</p>
+<p><code>Alt+Shift+C</code>&#x2F;&#x2F;最近的更改</p>
+<p><code>Ctrl+F12</code>&#x2F;&#x2F;显示当前文件结构</p>
+<p><code>Ctrl+H</code>&#x2F;&#x2F;显示类结构图（类的继承层次）</p>
+<p><code>Ctrl+Shift+Space</code>&#x2F;&#x2F;自动补全代码</p>
+<p><code>Ctrl+Shift+Backspace</code>&#x2F;&#x2F;跳转到上次编辑的地方</p>
+<p><code>Ctrl+Alt+left/right</code>&#x2F;&#x2F;返回至上次浏览的位置</p>
+<p><code>Alt+left/right</code>&#x2F;&#x2F;切换代码视图</p>
+<p><code>Alt+Up/Down</code>&#x2F;&#x2F;在方法间快速移动定位</p>
+<p><code>Ctrl+Shift+Up/Down</code>，向上&#x2F;下移动代码块</p>
+<p><code>Ctrl+Shift+U</code>&#x2F;&#x2F;大小写转化</p>
+<p><code>Ctrl+Alt+T</code>&#x2F;&#x2F;把代码块包起来，if、try之类的</p>
+<p><code>Ctrl+Alt+J</code>&#x2F;&#x2F;用动态模板环绕</p>
+<p><code>Ctrl+click</code>&#x2F;&#x2F;shift再点文件列表可以打开文件所在位置或文件，对变量使用是跳转到定义处</p>
+<p><code>Alt+Shift+Up/Down</code>，上&#x2F;下移一行</p>
+<p><code>Ctrl+Alt+L</code>&#x2F;&#x2F;格式化代码</p>
+<p><code>Alt+F1</code>&#x2F;&#x2F;查找代码所在位置</p>
+<p><code>Ctrl+Shift+V/Insert</code>&#x2F;&#x2F;打开粘贴板</p>
+<p><code>Alt+Insert</code>&#x2F;&#x2F;打开构造器</p>
+<p><code>Shift+Click</code>&#x2F;&#x2F;shift再点文件列表可以关掉它，等于点那个X</p>
+<p><code>Ctrl+W</code>&#x2F;&#x2F;可以选择单词继而语句继而行继而函数,+shift则相反</p>
+<p><code>Ctrl+[ 或]</code>&#x2F;&#x2F;去找最近的{或}</p>
+<p><code>Ctrl+O</code>&#x2F;&#x2F;重写方法</p>
+<p><code>Ctrl+I</code>&#x2F;&#x2F;实现方法</p>
+<p><code>Ctrl+Y</code>&#x2F;&#x2F;删除行</p>
+<p><code>Ctrl+X</code>&#x2F;&#x2F;剪切行</p>
+<p><code>Ctrl+C</code>&#x2F;&#x2F;复制行</p>
+<p><code>Ctrl+D</code>&#x2F;&#x2F;复制黏贴行</p>
+<p><code>Shift Shift</code>&#x2F;&#x2F;文件参数搜索</p>
+<p><code>Ctrl+Alt+B</code>&#x2F;&#x2F;打开时实现类</p>
+<p><code>Alt+F7</code>&#x2F;&#x2F;查找方法被调用的位置</p>
+<p><code>Ctrl+shift+T</code>&#x2F;&#x2F;跳转或创建测试用例</p>
+<h3 id="模版"><a href="#模版" class="headerlink" title="模版"></a>模版</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//模版一:psvm</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="comment">//模版二:sout soutp soutm soutv xx.sout</span></span><br><span class="line">    System.out.println(<span class="string">&quot;hello world!&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;args = [&quot;</span> + args + <span class="string">&quot;]&quot;</span>);</span><br><span class="line">    System.out.println(<span class="string">&quot;hotkeysTest.main&quot;</span>);</span><br><span class="line">    <span class="type">int</span> v=<span class="number">10</span>;</span><br><span class="line">    <span class="type">int</span> v2=<span class="number">20</span>;</span><br><span class="line">    System.out.println(<span class="string">&quot;v = &quot;</span> + v);</span><br><span class="line">    System.out.println(v);</span><br><span class="line">    System.out.println(v2);</span><br><span class="line">    System.out.println(<span class="string">&quot;v2 = &quot;</span> + v2);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//模版三:fori</span></span><br><span class="line">    String[] arr=<span class="keyword">new</span> <span class="title class_">String</span>[]&#123;<span class="string">&quot;A&quot;</span>,<span class="string">&quot;B&quot;</span>,<span class="string">&quot;C&quot;</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;arr = &quot;</span> + arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//iter</span></span><br><span class="line">    <span class="keyword">for</span> (String s : arr) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;s = &quot;</span> + s);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//itar</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">s</span> <span class="operator">=</span> arr[i];</span><br><span class="line">        System.out.println(<span class="string">&quot;s = &quot;</span> + s);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//模版四:list.for</span></span><br><span class="line">    <span class="type">ArrayList</span> <span class="variable">list</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ArrayList</span>();</span><br><span class="line">    list.add(<span class="number">1</span>);</span><br><span class="line">    list.add(<span class="number">2</span>);</span><br><span class="line">    list.add(<span class="number">3</span>);</span><br><span class="line">    <span class="keyword">for</span> (Object o : list) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//list.fori</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; list.size(); i++) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//list.forr 逆序</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> list.size() - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//模版五:ifn</span></span><br><span class="line">    <span class="keyword">if</span> (list == <span class="literal">null</span>) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//inn</span></span><br><span class="line">    <span class="keyword">if</span> (list != <span class="literal">null</span>) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//xx.nn /xx.null</span></span><br><span class="line">    <span class="keyword">if</span> (list != <span class="literal">null</span>) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (list == <span class="literal">null</span>) &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//模版六psf</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">A</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line"><span class="comment">//prsf</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">B</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line"><span class="comment">//psfi</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">C</span> <span class="operator">=</span> <span class="number">3</span>;</span><br><span class="line"><span class="comment">//psfs</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">String</span> <span class="variable">D</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">在Setting&gt;Editor&gt;Live Templates中可以设置自己的Template Group和Live Templates</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//自定义模版  </span></span><br><span class="line"><span class="comment">//例如：</span></span><br><span class="line"><span class="comment">//Abbreviation：bz  Description：添加备注带时间戳</span></span><br><span class="line"><span class="comment">//Template text：/** $remark$ $END$ @autthor: $USER$ @create: $DAY$ $TIME$*/</span></span><br><span class="line"><span class="comment">//效果</span></span><br><span class="line"><span class="comment">/**   <span class="doctag">@autthor</span>: LinP <span class="doctag">@create</span>: 2019/6/1 19:46*/</span></span><br></pre></td></tr></table></figure>
+
 <h3 id="IDEA-database"><a href="#IDEA-database" class="headerlink" title="IDEA database"></a>IDEA database</h3><p>IDEA database不仅可以用来查看数据关系，还可以用scripted Extensions来逆向生成SQL。</p>
 <ol>
 <li>在idea右侧菜单栏Database中添加Data Source,选择需要的Schemas</li>
@@ -417,29 +419,33 @@
 <li>GsonFormat:通过json串快速生成实体(Alt+Insert)</li>
 <li>GsonFormatPlus:升级版本</li>
 <li>Maven Helper:pom文件增加Dependency Analyzer窗口,查看解决冲突,以列表和树形式查看依赖</li>
-<li>nginx Support/NodeJS/vue.js:支持在idea启动nginx/NodeJS/vue.js</li>
+<li>nginx Support&#x2F;NodeJS&#x2F;vue.js:支持在idea启动nginx&#x2F;NodeJS&#x2F;vue.js</li>
 <li>SequenceDiagram:右键方法生成时序图</li>
 <li>Grep Console:过滤日志</li>
 <li>JRebel and XRebel for IntelliJ:热部署 <strong>需要收费</strong> 不推荐</li>
-<li>Statistic:项目文件统计 旧版本idea要<a href="https://plugins.jetbrains.com/plugin/4509-statistic/versions" target="_blank" rel="noopener">下载</a>旧版本插件</li>
+<li>Statistic:项目文件统计 旧版本idea要<a target="_blank" rel="noopener" href="https://plugins.jetbrains.com/plugin/4509-statistic/versions">下载</a>旧版本插件</li>
 <li>.ignore:忽略文件提交</li>
 <li>SonarLint:比阿里的更细节</li>
 <li>CheckStyle-IDEA:比阿里和SonarLint还细节</li>
 </ul>
 <h3 id="Postfix"><a href="#Postfix" class="headerlink" title="Postfix"></a>Postfix</h3><p>和Live Template类似,利用.key来快速写代码.</p>
 <p>在Setting&gt;Editor&gt;General&gt;Postfix Completion里有可以添加模版,默认自带了java,sql,js的常用模版.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//.for</span></span><br><span class="line"><span class="keyword">for</span> (Map&lt;String, Object&gt; ObjectMap : mapLists) &#123;&#125;</span><br><span class="line"><span class="comment">//.fori</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; mapLists.size(); i++) &#123;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//.for</span></span><br><span class="line"><span class="keyword">for</span> (Map&lt;String, Object&gt; ObjectMap : mapLists) &#123;&#125;</span><br><span class="line"><span class="comment">//.fori</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; mapLists.size(); i++) &#123;&#125;</span><br></pre></td></tr></table></figure>
+
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--常用sql</span></span><br><span class="line"><span class="comment">--select tableA.afrom</span></span><br><span class="line"><span class="keyword">select</span> aa <span class="keyword">as</span> a,bb <span class="keyword">as</span> b <span class="keyword">from</span> tableA</span><br><span class="line"><span class="comment">--select tableA.cfrom</span></span><br><span class="line"><span class="keyword">select</span> aa,bb <span class="keyword">from</span> tableA</span><br></pre></td></tr></table></figure>
+
+
+
 <h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>开启debug，可以在断点中设置条件；</p>
-<p>蓝色折线箭头+灰色按钮=单行执行（不会进入）</p>
-<p>蓝色直线箭头+灰色按钮=单布进入（只会进入自定义方法）</p>
-<p>红色直线箭头+灰色按钮=单步进入（也会进入系统方法）</p>
-<p>蓝色反箭头+灰色按钮=单步跳出</p>
+<p>蓝色折线箭头+灰色按钮&#x3D;单行执行（不会进入）</p>
+<p>蓝色直线箭头+灰色按钮&#x3D;单布进入（只会进入自定义方法）</p>
+<p>红色直线箭头+灰色按钮&#x3D;单步进入（也会进入系统方法）</p>
+<p>蓝色反箭头+灰色按钮&#x3D;单步跳出</p>
 <h2 id="社区版"><a href="#社区版" class="headerlink" title="社区版"></a>社区版</h2><p>下载社区版,有遇到的问题（在新机上安装）</p>
 <ol>
 <li>svn关联,在setting中svn设置本地ToroiseSVN(还是ToroiseSvn顺手)</li>
-<li>maven关联,直接download重新下载依赖,如果下载慢可以在maven的setting.xml(idea中选pom文件右键可以快速创建或打开)中加镜像,也可以提前拷贝旧电脑的maven仓库；可以下载<a href="https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/" target="_blank" rel="noopener">旧版本maven</a><ol>
-<li>Unresolved dependency: ‘jdk.tools:jdk.tools:jar:1.6’ 可能是下载的jkd的lib下没有tools.jar(<a href="https://www.oracle.com/cn/java/technologies/javase/javase8-archive-downloads.html" target="_blank" rel="noopener">jdk8</a>)</li>
+<li>maven关联,直接download重新下载依赖,如果下载慢可以在maven的setting.xml(idea中选pom文件右键可以快速创建或打开)中加镜像,也可以提前拷贝旧电脑的maven仓库；可以下载<a target="_blank" rel="noopener" href="https://archive.apache.org/dist/maven/maven-3/3.6.0/binaries/">旧版本maven</a><ol>
+<li>Unresolved dependency: ‘jdk.tools:jdk.tools:jar:1.6’ 可能是下载的jkd的lib下没有tools.jar(<a target="_blank" rel="noopener" href="https://www.oracle.com/cn/java/technologies/javase/javase8-archive-downloads.html">jdk8</a>)</li>
 </ol>
 </li>
 <li>快捷键发现crtl+y不是删除而是取消撤回，社区版默认的keymap是WindowsPorperRedo</li>
@@ -447,7 +453,7 @@
 
                 
             </div>
-            <hr>
+            <hr/>
 
             
 
@@ -458,7 +464,7 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/心得/">
+                                <a href="/tags/%E5%BF%83%E5%BE%97/">
                                     <span class="chip bg-color">心得</span>
                                 </a>
                             
@@ -509,7 +515,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/07/02/Linux服务器学习/">
+                <a href="/2019/07/02/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
@@ -543,11 +549,11 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/基础/">
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
                         <span class="chip bg-color">基础</span>
                     </a>
                     
-                    <a href="/tags/服务器/">
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
                         <span class="chip bg-color">服务器</span>
                     </a>
                     
@@ -575,7 +581,7 @@
                     <div class="summary block-with-text">
                         
                             简单了解一下什么是MongoDB
-MongoDB的简介MongoDB 是一个面向文档存储的非关系(NoSQL)数据库，MongoDB 将数据存储为一个文档，数据结构由键值(key=&gt;value)对组成。MongoDB 文档类似于 JS
+MongoDB的简介MongoDB 是一个面向文档存储的非关系(NoSQL)数据库，MongoDB 将数据存储为一个文档，数据结构由键值(key&#x3D;&gt;value)对组成。MongoDB 文档类
                         
                     </div>
                     <div class="publish-info">
@@ -593,7 +599,7 @@ MongoDB的简介MongoDB 是一个面向文档存储的非关系(NoSQL)数据库�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习笔记/">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">学习笔记</span>
                     </a>
                     
@@ -760,10 +766,22 @@ MongoDB的简介MongoDB 是一个面向文档存储的非关系(NoSQL)数据库�
 
     
 </style>
-<div class>
+<div class="">
     
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2700388203" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2700388203"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
         </meting-js>
     </div>
 </div>
@@ -773,11 +791,12 @@ MongoDB的简介MongoDB 是一个面向文档存储的非关系(NoSQL)数据库�
 
     
 
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">linPeng</a>
@@ -841,7 +860,8 @@ MongoDB的简介MongoDB 是一个面向文档存储的非关系(NoSQL)数据库�
     <div class="modal-content">
         <div class="search-header">
             <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
         </div>
         <div id="searchResult"></div>
     </div>

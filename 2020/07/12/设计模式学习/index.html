@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="设计模式的学习, 归来仍是少年">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 
@@ -324,7 +324,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/基础/">
+                            <a href="/tags/%E5%9F%BA%E7%A1%80/">
                                 <span class="chip bg-color">基础</span>
                             </a>
                         
@@ -363,7 +363,8 @@
             <div id="articleContent">
                 <p>[TOC]</p>
 <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><p><strong>设计模式</strong>是软件设计中常见问题的典型解决方案。</p>
-<a id="more"></a>
+<span id="more"></span>
+
 <p>所有模式可以根据其意图或目的来分类：</p>
 <ul>
 <li><strong>创建型模式</strong>提供创建对象的机制， 增加已有代码的灵活性和可复用性。</li>
@@ -384,8 +385,7 @@
 <th>行为型模式</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td><strong>类模式</strong></td>
 <td>工厂方法</td>
 <td>(类）适配器</td>
@@ -397,12 +397,11 @@
 <td>代理 (对象）适配器 桥接 装饰 外观 享元 组合</td>
 <td>策略 命令 职责链 状态 观察者 中介者 迭代器 访问者 备忘录</td>
 </tr>
-</tbody>
-</table>
-<h2 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h2><p>​        <strong>开闭原则</strong>是总纲，它告诉我们要对扩展开放，对修改关闭；<strong>里氏替换原则</strong>告诉我们不要破坏继承体系；<strong>依赖倒置原则</strong>告诉我们要面向接口编程；<strong>单一职责原则</strong>告诉我们实现类要职责单一；<strong>接口隔离原则</strong>告诉我们在设计接口的时候要精简单一；<strong>迪米特法则</strong>告诉我们要降低耦合度；<strong>合成复用原则</strong>告诉我们要优先使用组合或者聚合关系复用，少用继承关系复用。</p>
+</tbody></table>
+<h2 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h2><p>​		<strong>开闭原则</strong>是总纲，它告诉我们要对扩展开放，对修改关闭；<strong>里氏替换原则</strong>告诉我们不要破坏继承体系；<strong>依赖倒置原则</strong>告诉我们要面向接口编程；<strong>单一职责原则</strong>告诉我们实现类要职责单一；<strong>接口隔离原则</strong>告诉我们在设计接口的时候要精简单一；<strong>迪米特法则</strong>告诉我们要降低耦合度；<strong>合成复用原则</strong>告诉我们要优先使用组合或者聚合关系复用，少用继承关系复用。</p>
 <ul>
 <li><strong>单一职责</strong>:这里的职责是指类变化的原因，单一职责原则规定一个类应该有且仅有一个引起它变化的原因，否则类应该被拆分。单一职责原则的核心就是控制类的粒度大小、将对象解耦、提高其内聚性。</li>
-<li><h3 id="开闭原则-软件实体（项目中划分出的模块-类与接口-方法）应当对扩展开放，对修改关闭。软件遵守开闭原则的话，软件测试时只需要对扩展的代码进行测试就可以了，因为原有的测试代码仍然能够正常运行。"><a href="#开闭原则-软件实体（项目中划分出的模块-类与接口-方法）应当对扩展开放，对修改关闭。软件遵守开闭原则的话，软件测试时只需要对扩展的代码进行测试就可以了，因为原有的测试代码仍然能够正常运行。" class="headerlink" title="开闭原则:软件实体（项目中划分出的模块/类与接口/方法）应当对扩展开放，对修改关闭。软件遵守开闭原则的话，软件测试时只需要对扩展的代码进行测试就可以了，因为原有的测试代码仍然能够正常运行。"></a><strong>开闭原则</strong>:软件实体（项目中划分出的模块/类与接口/方法）应当对扩展开放，对修改关闭。软件遵守开闭原则的话，软件测试时只需要对扩展的代码进行测试就可以了，因为原有的测试代码仍然能够正常运行。</h3></li>
+<li><h3 id="开闭原则-软件实体（项目中划分出的模块-x2F-类与接口-x2F-方法）应当对扩展开放，对修改关闭。软件遵守开闭原则的话，软件测试时只需要对扩展的代码进行测试就可以了，因为原有的测试代码仍然能够正常运行。"><a href="#开闭原则-软件实体（项目中划分出的模块-x2F-类与接口-x2F-方法）应当对扩展开放，对修改关闭。软件遵守开闭原则的话，软件测试时只需要对扩展的代码进行测试就可以了，因为原有的测试代码仍然能够正常运行。" class="headerlink" title="开闭原则:软件实体（项目中划分出的模块&#x2F;类与接口&#x2F;方法）应当对扩展开放，对修改关闭。软件遵守开闭原则的话，软件测试时只需要对扩展的代码进行测试就可以了，因为原有的测试代码仍然能够正常运行。"></a><strong>开闭原则</strong>:软件实体（项目中划分出的模块&#x2F;类与接口&#x2F;方法）应当对扩展开放，对修改关闭。软件遵守开闭原则的话，软件测试时只需要对扩展的代码进行测试就可以了，因为原有的测试代码仍然能够正常运行。</h3></li>
 <li><strong>里氏替换</strong>:继承必须确保超类所拥有的性质在子类中仍然成立。子类可以扩展父类的功能，但不能改变父类原有的功能。它反映了基类与子类之间的关系，是对开闭原则的补充，是对实现抽象化的具体步骤的规范。</li>
 <li><strong>依赖倒转</strong>:高层模块不应该依赖低层模块，两者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象。其核心思想是：要面向接口编程，不要面向实现编程。依赖倒置原则是实现开闭原则的重要途径之一，它降低了客户与实现模块之间的耦合。</li>
 <li><strong>接口隔离</strong>:要求程序员尽量将臃肿庞大的接口拆分成更小的和更具体的接口，让接口中只包含客户感兴趣的方法。要为各个类建立它们需要的专用接口，而不要试图去建立一个很庞大的接口供所有依赖它的类去调用。</li>
@@ -415,8 +414,8 @@
 <p><strong>优点</strong>：</p>
 <ul>
 <li>可以<strong>避免</strong>创建者和具体产品之间的<strong>紧密耦合</strong>。</li>
-<li><strong><em>单一职责原则</em></strong>。 你可以将产品创建代码放在程序的单一位置， 从而使得代码更容易维护。</li>
-<li><strong><em>开闭原则</em></strong>。 无需更改现有客户端代码， 你就可以在程序中引入新的产品类型。</li>
+<li><em><strong>单一职责原则</strong></em>。 你可以将产品创建代码放在程序的单一位置， 从而使得代码更容易维护。</li>
+<li><em><strong>开闭原则</strong></em>。 无需更改现有客户端代码， 你就可以在程序中引入新的产品类型。</li>
 </ul>
 <p><strong>缺点</strong>：</p>
 <ul>
@@ -499,7 +498,7 @@
 </ul>
 <p><strong>缺点</strong>：</p>
 <ul>
-<li>违反了<em>单一职责原则</em>。 该模式同时解决了两个问题。</li>
+<li>违反了_单一职责原则_。 该模式同时解决了两个问题。</li>
 <li>单例模式可能掩盖不良设计， 比如程序各组件之间相互了解过多等。</li>
 <li>该模式在多线程环境下需要进行特殊处理， 避免多个线程多次创建单例对象。</li>
 <li>单例的客户端代码单元测试可能会比较困难， 因为许多测试框架以基于继承的方式创建模拟对象。 由于单例类的构造函数是私有的， 而且绝大部分语言无法重写静态方法， 所以你需要想出仔细考虑模拟单例的方法。 要么干脆不编写测试代码， 或者不使用单例模式。</li>
@@ -602,17 +601,24 @@
 </ul>
 <p><strong>与其他模式的关系</strong></p>
 <ul>
-<li><strong>适配器模式</strong>可以对已有对象的接口进行修改， <strong>装饰模式</strong>则能在不改变对象接口的前提下强化对象功能。 此外， <strong>装饰</strong>还支持递归组合， <strong>适配器</strong>则无法实现。</li>
-<li><strong>适配器</strong>能为被封装对象提供不同的接口， <strong>代理模式</strong>能为对象提供相同的接口， <strong>装饰</strong>则能为对象提供加强的接口。</li>
-<li><strong>责任链模式</strong>和<strong>装饰模式</strong>的类结构非常相似。 两者都依赖递归组合将需要执行的操作传递给一系列对象。 但是， 两者有几点重要的不同之处。</li>
-<li><strong>责任链</strong>的管理者可以相互独立地执行一切操作， 还可以随时停止传递请求。 另一方面， 各种装饰可以在遵循基本接口的情况下扩展对象的行为。 此外， <strong>装饰</strong>无法中断请求的传递。</li>
-<li><strong>组合模式</strong>和<strong>装饰</strong>的结构图很相似， 因为两者都依赖递归组合来组织无限数量的对象。</li>
-<li><strong>装饰</strong>类似于<strong>组合</strong>， 但其只有一个子组件。 此外还有一个明显不同： <strong>装饰</strong>为被封装对象添加了额外的职责， 组合仅对其子节点的结果进行了 “求和”。但是， 模式也可以相互合作： 你可以使用<strong>装饰</strong>来扩展<strong>组合树</strong>中特定对象的行为。</li>
+<li><p><strong>适配器模式</strong>可以对已有对象的接口进行修改， <strong>装饰模式</strong>则能在不改变对象接口的前提下强化对象功能。 此外， <strong>装饰</strong>还支持递归组合， <strong>适配器</strong>则无法实现。</p>
+</li>
+<li><p><strong>适配器</strong>能为被封装对象提供不同的接口， <strong>代理模式</strong>能为对象提供相同的接口， <strong>装饰</strong>则能为对象提供加强的接口。</p>
+</li>
+<li><p><strong>责任链模式</strong>和<strong>装饰模式</strong>的类结构非常相似。 两者都依赖递归组合将需要执行的操作传递给一系列对象。 但是， 两者有几点重要的不同之处。</p>
+</li>
+<li><p><strong>责任链</strong>的管理者可以相互独立地执行一切操作， 还可以随时停止传递请求。 另一方面， 各种装饰可以在遵循基本接口的情况下扩展对象的行为。 此外， <strong>装饰</strong>无法中断请求的传递。</p>
+</li>
+<li><p><strong>组合模式</strong>和<strong>装饰</strong>的结构图很相似， 因为两者都依赖递归组合来组织无限数量的对象。</p>
+</li>
+<li><p><strong>装饰</strong>类似于<strong>组合</strong>， 但其只有一个子组件。 此外还有一个明显不同： <strong>装饰</strong>为被封装对象添加了额外的职责， 组合仅对其子节点的结果进行了 “求和”。但是， 模式也可以相互合作： 你可以使用<strong>装饰</strong>来扩展<strong>组合树</strong>中特定对象的行为。</p>
+</li>
 <li><p>大量使用<strong>组合</strong>和<strong>装饰</strong>的设计通常可从对于<strong>原型模式</strong>的使用中获益。 你可以通过该模式来复制复杂结构， 而非从零开始重新构造。</p>
 </li>
 <li><p><strong>装饰</strong>可让你更改对象的外表， <strong>策略模式</strong>则让你能够改变其本质。</p>
 </li>
-<li><strong>装饰</strong>和<strong>代理</strong>有着相似的结构， 但是其意图却非常不同。 这两个模式的构建都基于组合原则， 也就是说一个对象应该将部分工作委派给另一个对象。 两者之间的不同之处在于<strong>代理</strong>通常自行管理其服务对象的生命周期， 而<strong>装饰</strong>的生成则总是由客户端进行控制。</li>
+<li><p><strong>装饰</strong>和<strong>代理</strong>有着相似的结构， 但是其意图却非常不同。 这两个模式的构建都基于组合原则， 也就是说一个对象应该将部分工作委派给另一个对象。 两者之间的不同之处在于<strong>代理</strong>通常自行管理其服务对象的生命周期， 而<strong>装饰</strong>的生成则总是由客户端进行控制。</p>
+</li>
 </ul>
 <h3 id="外观模式"><a href="#外观模式" class="headerlink" title="外观模式"></a>外观模式</h3><p><strong>亦称</strong>： 门面模式、 Facade</p>
 <p><strong>外观模式</strong>是一种结构型设计模式， 能为程序库、 框架或其他复杂类提供一个简单的接口。</p>
@@ -634,12 +640,15 @@
 </li>
 <li><p><strong>外观</strong>和<strong>中介者模式</strong>的职责类似： 它们都尝试在大量紧密耦合的类中组织起合作。</p>
 </li>
-<li><strong>外观</strong>为子系统中的所有对象定义了一个简单接口， 但是它不提供任何新功能。 子系统本身不会意识到外观的存在。 子系统中的对象可以直接进行交流。<ul>
+<li><p><strong>外观</strong>为子系统中的所有对象定义了一个简单接口， 但是它不提供任何新功能。 子系统本身不会意识到外观的存在。 子系统中的对象可以直接进行交流。</p>
+<ul>
 <li><strong>中介者</strong>将系统中组件的沟通行为中心化。 各组件只知道中介者对象， 无法直接相互交流。</li>
 </ul>
 </li>
-<li><strong>外观类</strong>通常可以转换为<strong>单例模式类</strong>， 因为在大部分情况下一个外观对象就足够了。</li>
-<li><strong>外观</strong>与<strong>代理模式</strong>的相似之处在于它们都缓存了一个复杂实体并自行对其进行初始化。 代理与其服务对象遵循同一接口， 使得自己和服务对象可以互换， 在这一点上它与外观不同。</li>
+<li><p><strong>外观类</strong>通常可以转换为<strong>单例模式类</strong>， 因为在大部分情况下一个外观对象就足够了。</p>
+</li>
+<li><p><strong>外观</strong>与<strong>代理模式</strong>的相似之处在于它们都缓存了一个复杂实体并自行对其进行初始化。 代理与其服务对象遵循同一接口， 使得自己和服务对象可以互换， 在这一点上它与外观不同。</p>
+</li>
 </ul>
 <h3 id="享元模式"><a href="#享元模式" class="headerlink" title="享元模式"></a>享元模式</h3><p><strong>亦称</strong>： 缓存、 Cache、 Flyweight</p>
 <p><strong>享元模式</strong>是一种结构型设计模式， 它摒弃了在每个对象中保存所有数据的方式， 通过共享多个对象所共有的相同状态， 让你能在有限的内存容量中载入更多对象。</p>
@@ -700,7 +709,8 @@
 </ul>
 <p><strong>与其他模式的关系</strong></p>
 <ul>
-<li><strong>责任链模式</strong>、<strong>命令模式</strong>、<strong>中介者模式</strong>和<strong>观察者模式</strong>用于处理请求发送者和接收者之间的不同连接方式：<ul>
+<li><p><strong>责任链模式</strong>、<strong>命令模式</strong>、<strong>中介者模式</strong>和<strong>观察者模式</strong>用于处理请求发送者和接收者之间的不同连接方式：</p>
+<ul>
 <li><strong>责任链</strong>按照顺序将请求动态传递给一系列的潜在接收者， 直至其中一名接收者对请求进行处理。</li>
 <li><strong>命令</strong>在发送者和请求者之间建立单向连接。</li>
 <li><strong>中介者</strong>清除了发送者和请求者之间的直接连接， 强制它们通过一个中介对象进行间接沟通。</li>
@@ -730,7 +740,8 @@
 </ul>
 <p><strong>与其他模式的关系</strong></p>
 <ul>
-<li><strong>责任链模式</strong>、<strong>命令模式</strong>、<strong>中介者模式</strong>和<strong>观察者模式</strong>用于处理请求发送者和接收者之间的不同连接方式：</li>
+<li><p><strong>责任链模式</strong>、<strong>命令模式</strong>、<strong>中介者模式</strong>和<strong>观察者模式</strong>用于处理请求发送者和接收者之间的不同连接方式：</p>
+</li>
 <li><p><strong>责任链</strong>按照顺序将请求动态传递给一系列的潜在接收者， 直至其中一名接收者对请求进行处理。</p>
 </li>
 <li><p><strong>命令</strong>在发送者和请求者之间建立单向连接。</p>
@@ -742,7 +753,8 @@
 </li>
 <li><p><strong>责任链</strong>的管理者可使用命令模式实现。 在这种情况下， 你可以对由请求代表的同一个上下文对象执行许多不同的操作。还有另外一种实现方式， 那就是请求自身就是一个命令对象。 在这种情况下， 你可以对由一系列不同上下文连接而成的链执行相同的操作。</p>
 </li>
-<li>你可以同时使用<strong>命令</strong>和<strong>备忘录模式</strong>来实现 “撤销”。 在这种情况下， 命令用于对目标对象执行各种不同的操作，<strong>备忘录</strong>用来保存一条命令执行前该对象的状态。</li>
+<li><p>你可以同时使用<strong>命令</strong>和<strong>备忘录模式</strong>来实现 “撤销”。 在这种情况下， 命令用于对目标对象执行各种不同的操作，<strong>备忘录</strong>用来保存一条命令执行前该对象的状态。</p>
+</li>
 <li><p><strong>命令</strong>和<strong>策略模式</strong>看上去很像，因为两者都能通过某些行为来参数化对象。 但是， 它们的意图有非常大的不同。</p>
 <ul>
 <li><p>你可以使用<strong>命令</strong>来将任何操作转换为对象。 操作的参数将成为对象的成员变量。 你可以通过转换来延迟操作的执行、 将操作放入队列、 保存历史命令或者向远程服务发送命令等。</p>
@@ -751,8 +763,10 @@
 </li>
 </ul>
 </li>
-<li><strong>原型模式</strong>可用于保存<strong>命令</strong>的历史记录。</li>
-<li>你可以将<strong>访问者模式</strong>视为<strong>命令模式</strong>的加强版本， 其对象可对不同类的多种对象执行操作。</li>
+<li><p><strong>原型模式</strong>可用于保存<strong>命令</strong>的历史记录。</p>
+</li>
+<li><p>你可以将<strong>访问者模式</strong>视为<strong>命令模式</strong>的加强版本， 其对象可对不同类的多种对象执行操作。</p>
+</li>
 </ul>
 <h3 id="迭代器模式"><a href="#迭代器模式" class="headerlink" title="迭代器模式"></a>迭代器模式</h3><p><strong>亦称</strong>： Iterator</p>
 <p><strong>迭代器模式</strong>是一种行为设计模式， 让你能在不暴露集合底层表现形式 （列表、 栈和树等） 的情况下遍历集合中所有的元素。</p>
@@ -801,8 +815,7 @@
 <li>观察者允许接收者动态地订阅或取消接收请求。</li>
 </ul>
 </li>
-<li><p><strong>外观模式</strong>和<strong>中介者</strong>的职责类似： 它们都尝试在大量紧密耦合的类中组织起合作。</p>
-<ul>
+<li><strong>外观模式</strong>和<strong>中介者</strong>的职责类似： 它们都尝试在大量紧密耦合的类中组织起合作。<ul>
 <li><p>外观为子系统中的所有对象定义了一个简单接口， 但是它不提供任何新功能。 子系统本身不会意识到外观的存在。 子系统中的对象可以直接进行交流。</p>
 </li>
 <li><p>中介者将系统中组件的沟通行为中心化。 各组件只知道中介者对象， 无法直接相互交流。</p>
@@ -915,7 +928,7 @@
 <p><strong>缺点</strong>：</p>
 <ul>
 <li>部分客户端可能会受到算法框架的限制。</li>
-<li>通过子类抑制默认步骤实现可能会导致违反<em>里氏替换原则</em>。</li>
+<li>通过子类抑制默认步骤实现可能会导致违反_里氏替换原则_。</li>
 <li>模板方法中的步骤越多，其维护工作就可能会越困难。</li>
 </ul>
 <p><strong>与其他模式的关系</strong></p>
@@ -961,13 +974,11 @@
 <li>解释器模式采用递归调用方法。</li>
 </ul>
 <p><strong>与其他模式的关系</strong></p>
-<ul>
-<li></li>
-</ul>
+<p>- </p>
 
                 
             </div>
-            <hr>
+            <hr/>
 
             
 
@@ -978,7 +989,7 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/基础/">
+                                <a href="/tags/%E5%9F%BA%E7%A1%80/">
                                     <span class="chip bg-color">基础</span>
                                 </a>
                             
@@ -1029,7 +1040,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/07/15/数据结构与算法/">
+                <a href="/2020/07/15/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">
                     <div class="card-image">
                         
                         
@@ -1059,7 +1070,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/基础/">
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
                         <span class="chip bg-color">基础</span>
                     </a>
                     
@@ -1074,7 +1085,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/07/11/linux系统安装/">
+                <a href="/2020/07/11/linux%E7%B3%BB%E7%BB%9F%E5%AE%89%E8%A3%85/">
                     <div class="card-image">
                         
                         
@@ -1108,15 +1119,15 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/基础/">
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
                         <span class="chip bg-color">基础</span>
                     </a>
                     
-                    <a href="/tags/环境/">
+                    <a href="/tags/%E7%8E%AF%E5%A2%83/">
                         <span class="chip bg-color">环境</span>
                     </a>
                     
-                    <a href="/tags/自动化/">
+                    <a href="/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">
                         <span class="chip bg-color">自动化</span>
                     </a>
                     
@@ -1283,10 +1294,22 @@
 
     
 </style>
-<div class>
+<div class="">
     
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2700388203" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2700388203"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
         </meting-js>
     </div>
 </div>
@@ -1296,11 +1319,12 @@
 
     
 
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">linPeng</a>
@@ -1364,7 +1388,8 @@
     <div class="modal-content">
         <div class="search-header">
             <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
         </div>
         <div id="searchResult"></div>
     </div>

@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="了解HTTP, 归来仍是少年">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 
@@ -324,7 +324,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/学习/">
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                                 <span class="chip bg-color">学习</span>
                             </a>
                         
@@ -362,9 +362,10 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="了解HTTP"><a href="#了解HTTP" class="headerlink" title="了解HTTP"></a>了解HTTP</h1><p>HTTP(HyperText Transfer Protocol 超文本传输协议).</p>
-<a id="more"></a>
+<span id="more"></span>
+
 <p>[TOC]</p>
-<h2 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h2><p>HTTP是TCP/IP协议的一个子集.TCP/IP协议族按层次分别分为以下4层:</p>
+<h2 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h2><p>HTTP是TCP&#x2F;IP协议的一个子集.TCP&#x2F;IP协议族按层次分别分为以下4层:</p>
 <ul>
 <li>应用层:应用层决定了向用户提供应用服务时的活动.如FTP(File Transfer Protocol,文件传输协议),DNS(Domain Name System,域名系统),HTTP协议也属于该层.</li>
 <li>传输层:传输层对上层应用层,提供处于网络连接中的两台计算机之间的数据传输.有两种性质不同的协议:TCP(Transmission Control Protocol,传输控制协议),UDP(User Data Protocol,用户数据报协议).</li>
@@ -373,7 +374,7 @@
 </ul>
 <p>封装(encapsulate):发送端在层与层之间传输数据时,每经过一层时必定会被打上一个该层所属的首部信息.反之,接收端在层与层之间传输数据时,每经过一层是会把对应的首部信息去掉.</p>
 <p><strong>IP</strong>(Internet Protocol)网际协议位于网络层.根据端到端的设计原则,IP只为主机提供一种无连接,不可靠的,尽力而为的数据报传输服务.</p>
-<p><strong>TCP</strong>(Transmission Control Protocol)位于传输层,提供可靠的字节流服务(Byte Stream Service):将大块数据分割成以报文段(segment)为单位的数据包进行管理.TCP采用三次握手(three-way handshaking)确保可靠性:发送端首先发送一个带SYN(synchronize)标识的数据包给对方,接收端收到后回传一个带有SYN/ACK标识的数据包表示确认,然后发送端再回传一个带ACK(acknowledgement)的标志表示结束.</p>
+<p><strong>TCP</strong>(Transmission Control Protocol)位于传输层,提供可靠的字节流服务(Byte Stream Service):将大块数据分割成以报文段(segment)为单位的数据包进行管理.TCP采用三次握手(three-way handshaking)确保可靠性:发送端首先发送一个带SYN(synchronize)标识的数据包给对方,接收端收到后回传一个带有SYN&#x2F;ACK标识的数据包表示确认,然后发送端再回传一个带ACK(acknowledgement)的标志表示结束.</p>
 <p><strong>DNS</strong>(Domain Name System)位于应用层.提供ip地址的解析.</p>
 <p><strong>URI</strong>(Uniform Resource Identifier,统一资源标识符)是一个用于标识某一互联网资源名称的字符串.URI的格式:协议方案+登录信息(可选)+服务器地址+服务器端口号+文件路径层级+查询字符串(可选)+片段标识符(可选)</p>
 <p><strong>URL</strong>(Uniform Resource Locator,统一资源定位系统)是因特网的万维网服务程序上用于指定信息位置的表示方法.URL算是URL是子集.</p>
@@ -388,13 +389,13 @@
 <li>TRACE:追踪路径(不常用)</li>
 <li>CONNECT:要求用隧道协议连接代理(不常用)</li>
 </ul>
-<p>HTTP/1.1中采用<strong>持久连接</strong>:每个连接可以处理多个请求,不主动断开TCP连接,直到超时或者请求上限.</p>
+<p>HTTP&#x2F;1.1中采用<strong>持久连接</strong>:每个连接可以处理多个请求,不主动断开TCP连接,直到超时或者请求上限.</p>
 <p><strong>管道化连接</strong>:在持久连接的基础上,不需要一个个等待响应就可以发送下一个请求.</p>
 <h2 id="HTTP报文"><a href="#HTTP报文" class="headerlink" title="HTTP报文"></a>HTTP报文</h2><p>HTTP报文分为:请求报文和响应报文.结构为:</p>
 <ol>
 <li>报文部首<ol>
-<li>请求行/状态行</li>
-<li>请求/响应部首字段</li>
+<li>请求行&#x2F;状态行</li>
+<li>请求&#x2F;响应部首字段</li>
 <li>通用部首字段</li>
 <li>实体部首字段</li>
 <li>其他</li>
@@ -405,11 +406,11 @@
 </ol>
 <h2 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h2><p>状态码是原来描述请求结果的状态.常见的有:</p>
 <ul>
-<li>1XX    Informational(信息性状态码)    接受的请求正在处理</li>
-<li>2XX    Success(成功状态码)    请求正常处理完毕</li>
-<li>3XX    Redirection(重定向状态码)    需要进行附加操作以完成请求</li>
-<li>4XX    Client Error(客户端错误状态码)    服务器无法处理请求</li>
-<li>5XX    Server Error(服务器错误状态码)    服务器处理请求出错</li>
+<li>1XX	Informational(信息性状态码)	接受的请求正在处理</li>
+<li>2XX	Success(成功状态码)	请求正常处理完毕</li>
+<li>3XX	Redirection(重定向状态码)	需要进行附加操作以完成请求</li>
+<li>4XX	Client Error(客户端错误状态码)	服务器无法处理请求</li>
+<li>5XX	Server Error(服务器错误状态码)	服务器处理请求出错</li>
 </ul>
 <h2 id="HTTP部首"><a href="#HTTP部首" class="headerlink" title="HTTP部首"></a>HTTP部首</h2><p><strong>通用首部字段</strong>（General Header Fields）：请求报文和响应报文两方都会使用的首部</p>
 <p>Cache-Control  控制缓存 *</p>
@@ -463,11 +464,11 @@
 <p>Last-Modified 资源最后的修改资源 *</p>
 <p>Expires 实体主体的过期资源 *</p>
 <h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><p>基于HTTP协议，通过SSL或TLS提供加密处理数据、验证对方身份以及数据完整性保护.</p>
-<p><strong>HTTPS协议 = HTTP协议 + SSL/TLS协议</strong> <a href="https://www.jianshu.com/p/14cd2c9d2cd2" target="_blank" rel="noopener">参考</a></p>
+<p><strong>HTTPS协议 &#x3D; HTTP协议 + SSL&#x2F;TLS协议</strong> <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/14cd2c9d2cd2">参考</a></p>
 <p><strong>对称加密</strong>：对称加密又叫做私钥加密，即信息的发送方和接收方使用同一个密钥去加密和解密数据。对称加密的特点是算法公开、加密和解密速度快，适合于对大数据量进行加密，常见的对称加密算法有DES、3DES、TDEA、Blowfish、RC5和IDEA。</p>
-<p>其加密过程如下：<strong>明文 + 加密算法 + 私钥 =&gt; 密文</strong><br>解密过程如下： <strong>密文 + 解密算法 + 私钥 =&gt; 明文</strong></p>
+<p>其加密过程如下：<strong>明文 + 加密算法 + 私钥 &#x3D;&gt; 密文</strong><br>解密过程如下： <strong>密文 + 解密算法 + 私钥 &#x3D;&gt; 明文</strong></p>
 <p><strong>非对称加密</strong>：非对称加密也叫做公钥加密。非对称加密与对称加密相比，其安全性更好。对称加密的通信双方使用相同的密钥，如果一方的密钥遭泄露，那么整个通信就会被破解。而非对称加密使用一对密钥，即公钥和私钥，且二者成对出现。私钥被自己保存，不能对外泄露。公钥指的是公共的密钥，任何人都可以获得该密钥。用公钥或私钥中的任何一个进行加密，用另一个进行解密。</p>
-<p>被公钥加密过的密文只能被私钥解密，过程如下：<br> <strong>明文 + 加密算法 + 公钥 =&gt; 密文， 密文 + 解密算法 + 私钥 =&gt; 明文</strong><br> 被私钥加密过的密文只能被公钥解密，过程如下：<br> <strong>明文 + 加密算法 + 私钥 =&gt; 密文， 密文 + 解密算法 + 公钥 =&gt; 明文</strong></p>
+<p>被公钥加密过的密文只能被私钥解密，过程如下：<br> <strong>明文 + 加密算法 + 公钥 &#x3D;&gt; 密文， 密文 + 解密算法 + 私钥 &#x3D;&gt; 明文</strong><br> 被私钥加密过的密文只能被公钥解密，过程如下：<br> <strong>明文 + 加密算法 + 私钥 &#x3D;&gt; 密文， 密文 + 解密算法 + 公钥 &#x3D;&gt; 明文</strong></p>
 <p>一个HTTPS请求实际上包含了两次HTTP传输，可以细分为8步。<br> 1.客户端向服务器发起HTTPS请求，连接到服务器的443端口</p>
 <p>2.服务器端有一个密钥对，即公钥和私钥，是用来进行非对称加密使用的，服务器端保存着私钥，不能将其泄露，公钥可以发送给任何人。</p>
 <p>3.服务器将自己的公钥发送给客户端。</p>
@@ -482,7 +483,7 @@
 
                 
             </div>
-            <hr>
+            <hr/>
 
             
 
@@ -493,7 +494,7 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/学习/">
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                                     <span class="chip bg-color">学习</span>
                                 </a>
                             
@@ -544,7 +545,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/10/15/开发中常见的spring注解/">
+                <a href="/2020/10/15/%E5%BC%80%E5%8F%91%E4%B8%AD%E5%B8%B8%E8%A7%81%E7%9A%84spring%E6%B3%A8%E8%A7%A3/">
                     <div class="card-image">
                         
                         
@@ -574,7 +575,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习/">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">学习</span>
                     </a>
                     
@@ -589,7 +590,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/27/JMeter与Fiddler/">
+                <a href="/2020/08/27/JMeter%E4%B8%8EFiddler/">
                     <div class="card-image">
                         
                         
@@ -619,7 +620,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习/">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">学习</span>
                     </a>
                     
@@ -786,10 +787,22 @@
 
     
 </style>
-<div class>
+<div class="">
     
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2700388203" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2700388203"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
         </meting-js>
     </div>
 </div>
@@ -799,11 +812,12 @@
 
     
 
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">linPeng</a>
@@ -867,7 +881,8 @@
     <div class="modal-content">
         <div class="search-header">
             <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
         </div>
         <div id="searchResult"></div>
     </div>

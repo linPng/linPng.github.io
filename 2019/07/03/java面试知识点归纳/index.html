@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="后端知识点归纳, 归来仍是少年">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 
@@ -324,7 +324,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/基础/">
+                            <a href="/tags/%E5%9F%BA%E7%A1%80/">
                                 <span class="chip bg-color">基础</span>
                             </a>
                         
@@ -348,7 +348,7 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/后端/" class="post-category">
+                            <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
                                 后端
                             </a>
                         
@@ -393,13 +393,20 @@
 </li>
 <li><p>父类的成员方法只能被它的子类重写。</p>
 </li>
-<li>声明为 final 的方法不能被重写。</li>
-<li>声明为 static 的方法不能被重写，但是能够被再次声明。</li>
-<li>子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为 private 和 final 的方法。</li>
-<li>子类和父类不在同一个包中，那么子类只能够重写父类的声明为 public 和 protected 的非 final 方法。</li>
-<li>重写的方法能够抛出任何非强制异常，无论被重写的方法是否抛出异常。但是，重写的方法不能抛出新的强制性异常，或者比被重写方法声明的更广泛的强制性异常，反之则可以。</li>
-<li>构造方法不能被重写。</li>
-<li>如果不能继承一个方法，则不能重写这个方法。</li>
+<li><p>声明为 final 的方法不能被重写。</p>
+</li>
+<li><p>声明为 static 的方法不能被重写，但是能够被再次声明。</p>
+</li>
+<li><p>子类和父类在同一个包中，那么子类可以重写父类所有方法，除了声明为 private 和 final 的方法。</p>
+</li>
+<li><p>子类和父类不在同一个包中，那么子类只能够重写父类的声明为 public 和 protected 的非 final 方法。</p>
+</li>
+<li><p>重写的方法能够抛出任何非强制异常，无论被重写的方法是否抛出异常。但是，重写的方法不能抛出新的强制性异常，或者比被重写方法声明的更广泛的强制性异常，反之则可以。</p>
+</li>
+<li><p>构造方法不能被重写。</p>
+</li>
+<li><p>如果不能继承一个方法，则不能重写这个方法。</p>
+</li>
 </ul>
 <p><strong>重载(Overload)</strong>:一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。</p>
 <ul>
@@ -410,7 +417,8 @@
 <li>方法能够在同一个类中或者在一个子类中被重载。</li>
 <li>无法以返回值类型作为重载函数的区分标准。</li>
 </ul>
-<h4 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[root@linpenghwy bin]# echo $JAVA_HOME</span><br><span class="line">/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64</span><br><span class="line">[root@linpenghwy bin]# cd /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64</span><br><span class="line">[root@linpenghwy java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64]# ls</span><br><span class="line">bin  demo  include  jre  lib  sample  src.zip  tapset</span><br><span class="line">[root@linpenghwy java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64]# cd bin/</span><br><span class="line">[root@linpenghwy bin]# ls</span><br><span class="line">appletviewer  hsdb  jarsigner  javadoc  java-rmi.cgi  jdb    jinfo  jps         jstack  keytool       pack200     rmid         serialver   unpack200  xjc</span><br><span class="line">clhsdb        idlj  java       javah    jcmd          jdeps  jjs    jrunscript  jstat   native2ascii  policytool  rmiregistry  servertool  wsgen</span><br><span class="line">extcheck      jar   javac      javap    jconsole      jhat   jmap   jsadebugd   jstatd  orbd          rmic        schemagen    tnameserv   wsimport</span><br></pre></td></tr></table></figure>
+<h4 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">[root@linpenghwy bin]# echo $JAVA_HOME</span><br><span class="line">/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64</span><br><span class="line">[root@linpenghwy bin]# cd /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64</span><br><span class="line">[root@linpenghwy java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64]# ls</span><br><span class="line">bin  demo  include  jre  lib  sample  src.zip  tapset</span><br><span class="line">[root@linpenghwy java-1.8.0-openjdk-1.8.0.252.b09-2.el7_8.x86_64]# cd bin/</span><br><span class="line">[root@linpenghwy bin]# ls</span><br><span class="line">appletviewer  hsdb  jarsigner  javadoc  java-rmi.cgi  jdb    jinfo  jps         jstack  keytool       pack200     rmid         serialver   unpack200  xjc</span><br><span class="line">clhsdb        idlj  java       javah    jcmd          jdeps  jjs    jrunscript  jstat   native2ascii  policytool  rmiregistry  servertool  wsgen</span><br><span class="line">extcheck      jar   javac      javap    jconsole      jhat   jmap   jsadebugd   jstatd  orbd          rmic        schemagen    tnameserv   wsimport</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 <p>其中常用的有:</p>
 <ul>
 <li>javac:编译.java文件</li>
@@ -427,12 +435,15 @@
 <li>jvisualvm: 监控JVM的GUI工具,可用来剖析运行的应用,分析JVM堆转储.</li>
 </ul>
 <h2 id="Spring基础"><a href="#Spring基础" class="headerlink" title="Spring基础"></a>Spring基础</h2><h4 id="spring循环依赖"><a href="#spring循环依赖" class="headerlink" title="spring循环依赖"></a>spring循环依赖</h4><h2 id="MyBatis"><a href="#MyBatis" class="headerlink" title="MyBatis"></a>MyBatis</h2><h4 id="和-的区别是什么"><a href="#和-的区别是什么" class="headerlink" title="#{}和${}的区别是什么?"></a>#{}和${}的区别是什么?</h4><p>#{}是预编译处理，${}是字符串替换。<br>Mybatis 在处理#{}时，会将 sql 中的#{}替换为?号，调用 PreparedStatement 的 set 方法来赋值；<br>Mybatis 在处理${}时，就是把${}替换成变量的值。<br>使用#{}可以有效的防止 SQL 注入，提高系统安全性。</p>
-<h4 id="resultMap的使用"><a href="#resultMap的使用" class="headerlink" title="resultMap的使用"></a>resultMap的使用</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">”me.gacl.domain.order”</span> <span class="attr">id</span>=<span class="string">”orderresultmap”</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">!–用id属性来映射主键字段–</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span> <span class="attr">property</span>=<span class="string">”id”</span> <span class="attr">column</span>=<span class="string">”order_id”</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">!–用result属性来映射非主键字段，property为实体类属性名，column</span> 为数据表中的属性–&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span> = <span class="string">“orderno”</span> <span class="attr">column</span> =<span class="string">”order_no”/</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">”price”</span> <span class="attr">column</span>=<span class="string">”order_price”</span> /&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">reslutMap</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="like语句"><a href="#like语句" class="headerlink" title="like语句"></a>like语句</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--mysql</span></span><br><span class="line">like  CONCAT('%',<span class="comment">#&#123;name&#125;,'%')</span></span><br><span class="line"></span><br><span class="line"><span class="comment">--oracle</span></span><br><span class="line">LIKE '%'||<span class="comment">#&#123;name&#125;||'%'</span></span><br></pre></td></tr></table></figure>
+<h4 id="resultMap的使用"><a href="#resultMap的使用" class="headerlink" title="resultMap的使用"></a>resultMap的使用</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">type</span>=<span class="string">”me.gacl.domain.order”</span> <span class="attr">id</span>=<span class="string">”orderresultmap”</span>&gt;</span> </span><br><span class="line">    &lt;!–用id属性来映射主键字段–&gt; </span><br><span class="line">    <span class="tag">&lt;<span class="name">id</span> <span class="attr">property</span>=<span class="string">”id”</span> <span class="attr">column</span>=<span class="string">”order_id”</span>&gt;</span></span><br><span class="line">	&lt;!–用result属性来映射非主键字段，property为实体类属性名，column 为数据表中的属性–&gt; </span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span> = <span class="string">“orderno”</span> <span class="attr">column</span> =<span class="string">”order_no”/</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">”price”</span> <span class="attr">column</span>=<span class="string">”order_price”</span> /&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">reslutMap</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="like语句"><a href="#like语句" class="headerlink" title="like语句"></a>like语句</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--mysql</span></span><br><span class="line"><span class="keyword">like</span>  CONCAT(<span class="string">&#x27;%&#x27;</span>,#&#123;name&#125;,<span class="string">&#x27;%&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">--oracle</span></span><br><span class="line"><span class="keyword">LIKE</span> <span class="string">&#x27;%&#x27;</span><span class="operator">||</span>#&#123;name&#125;<span class="operator">||</span><span class="string">&#x27;%&#x27;</span></span><br></pre></td></tr></table></figure>
+
 <h4 id="批量插入"><a href="#批量插入" class="headerlink" title="批量插入"></a>批量插入</h4><p>foreach</p>
 <p>BATCH模式</p>
-<h4 id="获取自动生成的-主-键值"><a href="#获取自动生成的-主-键值" class="headerlink" title="获取自动生成的(主)键值"></a>获取自动生成的(主)键值</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"insertWhitOutId"</span> <span class="attr">keyColumn</span>=<span class="string">"DEMO_ID"</span> <span class="attr">keyProperty</span>=<span class="string">"demoId"</span> <span class="attr">parameterType</span>=<span class="string">"com.example.demo.myDB.testDO"</span> <span class="attr">useGeneratedKeys</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">selectKey</span> <span class="attr">resultType</span>=<span class="string">"String"</span> <span class="attr">order</span>=<span class="string">"BEFORE"</span> <span class="attr">keyProperty</span>=<span class="string">"demoId"</span> &gt;</span></span><br><span class="line">            SELECT replace(uuid(), '-', '') FROM DUAL</span><br><span class="line">        <span class="tag">&lt;/<span class="name">selectKey</span>&gt;</span></span><br><span class="line">    insert into DEMO (DEMO_ID,ISEFFECT, CREUSRCODE, CREDATE)</span><br><span class="line">    values (#&#123;demoId,jdbcType=VARCHAR&#125;,#&#123;iseffect,jdbcType=VARCHAR&#125;, #&#123;creusrcode,jdbcType=VARCHAR&#125;, #&#123;credate,jdbcType=VARCHAR&#125;)</span><br><span class="line">  <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="Xml映射文件中的标签"><a href="#Xml映射文件中的标签" class="headerlink" title="Xml映射文件中的标签"></a>Xml映射文件中的标签</h4><h5 id="顶级元素"><a href="#顶级元素" class="headerlink" title="顶级元素"></a>顶级元素</h5><p><a href="https://blog.csdn.net/striveb/article/details/90709045" target="_blank" rel="noopener">参考</a></p>
+<h4 id="获取自动生成的-主-键值"><a href="#获取自动生成的-主-键值" class="headerlink" title="获取自动生成的(主)键值"></a>获取自动生成的(主)键值</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;insertWhitOutId&quot;</span> <span class="attr">keyColumn</span>=<span class="string">&quot;DEMO_ID&quot;</span> <span class="attr">keyProperty</span>=<span class="string">&quot;demoId&quot;</span> <span class="attr">parameterType</span>=<span class="string">&quot;com.example.demo.myDB.testDO&quot;</span> <span class="attr">useGeneratedKeys</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">selectKey</span> <span class="attr">resultType</span>=<span class="string">&quot;String&quot;</span> <span class="attr">order</span>=<span class="string">&quot;BEFORE&quot;</span> <span class="attr">keyProperty</span>=<span class="string">&quot;demoId&quot;</span> &gt;</span></span><br><span class="line">            SELECT replace(uuid(), &#x27;-&#x27;, &#x27;&#x27;) FROM DUAL</span><br><span class="line">        <span class="tag">&lt;/<span class="name">selectKey</span>&gt;</span></span><br><span class="line">    insert into DEMO (DEMO_ID,ISEFFECT, CREUSRCODE, CREDATE)</span><br><span class="line">    values (#&#123;demoId,jdbcType=VARCHAR&#125;,#&#123;iseffect,jdbcType=VARCHAR&#125;, #&#123;creusrcode,jdbcType=VARCHAR&#125;, #&#123;credate,jdbcType=VARCHAR&#125;)</span><br><span class="line">  <span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Xml映射文件中的标签"><a href="#Xml映射文件中的标签" class="headerlink" title="Xml映射文件中的标签"></a>Xml映射文件中的标签</h4><h5 id="顶级元素"><a href="#顶级元素" class="headerlink" title="顶级元素"></a>顶级元素</h5><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/striveb/article/details/90709045">参考</a></p>
 <p>常见标签(不完全)</p>
 <ul>
 <li><p><code>select</code> – 映射查询语句</p>
@@ -456,9 +467,12 @@
 </li>
 </ul>
 </li>
-<li><code>parameterMap</code> – 已被废弃！老式风格的参数映射。更好的办法是使用内联参数，此元素可能在将来被移除。</li>
-<li><code>sql</code> – 可被其他语句引用的可重用语句块。</li>
-<li><code>insert</code> – 映射插入语句<ul>
+<li><p><code>parameterMap</code> – 已被废弃！老式风格的参数映射。更好的办法是使用内联参数，此元素可能在将来被移除。</p>
+</li>
+<li><p><code>sql</code> – 可被其他语句引用的可重用语句块。</p>
+</li>
+<li><p><code>insert</code> – 映射插入语句</p>
+<ul>
 <li><code>selectKey</code><ul>
 <li>keyProperty:selectKey 语句结果应该被设置的目标属性。如果希望得到多个生成的列，也可以是逗号分隔的属性名称列表。</li>
 <li>keyColumn:匹配属性的返回结果集中的列名称。如果希望得到多个生成的列，也可以是逗号分隔的属性名称列表。</li>
@@ -472,18 +486,27 @@
 <li>keyColumn:通过生成的键值设置表中的列名</li>
 </ul>
 </li>
-<li><code>update</code> – 映射更新语句</li>
-<li><code>delete</code> – 映射删除语句</li>
-<li><code>cache</code> – 对给定命名空间的缓存配置。</li>
-<li><code>cache-ref</code> – 对其他命名空间缓存配置的引用。</li>
+<li><p><code>update</code> – 映射更新语句</p>
+</li>
+<li><p><code>delete</code> – 映射删除语句</p>
+</li>
+<li><p><code>cache</code> – 对给定命名空间的缓存配置。</p>
+</li>
+<li><p><code>cache-ref</code> – 对其他命名空间缓存配置的引用。</p>
+</li>
 </ul>
 <h5 id="Mybatis动态sql"><a href="#Mybatis动态sql" class="headerlink" title="Mybatis动态sql"></a>Mybatis动态sql</h5><p>Mybatis 提供了 9 种动态 sql 标签：trim | where | set | foreach | if | choose | when | otherwise | bind。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--if--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"title != null"</span>&gt;</span></span><br><span class="line">     AND title like #&#123;title&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--foreach--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">foreach</span> <span class="attr">item</span>=<span class="string">"item"</span> <span class="attr">index</span>=<span class="string">"index"</span> <span class="attr">collection</span>=<span class="string">"list"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">open</span>=<span class="string">"("</span> <span class="attr">separator</span>=<span class="string">","</span> <span class="attr">close</span>=<span class="string">")"</span>&gt;</span></span><br><span class="line">         #&#123;item&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--choose, when, otherwise--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">choose</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">"title != null"</span>&gt;</span></span><br><span class="line">       AND title like #&#123;title&#125;</span><br><span class="line">     <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">"author != null and author.name != null"</span>&gt;</span></span><br><span class="line">       AND author_name like #&#123;author.name&#125;</span><br><span class="line">     <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">otherwise</span>&gt;</span></span><br><span class="line">       AND featured = 1</span><br><span class="line">     <span class="tag">&lt;/<span class="name">otherwise</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">choose</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--where 元素只会在至少有一个子元素的条件返回 SQL 子句的情况下才去插入“WHERE”子句。而且，若语句的开头为“AND”或“OR”，where 元素也会将它们去除。 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"state != null"</span>&gt;</span></span><br><span class="line">          state = #&#123;state&#125;</span><br><span class="line">     <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"title != null"</span>&gt;</span></span><br><span class="line">         AND title like #&#123;title&#125;</span><br><span class="line">     <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"author != null and author.name != null"</span>&gt;</span></span><br><span class="line">         AND author_name like #&#123;author.name&#125;</span><br><span class="line">     <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--set 和where类似,用在update--&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"updateAuthorIfNecessary"</span>&gt;</span></span><br><span class="line">   update Author</span><br><span class="line">     <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"username != null"</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"password != null"</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"email != null"</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"bio != null"</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">   where id=#&#123;id&#125;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br><span class="line">       </span><br><span class="line"><span class="comment">&lt;!--trim 可以通过自定义达到where和set的效果--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--trim 可以通过自定义达到where和set的效果--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">trim</span> <span class="attr">prefix</span>=<span class="string">"WHERE"</span> <span class="attr">prefixOverrides</span>=<span class="string">"AND |OR "</span>&gt;</span></span><br><span class="line">   ...</span><br><span class="line"> <span class="tag">&lt;/<span class="name">trim</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">trim</span> <span class="attr">prefix</span>=<span class="string">"SET"</span> <span class="attr">suffixOverrides</span>=<span class="string">","</span>&gt;</span></span><br><span class="line">   ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">trim</span>&gt;</span></span><br><span class="line">       </span><br><span class="line"><span class="comment">&lt;!--bind 可以从 OGNL 表达式中创建一个变量并将其绑定到上下文--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"selectBlogsLike"</span> <span class="attr">resultType</span>=<span class="string">"Blog"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">bind</span> <span class="attr">name</span>=<span class="string">"pattern"</span> <span class="attr">value</span>=<span class="string">"'%' + _parameter.getTitle() + '%'"</span> /&gt;</span></span><br><span class="line">   SELECT * FROM BLOG</span><br><span class="line">   WHERE title LIKE #&#123;pattern&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h4 id="Mybatis的插件"><a href="#Mybatis的插件" class="headerlink" title="Mybatis的插件"></a>Mybatis的插件</h4><h5 id="分页插件"><a href="#分页插件" class="headerlink" title="分页插件"></a>分页插件</h5><h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><p>int类型会被识别为null,可添加 or intnum==0</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--if--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null&quot;</span>&gt;</span></span><br><span class="line">     AND title like #&#123;title&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--foreach--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">foreach</span> <span class="attr">item</span>=<span class="string">&quot;item&quot;</span> <span class="attr">index</span>=<span class="string">&quot;index&quot;</span> <span class="attr">collection</span>=<span class="string">&quot;list&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">open</span>=<span class="string">&quot;(&quot;</span> <span class="attr">separator</span>=<span class="string">&quot;,&quot;</span> <span class="attr">close</span>=<span class="string">&quot;)&quot;</span>&gt;</span></span><br><span class="line">         #&#123;item&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--choose, when, otherwise--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">choose</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;title != null&quot;</span>&gt;</span></span><br><span class="line">       AND title like #&#123;title&#125;</span><br><span class="line">     <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">when</span> <span class="attr">test</span>=<span class="string">&quot;author != null and author.name != null&quot;</span>&gt;</span></span><br><span class="line">       AND author_name like #&#123;author.name&#125;</span><br><span class="line">     <span class="tag">&lt;/<span class="name">when</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">otherwise</span>&gt;</span></span><br><span class="line">       AND featured = 1</span><br><span class="line">     <span class="tag">&lt;/<span class="name">otherwise</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">choose</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--where 元素只会在至少有一个子元素的条件返回 SQL 子句的情况下才去插入“WHERE”子句。而且，若语句的开头为“AND”或“OR”，where 元素也会将它们去除。 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;state != null&quot;</span>&gt;</span></span><br><span class="line">          state = #&#123;state&#125;</span><br><span class="line">     <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;title != null&quot;</span>&gt;</span></span><br><span class="line">         AND title like #&#123;title&#125;</span><br><span class="line">     <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;author != null and author.name != null&quot;</span>&gt;</span></span><br><span class="line">         AND author_name like #&#123;author.name&#125;</span><br><span class="line">     <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--set 和where类似,用在update--&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">&quot;updateAuthorIfNecessary&quot;</span>&gt;</span></span><br><span class="line">   update Author</span><br><span class="line">     <span class="tag">&lt;<span class="name">set</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;username != null&quot;</span>&gt;</span>username=#&#123;username&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;password != null&quot;</span>&gt;</span>password=#&#123;password&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;email != null&quot;</span>&gt;</span>email=#&#123;email&#125;,<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">&quot;bio != null&quot;</span>&gt;</span>bio=#&#123;bio&#125;<span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">set</span>&gt;</span></span><br><span class="line">   where id=#&#123;id&#125;</span><br><span class="line"> <span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br><span class="line">       </span><br><span class="line"><span class="comment">&lt;!--trim 可以通过自定义达到where和set的效果--&gt;</span></span><br><span class="line"><span class="comment">&lt;!--trim 可以通过自定义达到where和set的效果--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">trim</span> <span class="attr">prefix</span>=<span class="string">&quot;WHERE&quot;</span> <span class="attr">prefixOverrides</span>=<span class="string">&quot;AND |OR &quot;</span>&gt;</span></span><br><span class="line">   ...</span><br><span class="line"> <span class="tag">&lt;/<span class="name">trim</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">trim</span> <span class="attr">prefix</span>=<span class="string">&quot;SET&quot;</span> <span class="attr">suffixOverrides</span>=<span class="string">&quot;,&quot;</span>&gt;</span></span><br><span class="line">   ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">trim</span>&gt;</span></span><br><span class="line">       </span><br><span class="line"><span class="comment">&lt;!--bind 可以从 OGNL 表达式中创建一个变量并将其绑定到上下文--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">&quot;selectBlogsLike&quot;</span> <span class="attr">resultType</span>=<span class="string">&quot;Blog&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">bind</span> <span class="attr">name</span>=<span class="string">&quot;pattern&quot;</span> <span class="attr">value</span>=<span class="string">&quot;&#x27;%&#x27; + _parameter.getTitle() + &#x27;%&#x27;&quot;</span> /&gt;</span></span><br><span class="line">   SELECT * FROM BLOG</span><br><span class="line">   WHERE title LIKE #&#123;pattern&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="Mybatis的插件"><a href="#Mybatis的插件" class="headerlink" title="Mybatis的插件"></a>Mybatis的插件</h4><h5 id="分页插件"><a href="#分页插件" class="headerlink" title="分页插件"></a>分页插件</h5><h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><p>int类型会被识别为null,可添加 or intnum&#x3D;&#x3D;0</p>
 
                 
             </div>
-            <hr>
+            <hr/>
 
             
 
@@ -494,7 +517,7 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/基础/">
+                                <a href="/tags/%E5%9F%BA%E7%A1%80/">
                                     <span class="chip bg-color">基础</span>
                                 </a>
                             
@@ -557,7 +580,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/07/13/学习游泳/">
+                <a href="/2019/07/13/%E5%AD%A6%E4%B9%A0%E6%B8%B8%E6%B3%B3/">
                     <div class="card-image">
                         
                         
@@ -588,7 +611,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习/">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">学习</span>
                     </a>
                     
@@ -603,7 +626,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/02/Linux服务器学习/">
+                <a href="/2019/07/02/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
@@ -637,11 +660,11 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/基础/">
+                    <a href="/tags/%E5%9F%BA%E7%A1%80/">
                         <span class="chip bg-color">基础</span>
                     </a>
                     
-                    <a href="/tags/服务器/">
+                    <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">
                         <span class="chip bg-color">服务器</span>
                     </a>
                     
@@ -808,10 +831,22 @@
 
     
 </style>
-<div class>
+<div class="">
     
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2700388203" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2700388203"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
         </meting-js>
     </div>
 </div>
@@ -821,11 +856,12 @@
 
     
 
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">linPeng</a>
@@ -889,7 +925,8 @@
     <div class="modal-content">
         <div class="search-header">
             <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
         </div>
         <div id="searchResult"></div>
     </div>

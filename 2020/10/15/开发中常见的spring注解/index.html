@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="学习spring注解, 归来仍是少年">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 
@@ -324,7 +324,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/学习/">
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                                 <span class="chip bg-color">学习</span>
                             </a>
                         
@@ -361,14 +361,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="学习spring注解"><a href="#学习spring注解" class="headerlink" title="学习spring注解"></a>学习spring注解</h1><a id="more"></a>
+                <h1 id="学习spring注解"><a href="#学习spring注解" class="headerlink" title="学习spring注解"></a>学习spring注解</h1><span id="more"></span>
+
 <p>[TOC]</p>
 <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>@Override<br>[ˌəʊvəˈraɪd] vt. 推翻；不顾；践踏<br>表示重写.不写也可以,但是可以帮助检查和提示.</p>
 <p>@Deprecated<br>[ˈdeprəkeɪtɪd] v. 不赞成；弃用；不宜用（deprecate的过去式及过去分词形式）<br>用于修饰已经过时的方法.</p>
 <p>@SuppressWarnings<br>[səˈpres] vt. 抑制；镇压；废止  [ˈwɔːnɪŋ] n. 警告；预兆；预告 s<br>用于通知java编译器禁止特定的编译警告.</p>
 <h2 id="spring"><a href="#spring" class="headerlink" title="spring"></a>spring</h2><p>@Component<br>[kəmˈpəʊnənt] n. 组成部分；成分；组件，元件<br>泛指组件，当组件不好归类的时候，我们可以使用这个注解进行标注</p>
 <p>@Autowired<br>用来装配bean，都可以写在字段上，或者方法上。</p>
-<p>默认情况下必须要求依赖对象必须存在，如果要允许null值，可以设置它的required属性为false，例如：@Autowired(required=false)</p>
+<p>默认情况下必须要求依赖对象必须存在，如果要允许null值，可以设置它的required属性为false，例如：@Autowired(required&#x3D;false)</p>
 <p>@Import<br>@Import只能用在类上，@Import通过快速导入的方式实现把实例加入spring的IOC容器中</p>
 <h5 id="Transactional"><a href="#Transactional" class="headerlink" title="@Transactional"></a><strong>@Transactional</strong></h5><p>[trænˈzækʃənəl]<br>声明式事务管理,只能在public方法上使用.基于 Spring 的动态代理的机制,实质是使用了 JDBC 的事务来进行事务控制的.</p>
 <table>
@@ -378,8 +379,7 @@
 <th>说明</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>name</td>
 <td>当在配置文件中有多个 TransactionManager , 可以用该属性指定选择哪个事务管理器。</td>
 </tr>
@@ -407,8 +407,7 @@
 <td>no-rollback- for</td>
 <td>抛出 no-rollback-for 指定的异常类型，不回滚事务。</td>
 </tr>
-</tbody>
-</table>
+</tbody></table>
 <p>@PostConstruct<br>用来标记是在项目启动的时候执行这个方法。用来修饰一个非静态的void()方法</p>
 <p>也就是spring容器启动时就执行，多用于一些全局配置、数据字典之类的加载</p>
 <p>被@PostConstruct修饰的方法会在服务器加载Servlet的时候运行，并且只会被服务器执行一次。PostConstruct在构造函数之后执行,init()方法之前执行。PreDestroy（）方法在destroy()方法执行执行之后执</p>
@@ -446,12 +445,12 @@
 <p>@LoadBalanced<br>RestTemplate在请求时拥有客户端负载均衡的能力</p>
 <p>@EnableFeignClients<br>启用feign客户端</p>
 <p>@FeignClient<br>定义feign客户端</p>
-<h2 id="spring-security"><a href="#spring-security" class="headerlink" title="spring security"></a>spring security</h2><p>@EnableWebSecurity<br>​    Spring Security用于启用Web安全的注解</p>
+<h2 id="spring-security"><a href="#spring-security" class="headerlink" title="spring security"></a>spring security</h2><p>@EnableWebSecurity<br>​	Spring Security用于启用Web安全的注解</p>
 <p>@EnableGlobalMethodSecurity</p>
 <ul>
-<li>@EnableGlobalMethodSecurity(securedEnabled=true)<br>开启@Secured 注解过滤权限</li>
-<li>@EnableGlobalMethodSecurity(jsr250Enabled=true)<br>开启@RolesAllowed 注解过滤权限</li>
-<li>@EnableGlobalMethodSecurity(prePostEnabled=true)<br>使用表达式时间方法级别的安全性 4个注解可用<br>-@PreAuthorize 在方法调用之前,基于表达式的计算结果来限制对方法的访问<br>-@PostAuthorize 允许方法调用,但是如果表达式计算结果为false,将抛出一个安全性异常<br>-@PostFilter 允许方法调用,但必须按照表达式来过滤方法的结果<br>-@PreFilter 允许方法调用,但必须在进入方法之前过滤输入值</li>
+<li>@EnableGlobalMethodSecurity(securedEnabled&#x3D;true)<br>开启@Secured 注解过滤权限</li>
+<li>@EnableGlobalMethodSecurity(jsr250Enabled&#x3D;true)<br>开启@RolesAllowed 注解过滤权限</li>
+<li>@EnableGlobalMethodSecurity(prePostEnabled&#x3D;true)<br>使用表达式时间方法级别的安全性 4个注解可用<br>-@PreAuthorize 在方法调用之前,基于表达式的计算结果来限制对方法的访问<br>-@PostAuthorize 允许方法调用,但是如果表达式计算结果为false,将抛出一个安全性异常<br>-@PostFilter 允许方法调用,但必须按照表达式来过滤方法的结果<br>-@PreFilter 允许方法调用,但必须在进入方法之前过滤输入值</li>
 </ul>
 <p>@EnableAuthorizationServer<br>启用授权服务器</p>
 <p>@EnableResourceServer<br>启用oauth2服务</p>
@@ -515,13 +514,13 @@
 <p>@Options<br>注解能够设置缓存时间，能够为对象生成自增的key</p>
 <h3 id="Swagger2"><a href="#Swagger2" class="headerlink" title="Swagger2"></a>Swagger2</h3><p>@EnableCustomSwagger2<br>启用Swagger2</p>
 <h3 id="quartz"><a href="#quartz" class="headerlink" title="quartz"></a>quartz</h3><p>@DisallowConcurrentExecution<br>禁止并发执行定时任务</p>
-<h3 id="jackson"><a href="#jackson" class="headerlink" title="jackson"></a>jackson</h3><p><a href="https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations" target="_blank" rel="noopener">参考</a></p>
-<p>@JsonFormat<br>具有每种类型行为的常规注释;例如,可用于指定序列化日期/时间值时要使用的格式.</p>
+<h3 id="jackson"><a href="#jackson" class="headerlink" title="jackson"></a>jackson</h3><p><a target="_blank" rel="noopener" href="https://github.com/FasterXML/jackson-annotations/wiki/Jackson-Annotations">参考</a></p>
+<p>@JsonFormat<br>具有每种类型行为的常规注释;例如,可用于指定序列化日期&#x2F;时间值时要使用的格式.</p>
 <p>@JsonIgnore<br>用于忽略指定属性的简单注释</p>
 
                 
             </div>
-            <hr>
+            <hr/>
 
             
 
@@ -532,7 +531,7 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/学习/">
+                                <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                                     <span class="chip bg-color">学习</span>
                                 </a>
                             
@@ -583,7 +582,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/11/04/Java虚拟机/">
+                <a href="/2020/11/04/Java%E8%99%9A%E6%8B%9F%E6%9C%BA/">
                     <div class="card-image">
                         
                         
@@ -617,7 +616,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习/">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">学习</span>
                     </a>
                     
@@ -632,7 +631,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/31/了解HTTP/">
+                <a href="/2020/08/31/%E4%BA%86%E8%A7%A3HTTP/">
                     <div class="card-image">
                         
                         
@@ -662,7 +661,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习/">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">学习</span>
                     </a>
                     
@@ -829,10 +828,22 @@
 
     
 </style>
-<div class>
+<div class="">
     
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2700388203" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2700388203"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
         </meting-js>
     </div>
 </div>
@@ -842,11 +853,12 @@
 
     
 
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">linPeng</a>
@@ -910,7 +922,8 @@
     <div class="modal-content">
         <div class="search-header">
             <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
         </div>
         <div id="searchResult"></div>
     </div>

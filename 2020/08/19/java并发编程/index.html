@@ -2,10 +2,10 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="java并发编程, 归来仍是少年">
-    <meta name="description" content>
+    <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 
 
@@ -324,7 +324,7 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/笔记/">
+                            <a href="/tags/%E7%AC%94%E8%AE%B0/">
                                 <span class="chip bg-color">笔记</span>
                             </a>
                         
@@ -361,10 +361,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="JAVA并发编程"><a href="#JAVA并发编程" class="headerlink" title="JAVA并发编程"></a>JAVA并发编程</h1><p>《JAVA并发编程的艺术》 <a href="https://www.jianshu.com/p/a2117af9950d" target="_blank" rel="noopener">参考</a></p>
+                <h1 id="JAVA并发编程"><a href="#JAVA并发编程" class="headerlink" title="JAVA并发编程"></a>JAVA并发编程</h1><p>《JAVA并发编程的艺术》 <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a2117af9950d">参考</a></p>
 <p>并发编程的目的是让程序运行的更快,同时也带来了更多的挑战,比如上下文切换,死锁,资源问题.</p>
 <p>重点是在:线程池</p>
-<a id="more"></a>
+<span id="more"></span>
+
 <p>[TOC]</p>
 <h2 id="并发编程的挑战"><a href="#并发编程的挑战" class="headerlink" title="并发编程的挑战"></a>并发编程的挑战</h2><p>并不是线程越多越快,线程的创建和上下文的切换都要耗时.</p>
 <p><strong>上下文切换</strong>:任务从保存到再加载的过程.</p>
@@ -396,6 +397,7 @@
 <p><strong>重量锁</strong>:线程竞争不使用自旋,但是会线程阻塞,适用于吞吐量大,执行较长的场景.</p>
 <p><strong>synchronize应用</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*synchronize 不可以与 @Transactional 同时使用*/</span></span><br><span class="line"><span class="comment">/*key为String类型需要intern()方法避免锁对象不同*/</span></span><br><span class="line"><span class="comment">/*使用guava的interner代替String.intern():String.intern()的缺陷是 如果字符串特别多，导致放入字符串池的String不可控，有可能导致OOM错误或者过多的Full GC*/</span></span><br><span class="line"><span class="comment">/*需要在方法外声明pool,避免锁对象不同</span></span><br><span class="line"><span class="comment">private static Interner&lt;String&gt; pool = Interners.newWeakInterner();*/</span></span><br><span class="line"><span class="keyword">synchronized</span> (pool.intern(key))&#123;<span class="comment">/*同步代码块*/</span>&#125;</span><br><span class="line"><span class="comment">/*这种同步只能确保单机,不能保证集群同步*/</span></span><br></pre></td></tr></table></figure>
+
 <h2 id="JAVA内存模型"><a href="#JAVA内存模型" class="headerlink" title="JAVA内存模型"></a>JAVA内存模型</h2><p><strong>线程通信</strong></p>
 <ul>
 <li><strong>共享内存</strong> 的并发模型：通过 <strong>读写内存中的公共状态 来进行隐式通信。</strong></li>
@@ -404,10 +406,9 @@
 <p><strong>线程同步</strong></p>
 <ul>
 <li><strong>共享内存</strong> 的并发模型：同步时显示进行的。我们必须显示指定某段代码需要在线程直线互斥执行。</li>
-<li><p><strong>消息传递</strong> 的并发模型：由于消息发送必须在消息接收之前，因此同步时隐式的。</p>
-<p><strong>Java并发</strong> 采用的是 <strong>共享内存模型</strong>，Java线程之前的通信总是隐式进行的。</p>
-</li>
+<li><strong>消息传递</strong> 的并发模型：由于消息发送必须在消息接收之前，因此同步时隐式的。</li>
 </ul>
+<p> <strong>Java并发</strong> 采用的是 <strong>共享内存模型</strong>，Java线程之前的通信总是隐式进行的。</p>
 <h5 id="Java内存模型的抽象结构"><a href="#Java内存模型的抽象结构" class="headerlink" title="Java内存模型的抽象结构"></a>Java内存模型的抽象结构</h5><p>在Java中，所有 <strong>实例域</strong>、<strong>静态域</strong> 和 <strong>数组元素</strong> 都储存在堆内存中，<strong>堆内存在线程之前共享</strong>。<br> 本文用  <strong>共享变量</strong> 统一描述 实例域、静态域 和 数组元素 。</p>
 <p><strong>局部变量</strong> 、<strong>方法定义参数</strong>、<strong>异常处理器参数</strong> 不会在内存之间共享，他们不会有内存可见性问题，也不受内存模型影响。</p>
 <p>从抽象角度看，JMM定义了 <strong>线程</strong> 和 <strong>主内存</strong> 之间的抽象关系：<strong>线程之间的共享变量储存在主内存中，每个线程都有一个私有的本地内存，本地内存储存了 该线程 以读写共享变量的副本。</strong></p>
@@ -466,10 +467,10 @@
 </li>
 </ul>
 </li>
-<li><p>Fork / Join 框架:分治编程,先分割任务,然后执行任务并合并结果.</p>
+<li><p>Fork &#x2F; Join 框架:分治编程,先分割任务,然后执行任务并合并结果.</p>
 </li>
 </ul>
-<h2 id="原子操作类"><a href="#原子操作类" class="headerlink" title="原子操作类"></a>原子操作类</h2><p><a href="https://docs.oracle.com/javase/1.5.0/docs/api/java/util/concurrent/atomic/package-summary.html" target="_blank" rel="noopener">官方介绍</a></p>
+<h2 id="原子操作类"><a href="#原子操作类" class="headerlink" title="原子操作类"></a>原子操作类</h2><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/1.5.0/docs/api/java/util/concurrent/atomic/package-summary.html">官方介绍</a></p>
 <p>而 Java 从 <code>JDK 1.5</code> 开始提供了 <code>java.util.concurrent.atomic</code> 包（以下简称<code>Atomic包</code>），这个包中的 <strong>原子操作类</strong> 提供了一种用法简单、性能高效、线程安全地更新一个变量的方式。</p>
 <p>因为变量的类型有很多种，所以在 <code>Atomic</code> 包里一共提供了 <code>12个</code> 类，属于以下 <code>4</code> 种类型的原子更新方式：</p>
 <ul>
@@ -524,9 +525,11 @@
 <li>混合型:可以考虑拆分成CPU密集型和IO密集型</li>
 </ul>
 <h4 id="ThreadPoolExecutor"><a href="#ThreadPoolExecutor" class="headerlink" title="ThreadPoolExecutor"></a>ThreadPoolExecutor</h4><p>阿里巴巴Java开发手册:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">【强制】线程池不允许使用 Executors 去创建，而是通过 ThreadPoolExecutor 的方式，这样</span><br><span class="line"></span><br><span class="line">的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险。 说明:Executors 返回的线程池对象的弊端如下:</span><br><span class="line">1)FixedThreadPool 和 SingleThreadPool:</span><br><span class="line"></span><br><span class="line">允许的请求队列长度为 Integer.MAX_VALUE，可能会堆积大量的请求，从而导致 OOM。</span><br><span class="line"></span><br><span class="line">2)CachedThreadPool 和 ScheduledThreadPool:</span><br><span class="line"></span><br><span class="line">允许的创建线程数量为 Integer.MAX_VALUE，可能会创建大量的线程，从而导致 OOM。</span><br></pre></td></tr></table></figure>
-<h5 id="创建线程"><a href="#创建线程" class="headerlink" title="创建线程"></a>创建线程</h5><p>   <a href="https://www.jianshu.com/p/f030aa5d7a28" target="_blank" rel="noopener">参考</a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> ThreadPoolExecutor(corePoolSize,maximumPoolSize,keepAliveTime,TimeUnit,workQueue,threadFactory,handler)</span><br></pre></td></tr></table></figure>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">【强制】线程池不允许使用 Executors 去创建，而是通过 ThreadPoolExecutor 的方式，这样</span><br><span class="line"></span><br><span class="line">的处理方式让写的同学更加明确线程池的运行规则，规避资源耗尽的风险。 说明:Executors 返回的线程池对象的弊端如下:</span><br><span class="line">1)FixedThreadPool 和 SingleThreadPool:</span><br><span class="line"></span><br><span class="line">允许的请求队列长度为 Integer.MAX_VALUE，可能会堆积大量的请求，从而导致 OOM。</span><br><span class="line"></span><br><span class="line">2)CachedThreadPool 和 ScheduledThreadPool:</span><br><span class="line"></span><br><span class="line">允许的创建线程数量为 Integer.MAX_VALUE，可能会创建大量的线程，从而导致 OOM。</span><br></pre></td></tr></table></figure>
+
+<h5 id="创建线程"><a href="#创建线程" class="headerlink" title="创建线程"></a>创建线程</h5><p>   <a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f030aa5d7a28">参考</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(corePoolSize,maximumPoolSize,keepAliveTime,TimeUnit,workQueue,threadFactory,handler)</span><br></pre></td></tr></table></figure>
+
 <p><strong>corePoolSize</strong>:核心线程池大小,当任务到达线程池时,如果线程数小于核心线程数,不论是否有空闲线程都会创建线程.</p>
 <p><strong>maximumPoolSize</strong>:最大线程数,如果现有线程队列满了,且线程池未满就创建线程.如果设置了无界队列,则这个配置无效.</p>
 <p><strong>keepAliveTime</strong>:线程活动保持时间,线程在空闲后保持存活的时间,如果任务多且快,会频繁超过核心数,可以调大提高利用率.</p>
@@ -548,9 +551,11 @@
 </ul>
 <h5 id="提交任务"><a href="#提交任务" class="headerlink" title="提交任务"></a>提交任务</h5><p>有execute()和submit()两种.</p>
 <p>execute():没有返回值,入参是Runnable类.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ExecutorService.execute(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="comment">//todo</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
-<p>submit():返回Future对象通过get方法获取返回值,get方法会阻塞当前线程直到任务完成;使用get(long timeout,TimeUnit unit)方法则会阻塞当前线程一段时间后立即返回,任务不一定完成.入参有Callable<t>\Runnable\Runnable,T 三种.</t></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Callable&lt;T&gt;为例</span></span><br><span class="line">Future&lt;Object&gt; future=ExecutorService.submit(<span class="keyword">new</span> Callable&lt;Object&gt;() &#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> Object();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    Object o = future.get();</span><br><span class="line">&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125; <span class="keyword">catch</span> (ExecutionException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ExecutorService.execute(<span class="keyword">new</span> <span class="title class_">Runnable</span>() &#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">		<span class="comment">//todo</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>submit():返回Future对象通过get方法获取返回值,get方法会阻塞当前线程直到任务完成;使用get(long timeout,TimeUnit unit)方法则会阻塞当前线程一段时间后立即返回,任务不一定完成.入参有Callable<T>\Runnable\Runnable,T 三种.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Callable&lt;T&gt;为例</span></span><br><span class="line">Future&lt;Object&gt; future=ExecutorService.submit(<span class="keyword">new</span> <span class="title class_">Callable</span>&lt;Object&gt;() &#123;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">call</span><span class="params">()</span> <span class="keyword">throws</span> Exception&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Object</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="type">Object</span> <span class="variable">o</span> <span class="operator">=</span> future.get();</span><br><span class="line">&#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125; <span class="keyword">catch</span> (ExecutionException e) &#123;</span><br><span class="line">    e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h5 id="关闭线程池"><a href="#关闭线程池" class="headerlink" title="关闭线程池"></a>关闭线程池</h5><p>可以通过<strong>shutdown</strong>或<strong>shutdownNow</strong>来关闭线程池.原理是通过遍历线程池中的工作线程,然后逐个调用线程的interrupt方法来中断线程,所以无法响应的线程可能永远无法终止.shutdownNow会停止所有正在执行的线程,shutdown会继续执行未完成的任务,通常用shutdown来关闭线程池.调用后isShutdown就返回true,关闭成功后isTerminaed返回true.</p>
 <p>调用线程池的方法会被多次调用,多次调用假如要是有初始线程数2个,那每次调用都会有两个线程数空闲,为了不浪费资源,所以要shutdown.而声明在类里面,在Spring的bean声明中每个bean默认是单例的,它起一次在Spring项目启动的时候创建一个对象,假设对象有核心线程数2个,对象用完也就有2个线程空闲,不shutdown也无所谓.</p>
 <h2 id="Executor框架"><a href="#Executor框架" class="headerlink" title="Executor框架"></a>Executor框架</h2><p>从JDK5开始,工作单元和执行机制分离,工作单元包括:Runnable和Callable,执行机制:Executor(ExecutorService).</p>
@@ -565,8 +570,8 @@
 </li>
 <li>Executor:一般用来代替Thread类的创建,只有execute方法.</li>
 <li>ExecutorService:继承了Executor接口，且更加被广泛使用,增加了submit,shutdown等方法.</li>
-<li>Future/FutureTask:用于表示异步计算的结果.</li>
-<li>Runnable/Callable:用于实现线程要执行的工作单元.</li>
+<li>Future&#x2F;FutureTask:用于表示异步计算的结果.</li>
+<li>Runnable&#x2F;Callable:用于实现线程要执行的工作单元.</li>
 </ul>
 <h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><p>生产者和消费者模式就非常适合多线程,线程池就是实现方式.</p>
 <p>在实践中,top命令可以帮助分析性能,command是java的,cpu是总和,可以按1查看多核的数据(us:用户空间,sy内核空间,ni:用户进程空间内改变过优先级的进程占用空间,id:空闲,wa:等待).</p>
@@ -580,7 +585,7 @@
 
                 
             </div>
-            <hr>
+            <hr/>
 
             
 
@@ -591,7 +596,7 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/笔记/">
+                                <a href="/tags/%E7%AC%94%E8%AE%B0/">
                                     <span class="chip bg-color">笔记</span>
                                 </a>
                             
@@ -642,7 +647,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/27/JMeter与Fiddler/">
+                <a href="/2020/08/27/JMeter%E4%B8%8EFiddler/">
                     <div class="card-image">
                         
                         
@@ -672,7 +677,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习/">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0/">
                         <span class="chip bg-color">学习</span>
                     </a>
                     
@@ -687,7 +692,7 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/14/Git学习/">
+                <a href="/2020/08/14/Git%E5%AD%A6%E4%B9%A0/">
                     <div class="card-image">
                         
                         
@@ -717,7 +722,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/笔记/">
+                    <a href="/tags/%E7%AC%94%E8%AE%B0/">
                         <span class="chip bg-color">笔记</span>
                     </a>
                     
@@ -884,10 +889,22 @@
 
     
 </style>
-<div class>
+<div class="">
     
     <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2700388203" fixed="true" autoplay="false" theme="#42b983" loop="all" order="random" preload="auto" volume="0.7" list-folded="true">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2700388203"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
         </meting-js>
     </div>
 </div>
@@ -897,11 +914,12 @@
 
     
 
-    <div class="container row center-align" style="margin-bottom: 0px !important;">
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2022</span>
+                <span id="year">2019-2023</span>
             
             <span id="year">2019</span>
             <a href="/about" target="_blank">linPeng</a>
@@ -965,7 +983,8 @@
     <div class="modal-content">
         <div class="search-header">
             <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
-            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input">
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
         </div>
         <div id="searchResult"></div>
     </div>
